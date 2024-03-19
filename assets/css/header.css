@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header .photo{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+.header .title {
+    font-family: 'Neue Machine', sans-serif;
+}
+.header .title small{
+    font-size: .5rem;
+}
+.information p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.125rem;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.information p::before{
+   content: '';
+   display: inline-block;
+   width: 1rem;
+   height: 1rem;
+   background-repeat: no-repeat;
+   background-size: contain;
+   margin-right: .5rem;
+}
+.information .job::before{
+    background-image: url(../icons/job.svg);
+}
+.information .location::before{
+    background-image: url(../icons/location.svg);
+}
+.information .email::before{
+    background-image: url(../icons/email.svg);
+}
+.information .phone::before{
+    background-image: url(../icons/phone.svg);
+}

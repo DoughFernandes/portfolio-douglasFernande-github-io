@@ -1,0 +1,35 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    transition: all .3s;
+}
+.section__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+.section__button::after{
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../icons/set-maior.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section__open{
+    background-color: #55569E ;
+    display: flex;
+    flex-direction: column;
+}

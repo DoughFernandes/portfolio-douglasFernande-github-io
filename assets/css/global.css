@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+@font-face {
+    font-family: 'Neue Machine';
+    src: url('../fonts/Neue-machina-regular/NeueMachina-Regular.otf');
+}
+body{
+    background: rgb(2,0,36);
+    background: -moz-linear-gradient(225deg, rgba(2,0,36,1) 10%,
+        rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
+    background: -webkit-linear-gradient(225deg, rgba(2,0,36,1) 10%,
+        rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
+    background: linear-gradient(225deg, rgba(2,0,36,1) 10%,
+        rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#020024",GradientType=1);
+    color: #fff;
+    background-repeat: no-repeat;
+}
+.main{
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    background-color: transparent;
+}

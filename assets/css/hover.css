@@ -1,0 +1,7 @@
+.section__button:hover{
+    cursor: pointer;
+}
+.section:hover{
+    background-color: #55569E;
+    border-color: #8ca9fb ;
+}
