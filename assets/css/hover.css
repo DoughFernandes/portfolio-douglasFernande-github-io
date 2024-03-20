@@ -1,7 +1,21 @@
+@import url(./header.css);
+@import url(./hover.css);
+@import url(./languages.css);
+@import url(./media-query.css);
+@import url(./portfolio.css);
+@import url(./section.css);
+
 .section__button:hover{
     cursor: pointer;
 }
 .section:hover{
     background-color: #55569E;
     border-color: #8ca9fb ;
+}
+
+/* ------------ --------------- ------------- -------------- */
+
+a:hover{
+    color: #8ca9fb;
+    transform: scale(1.02);
 }

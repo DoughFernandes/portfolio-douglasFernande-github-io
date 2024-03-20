@@ -1,3 +1,11 @@
+@import url(./header.css);
+@import url(./hover.css);
+@import url(./languages.css);
+@import url(./media-query.css);
+@import url(./portfolio.css);
+@import url(./section.css);
+@import url(./skills.css);
+
 *{
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
@@ -28,4 +36,20 @@ body{
     border: 1px solid #fff;
     border-radius: .5rem;
     background-color: transparent;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.before::before{
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right:.5rem;
+}
+li{
+    list-style: none;
 }

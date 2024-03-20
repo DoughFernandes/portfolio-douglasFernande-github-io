@@ -1,0 +1,26 @@
+@import url(./header.css);
+@import url(./hover.css);
+@import url(./languages.css);
+@import url(./media-query.css);
+@import url(./portfolio.css);
+@import url(./section.css);
+
+.section__content__languages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.section__content__languages li{
+    padding: .5rem 1rem ;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/*<!----------------------------------------------------->*/
+.section__content__languages li::before{
+    background-image: url(../icons/languagens.svg);
+}

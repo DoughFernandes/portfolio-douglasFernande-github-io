@@ -1,17 +1,14 @@
-const idSectionButton = document.getElementById('section__button');
+const sectionButton = document.querySelectorAll('.section .section__button');
 
-idSectionButton.addEventListener('click', () => {
-    const idSection = document.getElementById('section');
-    const idSectionContent = document.getElementById('section__content').style;
-    
-    if(idSectionContent.display === 'none'){
+sectionButton.forEach((section__button) => {
+    section__button.addEventListener('click', () => {
+        const section = section__button.parentElement
+        const openIs = section.classList.contains('section__open');
 
-        idSectionContent.display = 'flex';
-        idSection.classList.add('section__open');
-
-    }else{
-        idSectionContent.display = 'none';
-        idSection.classList.remove('section__open');
-    }
-    
-});
+        if (openIs) {
+            section.classList.remove('section__open');
+        } else {
+            section.classList.add('section__open');
+        }
+    })
+})

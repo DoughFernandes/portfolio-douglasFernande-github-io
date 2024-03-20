@@ -1,0 +1,49 @@
+@import url(./header.css);
+@import url(./hover.css);
+@import url(./languages.css);
+@import url(./media-query.css);
+@import url(./portfolio.css);
+@import url(./section.css);
+
+.section__content__portfolio{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+.section__content__portfolio li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+.section__content__portfolio .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+.github::before{
+    background-image: url(../icons/github.svg);  
+}
+.linkedin::before{
+    background-image: url(../icons/linkedin.svg);  
+}
+.dio::before{
+    letter-spacing: -2px;
+    font-weight: 900;
+    font-size: 1rem;
+    content: 'Dio.me';
+    width: 3rem ;
+    height: 1rem ;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right:.5rem;
+    color: #B197FC;
+}

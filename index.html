@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Douglas Fernandes</title>
 
-    <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/media-query.css">
-    <link rel="stylesheet" href="./assets/css/section.css">
-    <link rel="stylesheet" href="./assets/css/hover.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,29 +18,112 @@
 </head>
 <body>
     <main class="main">
+
         <header class="header">
-            <img class="photo" src="./assets/img/avatar doug.png" alt="foto do Douglas">
+            <img class="photo" src="./assets/img/avatar doug.png" alt="foto de perfil Douglas">
     
-            <h1 class="title">Bem vindo, <small>esse é meu Portfólio </small> <br>Sou Douglas Fernandes</h1>
+            <h1 class="title">Bem vindo, <small>esse é meu Portfólio </small><br>Sou Douglas Fernandes</h1>
+            
+            <nav title="navegatin" class="information" aria-label="Contact navigation">
+                <ul aria-label="information contact">
+
+                    <li class="job before" aria-label="job" >
+                        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile:">Desenvolvedor Front-End</a>
+                    </li>
+                    
+                    <li class="location before" aria-label="location" >São Paulo - SP</li>
     
-            <div class="information">
-                <p class="job">Desenvolvedor Front-End</p>
-                <p class="location">São Paulo - SP</p>
-                <p class="phone">(11) 95582-4702</p>
-                <p class="email">dfdsf1996@gmail.com</p>           
-            </div>
+                    <li class="phone before"  aria-label="phone">
+                        <a href="whatsapp:(11) 95582-4702">(11) 95582-4702</a>
+                    </li>
     
+                    <li class="email before" aria-label="email">
+                        <a href="mailto:dfdsf1996@gmail.com">dfdsf1996@gmail.com</a>
+                    </li>
+
+                </ul>
+            </nav>
         </header>
 
-        <section id="section" class="section">
-            <button  id="section__button" class="section__button" type="button">
+        <section class="section section__open" aria-label="skills"><!--SKILLS-->
+
+            <button class="section__button" type="button" aria-label="Open skill button">
+                Habilidades
+            </button>
+
+            <div class="section__content">
+                <section class="section__content__skills">
+
+                    <section class="skills__content">
+                        <h3>Titulo geral</h3>
+    
+                        <h5>titulo skills</h5>
+    
+                        <figure>
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                        </figure>
+    
+                    </section>
+    
+                    <section class="skills__content">
+                        <h3>Titulo geral</h3>
+    
+                        <h5>titulo skills</h5>
+    
+                        <div>
+                            <span>Habilidades1</span>
+                            <span>Habilidades1</span>
+                            <span>Habilidades1</span>
+                            <span>Habilidades1</span>
+                        </div>
+    
+                    </section>
+
+                </section>
+                
+            </div>
+        
+        </section>
+
+        <section class="section"><!--LANGUAGENS-->
+
+            <button class="section__button" type="button" aria-label="Open language button">
                 Idiomas
             </button>
 
-            <div id="section__content" class="section__content" style = "display: none;">
-                <ul>
-                    <li>Português: Nativo</li>
-                     <li>English: (A2) Básico</li>
+            <div class="section__content">
+                <ul class="section__content__languages" aria-label="language">
+                    <li class="before" aria-label="Português">Português(BR): Nativo</li>
+                     <li class="before" aria-label="English">English: (A2) Básico</li>
+                </ul>
+            </div>
+        
+        </section>
+
+        <section class="section"><!--PORTFOLIO-->
+            <button class="section__button" type="button" aria-label="Open Portfolio button">
+                Portfolio
+            </button>
+
+            <div class="section__content ">
+                <ul class="section__content__portfolio" aria-label="links Portfolio">
+                    <li>
+                        <h3 class="title before github">GitHub</h3>
+                        <a href="#" target="_blank">https://github.com/DoughFernandes</a>
+                    </li>
+                    <li>
+                        <h3 class="title before linkedin">Linkedin</h3>
+                        <a href="#" target="_blank">www.google.com</a>
+                    </li>
+                    <li>
+                        <h3 class="title dio">Digital innovation one</h3>
+                        <a href="#" target="_blank">www.google.com</a>
+                    </li>
                 </ul>
             </div>
         
