@@ -1,0 +1,59 @@
+{
+  "name": "Douglas Fernandes",
+  "photo": "https://avatars.githubusercontent.com/u/152017678?s=400&u=38556ff5770390e89a61427ce829afcc035e1dc1&v=4",
+  "job": "Front-End",
+  "location": "São Paulo - SP",
+  "phone": "(11) 95582-4702 ",
+  "email": "dfdsf1996@gmail.com",
+  "skills": {
+    "softSkills": [
+      "Empatia",
+      "Liderança",
+      "Trabalho em equipe",
+      "Flexibilidade",
+      "Organização"
+    ]
+  },
+  "languages": [
+    "Português (BR) Nativo",
+    "Inglês (A2) Básico"
+  ],
+  "portfolio": [
+    {
+      "name": "Pokedex",
+      "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/pokedex",
+      "github": true
+    },
+    {
+      "name": "Spotify",
+      "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/Spotify",
+      "github": true
+    },
+    {
+      "name": "Jogo de matar mosquito",
+      "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/JogoMataMosquito",
+      "github": true
+    },
+    {
+      "name": "Despesa",
+      "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/Despesas",
+      "github": true
+    },{
+      "name": "Multiverso Spider-Man",
+      "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/MultiversoSpider",
+      "github": true
+    }
+  ],
+  "professionalExperience": [
+    {
+      "name": "Auxiliar de Produção / Nipo center",
+      "period": "2019 - 2023",
+      "description": "Atendimento e auxílio ao cliente - recebimento, conferência e armazenamento de mercadoria - cadastro e armazenamento no sistema"
+    },
+    {
+      "name": "Vendedor de calçados / Wishoes",
+      "period": "2017 - 2018",
+      "description": "Atendimento e auxílio ao cliente - Organização de mercadorias."
+    }
+  ]
+}

@@ -5,15 +5,6 @@
 @import url(./portfolio.css);
 @import url(./section.css);
 
-.section{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-    width: 100%;
-    border: 1px solid #fff;
-    border-radius: 1rem;
-    transition: all .3s;
-}
 .section__button{
     display: flex;
     flex-direction: row;
