@@ -5,6 +5,7 @@
 @import url(./portfolio.css);
 @import url(./section.css);
 @import url(./skills.css);
+@import url(./experience.css);
 
 *{
     box-sizing: border-box;

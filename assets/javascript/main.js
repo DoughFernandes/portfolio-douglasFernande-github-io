@@ -3,4 +3,7 @@
     updadeProfileInfo(profileData);
     updadeSoftSkills(profileData);
     updadeHardSkills(profileData);
+    updadeLanguages(profileData);
+    updadePortfolio(profileData);
+    updadeExperience(profileData);
 })();

@@ -55,7 +55,7 @@
             <div class="section__content">
                 <section class="section__content__skills">
 
-                    <section class="skills__content">
+                    <section class="skills__content" >
                         <h3>Habilidades profissionais:</h3>
     
                         <figure id="profile.skills.hardSkills" class="skills__content__figure">
@@ -83,7 +83,7 @@
         
         </section>
 
-        <section class="section" aria-label="skills"><!--ENSINO-->
+        <section class="section " aria-label="ENSINO"><!--ENSINO-->
 
             <button class="section__button" type="button" aria-label="Open skill button">
                 Estudo
@@ -124,36 +124,44 @@
             </button>
 
             <div class="section__content">
-                <ul class="section__content__languages" aria-label="language">
-                    <li class="before" aria-label="Português">Português(BR): Nativo</li>
-                     <li class="before" aria-label="English">English: (A2) Básico</li>
-                </ul>
+                <ul id="profile.language" class="section__content__languages" aria-label="language">
+                    <li class="before">Carregando ...</li>
+                     
             </div>
         
         </section>
 
-        <section class="section"><!--PORTFOLIO-->
+        <section class="section section__open"><!--PORTFOLIO-->
             <button class="section__button" type="button" aria-label="Open Portfolio button">
                 Portfolio
             </button>
 
             <div class="section__content ">
-                <ul class="section__content__portfolio" aria-label="links Portfolio">
+                <ul id="profile.portfolio" class="section__content__portfolio" aria-label="links Portfolio">
+                    <li>Carregando...</li>
+
                     <li>
-                        <h3 class="title before github">GitHub</h3>
-                        <a href="#" target="_blank">https://github.com/DoughFernandes</a>
-                    </li>
-                    <li>
-                        <h3 class="title before linkedin">Linkedin</h3>
-                        <a href="#" target="_blank">www.google.com</a>
-                    </li>
-                    <li>
-                        <h3 class="title dio">Digital innovation one</h3>
-                        <a href="#" target="_blank">www.google.com</a>
-                    </li>
+                        <h3 class="title before">name</h3>
+                        <a href="${portfolio.url}" target="_blank">
+                            <img src="#" alt="img">
+                        </a>
+                
+                     </li>
                 </ul>
             </div>
         
+        </section>
+
+        <section class="section"><!--EXPERIENCE-->
+            <button class="section__button" type="button" aria-label="Open Portfolio button">
+                Experiencia
+            </button>
+
+           <div class="section__content">
+                <ul id="profile.experience" class="section__experience">
+                    <li>Carregando ...</li>     
+                </ul> 
+           </div>       
         </section>
 
     </main>
@@ -164,6 +172,9 @@
     <script src="./assets/javascript/profileInfo.js"></script>
     <script src="./assets/javascript/profileSkill.js"></script>
     <script src="./assets/javascript/skills.js"></script>
+    <script src="./assets/javascript/language.js"></script>
+    <script src="./assets/javascript/experienc.js"></script>
+    <script src="./assets/javascript/portfolio.js"></script>
 
 </body>
 </html>

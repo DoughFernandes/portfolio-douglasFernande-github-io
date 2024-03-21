@@ -27,8 +27,7 @@
     color: #fff;
 }
 .skills__content figure img{
-    height: 5rem;
-    width: 5rem;
+    max-width: 4rem;
     margin: 1rem;
 }
 .skills__content__skill{

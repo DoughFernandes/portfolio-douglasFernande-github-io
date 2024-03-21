@@ -1,0 +1,23 @@
+.section__experience{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.section__experience h3{
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.section__experience small{
+    list-style: circle;
+    font-style: oblique;
+}
+.section__experience p{
+    display: flex;
+    font-size: .9rem;
+    margin: 1rem;
+}
