@@ -33,7 +33,7 @@
       },
       {
         "name": "VsCode",
-        "logo": "https://raw.githubusercontent.com/DoughFernandes/Portfolio/main/assets/icons/vscode.png"
+        "logo": "https://raw.githubusercontent.com/DoughFernandes/Portfolio/blob/main/assets/icons/vscode.png"
       }
     ],
 
@@ -53,25 +53,30 @@
     {
       "name": "Pokedex",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/pokedex",
+      "imagem": "https://raw.githubusercontent.com/DoughFernandes/MeusProjetos/Imagens/Pokedex.gif",
       "github": true
     },
     {
       "name": "Spotify",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/Spotify",
+      "imagem": "https://raw.githubusercontent.com/DoughFernandes/MeusProjetos/Imagens/Spotify.gif",
       "github": true
     },
     {
       "name": "Jogo de matar mosquito",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/JogoMataMosquito",
+      "imagem": "https://raw.githubusercontent.com/DoughFernandes/MeusProjetos/Imagens/MataMosquito.gif",
       "github": true
     },
     {
       "name": "Despesa",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/Despesas",
+      "imagem": "https://raw.githubusercontent.com/DoughFernandes/MeusProjetos/Imagens/despesa.gif",
       "github": true
     },{
       "name": "Multiverso Spider-Man",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/MultiversoSpider",
+      "imagem": "https://raw.githubusercontent.com/DoughFernandes/MeusProjetos/Imagens/Spider-Man-multiverso.gif",
       "github": true
     }
   ],
