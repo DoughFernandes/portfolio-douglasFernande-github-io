@@ -20,25 +20,26 @@
     <main class="main">
 
         <header class="header">
-            <img class="photo" src="./assets/img/avatar doug.png" alt="foto de perfil Douglas">
+            <img class="photo" src="./assets/img/avatar doug.png" alt="foto de perfil Douglas"
+            id="profile.photo">
     
-            <h1 class="title">Bem vindo, <small>esse é meu Portfólio </small><br>Sou Douglas Fernandes</h1>
-            
+            <h1 class="title">Bem vindo, <small>esse é meu Portfólio </small><br>Sou <span id="profile.name">Carregando ...</span></h1>
+             
             <nav title="navegatin" class="information" aria-label="Contact navigation">
                 <ul aria-label="information contact">
 
                     <li class="job before" aria-label="job" >
-                        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile:">Desenvolvedor Front-End</a>
+                        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile:" id="profile.job" target="_blank">Carregando...</a>
                     </li>
                     
-                    <li class="location before" aria-label="location" >São Paulo - SP</li>
+                    <li class="location before" aria-label="location" id="profile.location">Carregando...</li>
     
                     <li class="phone before"  aria-label="phone">
-                        <a href="whatsapp:(11) 95582-4702">(11) 95582-4702</a>
+                        <a href="whatsapp:(11) 95582-4702" id="profile.phone">Carregando...</a>
                     </li>
     
                     <li class="email before" aria-label="email">
-                        <a href="mailto:dfdsf1996@gmail.com">dfdsf1996@gmail.com</a>
+                        <a href="mailto:dfdsf1996@gmail.com" id="profile.email">Carregando</a>
                     </li>
 
                 </ul>
@@ -71,13 +72,13 @@
                     <section class="skills__content">
                         <h3>Habilidades pessoais:</h3>
     
-                        <div class="skills__content__skill">
-                            <span> - Facilidade com tarefas práticas</span>
-                            <span> - Comunicação </span>
-                            <span> - Trabalho em Equipe</span>
-                            <span> - Comprometimento e resultado</span>
-                            <span> - Metodologia Ágill</span>
-                        </div>
+                        <ul id="profile.skills.softskills" class="skills__content__skill">
+                            <li>Carregando...</li>
+                            <li>Carregando...</li>
+                            <li>Carregando...</li>
+                            <li>Carregando...</li>
+                            <li>Carregando...</li>
+                        </ul>
     
                     </section>
 
@@ -87,7 +88,7 @@
         
         </section>
 
-        <section class="section section__open" aria-label="skills"><!--SKILLS-->
+        <section class="section" aria-label="skills"><!--ENSINO-->
 
             <button class="section__button" type="button" aria-label="Open skill button">
                 Estudo
@@ -163,6 +164,10 @@
     </main>
 
     <script src="./assets/javascript/index.js"></script>
+    <script src="./assets/javascript/api.js"></script>
+    <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/profileInfo.js"></script>
+    <script src="./assets/javascript/profileSkill.js"></script>
 
 </body>
 </html>

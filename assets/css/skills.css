@@ -37,10 +37,12 @@
     margin: 1rem;
     width: 100%;
 }
-.skills__content__skill span{
+.skills__content__skill li{
+    list-style: circle;
     font-style: oblique;
     display: flex;
     font-size: .9rem;
     margin: 1rem;
 }
+
 /*<!----------------------------------------------------->*/
