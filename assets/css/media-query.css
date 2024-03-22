@@ -6,9 +6,8 @@
 @import url(./section.css);
 @import url(./skills.css);
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767.9px) {
     .main{
-        max-width: 1024px;
         margin: 0 auto;
     }
     .header{
@@ -20,6 +19,7 @@
     .header .photo{
         grid-area: photo;
         margin: 0 auto;
+        width: 230px;
     }
     .header .title{
         grid-area: title;
@@ -29,27 +29,46 @@
         grid-area: information;
     }
 }
-
-@media only screen and (min-width: 768.9px) {
+/* --------------------------------------------------------------------------------------*/
+@media only screen and  (min-width: 1024px) {
     .main{
-        max-width: 1024px;
+        max-width: 1340px;
         margin: 0 auto;
     }
     .header{
-        display: grid;
-        grid-template-areas:
-        "photo title"
-        "photo information"; 
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .header .photo{
-        grid-area: photo;
-        margin: 0 auto;
+        margin: 1rem;
+        width: 40rem;
     }
     .header .title{
-        grid-area: title;
-        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: 4.5rem;
+        width: 100%;
+        padding: 0 5rem;
+        font-family: "Lexend Zetta", sans-serif!important;
+    }
+    .header .title small{
+        font-size: 1.5rem;
     }
     .header .information{
-        grid-area: information;
+        display: flex;
+        width: 100%;
+        margin: 1rem;
+    }
+    .header .information ul{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }
