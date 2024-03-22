@@ -1,0 +1,19 @@
+.section__content__course{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.courses__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.courses__content h3, h4, small, p, a{
+    margin: .5rem;
+}

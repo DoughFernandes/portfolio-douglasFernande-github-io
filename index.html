@@ -19,20 +19,22 @@
 <body>
     <main class="main">
 
-        <header class="header">
+        <header class="header"><!--HEARDER-->
             <img class="photo" src="./assets/img/avatar doug.png" alt="foto de perfil Douglas"
             id="profile.photo">
     
             <h1 class="title">Bem vindo, <small>esse é meu Portfólio </small><br>Sou <span id="profile.name">Carregando ...</span></h1>
              
-            <nav title="navegatin" class="information" aria-label="Contact navigation">
-                <ul aria-label="information contact">
+            <nav title="navegatin" class="information">
+                <ul>
 
                     <li class="job before" aria-label="job" >
                         <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile:" id="profile.job" target="_blank">Carregando...</a>
                     </li>
                     
-                    <li class="location before" aria-label="location" id="profile.location">Carregando...</li>
+                    <li class="location before" aria-label="location">
+                        <span id="profile.location">Carregando...</span>
+                    </li>
     
                     <li class="phone before"  aria-label="phone">
                         <a href="whatsapp:(11) 95582-4702" id="profile.phone">Carregando...</a>
@@ -52,14 +54,14 @@
                 Habilidades
             </button>
 
-            <div class="section__content">
+            <div class="section__content" aria-label="information skills">
                 <section class="section__content__skills">
 
-                    <section class="skills__content" >
+                    <section class="skills__content">
                         <h3>Habilidades profissionais:</h3>
     
                         <figure id="profile.skills.hardSkills" class="skills__content__figure">
-                            
+                            <!-- Imagem Skills -->
                         </figure>
     
                     </section>
@@ -68,51 +70,37 @@
                         <h3>Habilidades pessoais:</h3>
     
                         <ul id="profile.skills.softskills" class="skills__content__skill">
-                            <li>Carregando...</li>
-                            <li>Carregando...</li>
-                            <li>Carregando...</li>
-                            <li>Carregando...</li>
-                            <li>Carregando...</li>
+                            <li aria-label="Habilidades">Carregando...</li> <!-- profile Skills -->
                         </ul>
     
                     </section>
 
                 </section>
-                
             </div>
         
         </section>
 
-        <section class="section " aria-label="ENSINO"><!--ENSINO-->
+        <section class="section" aria-label="Cursos"><!--COURSES-->
 
             <button class="section__button" type="button" aria-label="Open skill button">
-                Estudo
+                Courses
             </button>
 
             <div class="section__content">
-                <section class="section__content__skills">
+                <section id="profile.course" class="section__content__course">
 
-                    <section class="skills__content">
-                        <h3>Minhas conquistas na DIO.me:</h3>
-    
-                       
-    
+                    <section class="courses__content">
+                        <h3 aria-label="plataforma">Carregando...</h3>
+                        <h4 aria-label="nome do curso">Carregando...</h4>
+                        <small aria-label="data do curso">Carregando...</small>
+                        <p aria-label="descrição">
+                            Carregando...
+                        </p>
+                        <a target="_blank" href="#">Carregando...</a>
                     </section>
-    
-                    <section class="skills__content">
-                        <h3>Nome da plataforma:</h3>
-                        <span>Curso 1</span>
-                        
-                        <h3>Nome da plataforma:</h3>
-                        <span>Curso 1</span>
+                    <!-- Courses -->
 
-                        <h3>Nome da plataforma:</h3>
-                        <span>Curso 1</span>
-    
-                    </section>
-
-                </section>
-                
+                </section>               
             </div>
         
         </section>
@@ -124,44 +112,53 @@
             </button>
 
             <div class="section__content">
-                <ul id="profile.language" class="section__content__languages" aria-label="language">
-                    <li class="before">Carregando ...</li>
-                     
+                <section class="section__content__languages">
+
+                    <ul id="profile.language" aria-label="language">
+                        <li class="before">Carregando ...</li>
+                        <!--LANGUAGENS-->
+                    </ul>
+
+                </section>   
             </div>
         
         </section>
 
-        <section class="section section__open"><!--PORTFOLIO-->
+        <section class="section"><!--PORTFOLIO-->
             <button class="section__button" type="button" aria-label="Open Portfolio button">
                 Portfolio
             </button>
 
             <div class="section__content ">
-                <ul id="profile.portfolio" class="section__content__portfolio" aria-label="links Portfolio">
-                    <li>Carregando...</li>
+               <section class="section__content__portfolio">
 
-                    <li>
-                        <h3 class="title before">name</h3>
-                        <a href="${portfolio.url}" target="_blank">
-                            <img src="#" alt="img">
-                        </a>
-                
-                     </li>
-                </ul>
+                    <ul id="profile.portfolio" aria-label="links Portfolio">
+                        <li>Carregando ...</li>
+                        <!-- PORTFOLIO -->
+                    </ul>
+                    
+               </section>
             </div>
         
         </section>
 
         <section class="section"><!--EXPERIENCE-->
+
             <button class="section__button" type="button" aria-label="Open Portfolio button">
                 Experiencia
             </button>
 
            <div class="section__content">
-                <ul id="profile.experience" class="section__experience">
-                    <li>Carregando ...</li>     
-                </ul> 
-           </div>       
+                <section class="section__experience">
+
+                    <ul id="profile.experience">
+                        <li>Carregando ...</li>
+                        <!--EXPERIENCE-->   
+                    </ul>
+
+                </section>
+            </div>
+
         </section>
 
     </main>
@@ -175,6 +172,7 @@
     <script src="./assets/javascript/language.js"></script>
     <script src="./assets/javascript/experienc.js"></script>
     <script src="./assets/javascript/portfolio.js"></script>
+    <script src="./assets/javascript/course.js"></script>
 
 </body>
 </html>

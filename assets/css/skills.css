@@ -21,11 +21,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: .5rem
 }
-.skills__content h3{
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: #fff;
-}
 .skills__content figure img{
     max-width: 4rem;
     margin: 1rem;

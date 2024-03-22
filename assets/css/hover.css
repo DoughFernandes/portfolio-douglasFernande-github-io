@@ -12,10 +12,12 @@
     background-color: #55569E;
     border-color: #8ca9fb ;
 }
-
-/* ------------ --------------- ------------- -------------- */
-
 a:hover{
     color: #8ca9fb;
     transform: scale(1.02);
+}
+
+.section__content__portfolio li:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #35364b;
 }

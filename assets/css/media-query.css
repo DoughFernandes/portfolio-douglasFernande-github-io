@@ -29,3 +29,27 @@
         grid-area: information;
     }
 }
+
+@media only screen and (min-width: 768.9px) {
+    .main{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .header{
+        display: grid;
+        grid-template-areas:
+        "photo title"
+        "photo information"; 
+    }
+    .header .photo{
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .title{
+        grid-area: title;
+        text-align: start;
+    }
+    .header .information{
+        grid-area: information;
+    }
+}

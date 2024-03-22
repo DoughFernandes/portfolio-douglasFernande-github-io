@@ -1,9 +1,4 @@
-@import url(./header.css);
-@import url(./hover.css);
-@import url(./languages.css);
-@import url(./media-query.css);
-@import url(./portfolio.css);
-@import url(./section.css);
+@import url(./global.css);
 
 .header {
     display: flex;
@@ -34,6 +29,9 @@
     align-items: center;
     margin: .5rem;
     font-size: 1.125rem;
+}
+.information a{
+    color: #fff !important;
 }
 .information ul{
     padding: 0;

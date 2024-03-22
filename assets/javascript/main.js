@@ -6,4 +6,5 @@
     updadeLanguages(profileData);
     updadePortfolio(profileData);
     updadeExperience(profileData);
+    updadeCourse(profileData);
 })();
