@@ -33,7 +33,7 @@
       },
       {
         "name": "VsCode",
-        "logo": "https://raw.githubusercontent.com/DoughFernandes/Portfolio/blob/main/assets/icons/vscode.png"
+        "logo": "./data/imgs/icons/vscode.png"
       }
     ],
 
@@ -63,7 +63,7 @@
       "github": true
     },
     {
-      "name": "Jogo de matar mosquito",
+      "name": "Matar mosquito",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/JogoMataMosquito",
       "imagem": "https://raw.githubusercontent.com/DoughFernandes/MeusProjetos/Imagens/MataMosquito.gif",
       "github": true
@@ -90,6 +90,22 @@
       "name": "Vendedor de calçados / Wishoes",
       "period": "2017 - 2018",
       "description": "Atendimento e auxílio ao cliente - Organização de mercadorias."
+    }
+  ],
+  "Education": [
+    {
+      "plataform": "Digital innovation one",
+      "name": "Desenvolvedor de software | Fronte-End",
+      "period": "2023 - Em progresso ...",
+      "description": "HTML5, CSS3, JavaScript, Git, GitHub",
+      "url": "https://www.dio.me/users/dfdsf1996"
+    },
+    {
+      "plataform": "Digital innovation one",
+      "name": "Udemy",
+      "period": "2017 - 2018",
+      "description": "Desenvolvedor de software | Full stack.",
+      "url": "https://github.com/DoughFernandes/MeusProjetos"
     }
   ]
 }
