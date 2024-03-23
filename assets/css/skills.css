@@ -1,5 +1,3 @@
-@import url(./media-query.css);
-
 .section__content__skills{
     display: flex;
     flex-direction: row;

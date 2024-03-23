@@ -3,9 +3,9 @@ function updadeExperience (profileDate){
 
     experience.innerHTML = profileDate.professionalExperience.map(experience =>`
         <li>
-        <h3>${experience.name}</h3>
-        <small>${experience.period}</small>
-        <p>${experience.description}</p>
+            <h3>${experience.name}</h3>
+            <small>${experience.period}</small>
+            <p>${experience.description}</p>
         </li>
 
     `).join('');

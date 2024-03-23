@@ -1,16 +1,19 @@
 .section__experience{
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
-    margin: 1rem;
+
 }
 .section__experience li{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
     flex-wrap: wrap;
-    margin: 2rem;
+    margin: 1rem;
 }
 .section__experience p{
     font-size: .9rem;

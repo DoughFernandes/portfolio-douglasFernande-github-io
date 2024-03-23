@@ -1,12 +1,13 @@
 @import url(./header.css);
 @import url(./hover.css);
 @import url(./languages.css);
-@import url(./media-query.css);
+@import url(./media-query-tablet.css);
 @import url(./portfolio.css);
 @import url(./section.css);
 @import url(./skills.css);
 @import url(./experience.css);
 @import url(./Courses.css);
+@import url(./media-query-desktop.css);
 
 *{
     box-sizing: border-box;
@@ -21,7 +22,10 @@
     src: url('../fonts/Neue-machina-regular/NeueMachina-Regular.otf');
 }
 body{
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -37,8 +41,8 @@ body{
     background-repeat: no-repeat;
 }
 .main{
-    height: 100%;
     width: 100%;
+    height: 100%;
     padding: 1rem;
     margin: 1rem;
     border: 1px solid #d0ddfe;
@@ -58,14 +62,8 @@ a{
     color: #d0ddfe;
     text-decoration: none;
 }
-.before::before{
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    margin-right:.5rem;
-    background-repeat: no-repeat;
-    background-size: contain;
+ul{
+    padding: 0;
 }
 li{
     list-style: none;
@@ -83,4 +81,7 @@ h4{
 small{
     list-style: circle;
     font-style: oblique;
+}
+p{
+    font-size: 1rem;
 }
