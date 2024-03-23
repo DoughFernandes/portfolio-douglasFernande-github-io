@@ -54,30 +54,30 @@
       "name": "Pokedex",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/pokedex",
       "imagem": "./data/imgs/content/Pokedex.gif",
-      "description.": "Criar uma plataforma interativa para os fãs do Pokemon explorarem um pouco sobre."
+      "description": "Criar uma plataforma interativa para os fãs do Pokemon explorarem um pouco sobre."
     },
     {
       "name": "Spotify",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/Spotify",
       "imagem": "./data/imgs/content/Spotify.gif",
-      "description.": "Uma cópia da página principal do spotify"
+      "description": "Uma cópia da página principal do spotify"
     },
     {
       "name": "Matar mosquito",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/JogoMataMosquito",
       "imagem": "./data/imgs/content/MataMosquito.gif",
-      "description.": "Um jogo simples e demostrativa visual, interação entre páginas e objetos na tela."
+      "description": "Um jogo simples e demostrativa visual, interação entre páginas e objetos na tela."
     },
     {
       "name": "Despesa",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/Despesas",
       "imagem": "./data/imgs/content/despesa.gif",
-      "description.": "Um projeto de despesa, pode adicionar novas despesas remover e verificar histórico"
+      "description": "Um projeto de despesa, pode adicionar novas despesas remover e verificar histórico"
     },{
       "name": "Multiverso Spider-Man",
       "url": "https://github.com/DoughFernandes/MeusProjetos/tree/main/MultiversoSpider",
       "imagem": "./data/imgs/content/Spider-Man-multiverso.gif",
-      "description.": "Páginas e filmes do multiverso do amigo da comunidade."
+      "description": "Páginas e filmes do multiverso do amigo da comunidade."
     }
   ],
   "professionalExperience": [
