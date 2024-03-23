@@ -1,11 +1,13 @@
 @import url(./header.css);
 @import url(./hover.css);
 @import url(./languages.css);
-@import url(./media-query.css);
+@import url(./media-query-tablet.css);
 @import url(./portfolio.css);
 @import url(./section.css);
 @import url(./skills.css);
 @import url(./experience.css);
+@import url(./Courses.css);
+@import url(./media-query-desktop.css);
 
 *{
     box-sizing: border-box;
@@ -20,6 +22,13 @@
     src: url('../fonts/Neue-machina-regular/NeueMachina-Regular.otf');
 }
 body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background: rgb(2,0,36);
     background: -moz-linear-gradient(225deg, rgba(2,0,36,1) 10%,
         rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
@@ -32,6 +41,8 @@ body{
     background-repeat: no-repeat;
 }
 .main{
+    width: 100%;
+    height: 100%;
     padding: 1rem;
     margin: 1rem;
     border: 1px solid #d0ddfe;
@@ -48,18 +59,29 @@ body{
     transition: all .3s;
 }
 a{
-    color: #fff;
+    color: #d0ddfe;
     text-decoration: none;
 }
-.before::before{
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right:.5rem;
+ul{
+    padding: 0;
 }
 li{
     list-style: none;
+}
+h3{
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #fff;
+}
+h4{
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+}
+small{
+    list-style: circle;
+    font-style: oblique;
+}
+p{
+    font-size: 1rem;
 }

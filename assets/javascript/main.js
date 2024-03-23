@@ -1,4 +1,4 @@
-(async function() {
+(async function () {
     const profileData = await fetchProfileDate();
     updadeProfileInfo(profileData);
     updadeSoftSkills(profileData);
@@ -6,4 +6,5 @@
     updadeLanguages(profileData);
     updadePortfolio(profileData);
     updadeExperience(profileData);
+    updadeCourse(profileData);
 })();

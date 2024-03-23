@@ -1,23 +1,37 @@
 function updadeProfileInfo (profileData) {
-    const photo = document.getElementById('profile.photo');
-    photo.src = profileData.photo;
-    photo.alt = profileData.name;
+    const title = document.getElementById('header');
+    title.innerHTML = `
 
-    const name = document.getElementById('profile.name');
-    name.textContent = profileData.name;
+    <figure class ="box__figure">
+        <img class="photo" src="${profileData.photo}" alt="foto de perfil ${profileData.name}">
+    </figure>
 
-    const job = document.getElementById('profile.job');
-    job.textContent = profileData.job;
+    <h1 class="title">Transformando Ideias em Realidade:<br>Desenvolvedor Front-End Apaixonado por Criar Experiências Digitais Inovadoras<small>${profileData.name}</small></h1>
+     
+    <nav title="navegatin" class="information">
+        <ul>
 
-    const location = document.getElementById('profile.location');
-    location.textContent = profileData.location;
+            <li class="job" aria-label="job" >
+                <img class="information__profile" src="./assets/icons/job.svg" alt="${profileData.job}">${profileData.job}
+            </li>
+            
+            <li aria-label="location">
+                <img class="information__profile" src="./assets/icons/location.svg" alt="${profileData.location}">${profileData.location}
+            </li>
 
-    const phone = document.getElementById('profile.phone');
-    phone.textContent = profileData.phone;
-    phone.href = `tel:${profileData.phone}`;
+            <li aria-label="phone">
+                <img class="information__profile" src="./assets/icons/phone.svg" alt="${profileData.phone}">
+                <a href="whatsapp:(11) 95582-4702">${profileData.phone}</a>
+            </li>
 
-    const email = document.getElementById('profile.email');
-    email.textContent = profileData.email;
-    email.href = `mailto:${profileData.email}`;
+            <li aria-label="email">
+                <img class="information__profile" src="./assets/icons/email.svg" alt="${profileData.email}">
+                <a href="mailto:dfdsf1996@gmail.com">${profileData.email}</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    `
 
 }

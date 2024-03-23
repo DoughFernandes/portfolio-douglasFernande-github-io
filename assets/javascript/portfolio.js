@@ -3,13 +3,16 @@ function updadePortfolio (profileDate){
 
     portfolio.innerHTML = profileDate.portfolio.map(portfolio =>`
         <li>
-            <h3 class="title before">${portfolio.name}</h3>
-            <a href="${portfolio.url}" target="_blank">
-                <img src="${portfolio.img}" alt="${portfolio.name}">
-            </a>
+        <a href="${portfolio.url}" target="_blank">
+        <h3 class="title">${portfolio.name}</h3>
+        
+        <figure class="figure">
+            <img src="${portfolio.imagem}" alt=""${portfolio.name}">
+        </figure>
+
+        <span>${portfolio.description}</span>
 
         </li>
-        </ul>
 
     `).join('');
 }
