@@ -8,9 +8,10 @@ function updadePortfolio (profileDate){
         
         <figure class="figure">
             <img src="${portfolio.imagem}" alt=""${portfolio.name}">
+            <span class="section__content__portfolio__description">${portfolio.description}</span>
         </figure>
 
-        <span>${portfolio.description}</span>
+        
 
         </li>
 
