@@ -1,156 +1,202 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Douglas Fernandes</title>
+    <meta name="description" content="Meu portfolio Front-End">
+    <title>Douglas Fernandes | Bem-vindo</title>
 
-    <link rel="stylesheet" href="assets/css/global.css">
+    <meta name="description" content="Meu portfolio Front-End">
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
-    <link rel="preconnect" href="https://fonts.gstatic.com" origem cruzada>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="folha de estilo">
+    <!--FAIVEICONS-->
+    <link rel="shortcut icon" href="./assets/data/imgs/favicon-32x32.png" type="image/x-icon">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/global.css">
 
     <!-- NORMALIZE -->
     <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
 
+    <!--FONT-AWESOME ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header id="header" class="header"><!--HEARDER-->
-        <!-- HEARDER --> Carregando ...
+    <!--HEADER-->
+    <header class="header">
+
+        <nav class="header--nav"><!--NAVEGATION DESKTOP-->
+            <ul class="menu__desktop">
+    
+                <li class="desktop__item">
+                    <a class="menu__link active" title="menu phone" href="#home">
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+                <li class="desktop__item">
+                    <a class="desktop__link" title="menu phone" href="#projetos">
+                        <span class="desktop__text">Projetos</span>
+                    </a>
+                </li>
+                <li  class="desktop__item">
+                    <a class="desktop__link" title="menu phone" href="#sobre">
+                        <span class="desktop__text">Sobre</span>
+                    </a>
+                </li>
+                <li  class="desktop__item">
+                    <a class="desktop__link" title="menu phone" href="#contato">
+                        <span class="desktop__text">Contato</span>
+                    </a>
+                </li>
+    
+            </ul>
+        </nav>
+
+        <figure >
+            <img src="/assets/data/imgs/avatar doug.png" alt="profile photo">
+        </fugure>
+
+        <div class="header__toggle">
+            <i id="toggleTheme" class="fa-regular fa-sun"></i>
+        </div>
+
     </header>
 
-    <main class="main">
+    <main>
 
-        <section class="section " aria-label="skills"><!--SKILLS-->
+        <section title="primary" class="section__primary" alt="Profile">
+            <figure>
+                <img src="./assets/data/imgs/avatar doug.png" alt="profile logo">
+            </figure>
 
-            <button class="section__button" type="button" aria-label="Open skill button">
-                Habilidades
+            <h1><b>Soluções Criativas & </b>Desenvolvimento de software Front-end.</h1>
+            <small>Douglas Fernandes, São Paulo-SP.</small>
+
+            <ul alt="Media-social">
+                <li>
+                    <a href="#" title="github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="WhatsApp">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="E-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="btn" type="button" title="button">
+                <span alt="Projetos">Projetos</span>
+                <i class="fa-solid fa-window-restore"></i>
             </button>
 
-            <div class="section__content" aria-label="information skills">
-                <section class="section__content__skills">
-
-                    <section class="skills__content">
-                        <h3>Habilidades profissionais:</h3>
-    
-                        <figure id="profile.skills.hardSkills" class="skills__content__figure">
-                            <!-- Imagem Skills -->
-                        </figure>
-    
-                    </section>
-    
-                    <section class="skills__content">
-                        <h3>Habilidades pessoais:</h3>
-    
-                        <ul id="profile.skills.softskills" class="skills__content__skill">
-                            <li aria-label="Habilidades">Carregando...</li> <!-- profile Skills -->
-                        </ul>
-    
-                    </section>
-
-                </section>
-            </div>
-        
         </section>
 
-        <section class="section " aria-label="Cursos"><!--COURSES-->
+        <section title="Skills" class="section__skills" alt="Skills">
+            <h2>Conhecimento nas seguintes tecnologias</h2>
 
-            <button class="section__button" type="button" aria-label="Open skill button">
-                Courses
-            </button>
-
-            <div class="section__content">
-                <section id="profile.course" class="section__content__course">
-
-                    <section class="courses__content">
-                        <h3 aria-label="plataforma">Carregando...</h3>
-                        <h4 aria-label="nome do curso">Carregando...</h4>
-                        <small aria-label="data do curso">Carregando...</small>
-                        <p aria-label="descrição">
-                            Carregando...
-                        </p>
-                        <a target="_blank" href="#">Carregando...</a>
-                    </section>
-                    <!-- Courses -->
-
-                </section>               
-            </div>
-        
+            <ul>
+                <li><img src="./assets/data/icons/html5.svg" alt="Logo html5"></li>
+                <li><img src="./assets/data/icons/css3.svg" alt="Logo CSS3"></li>
+                <li><img class="js" src="./assets/data/icons/js.svg" alt="Logo javascript"></li>
+                <li><img src="./assets/data/icons/boostrap.svg" alt="Logo boostrap"></li>
+                <li><img src="./assets/data/icons/git.svg" alt="Logo Git"></li>
+                <li><img src="./assets/data/icons/github-skill.svg" alt="Logo GitHub"></li>
+            </ul> 
         </section>
 
-        <section class="section"><!--LANGUAGENS-->
+        <section title="Projects" class="projects__center | section__projetos">
+            <h2>Projetos</h2>
 
-            <button class="section__button" type="button" aria-label="Open language button">
-                Idiomas
-            </button>
+            <div class="projects__center | p__list">
+                <div class="projects__center | p__list__primary">
 
-            <div class="section__content">
-                <section class="section__content__languages">
+                    <figure class="l__primary__img">
+                        <img src="./assets/data/photo/Spider-Man-multiverso.gif" alt="Spider-Man">
+                    </figure>
 
-                    <ul id="profile.language" aria-label="language">
-                        <li class="before">Carregando ...</li>
-                        <!--LANGUAGENS-->
+                    <h3>Multverso-spider-man</h3>
+                    <h5>Informacões do spider</h5>
+
+                    <ul class="l__primary__details">
+                        <li>Filmes já feito do Spider-Man</li>
+                        <li>Sinopse dos filmes</li>
+                        <li>Trailer e imagens.</li>
                     </ul>
 
-                </section>   
+                    <div class="l__primary__icons">
+                        <img src="./assets/data/icons/html5.svg" alt="">
+                        <img src="./assets/data/icons/css3.svg" alt="">
+                        <img src="./assets/data/icons/js.svg" alt="">
+                    </div>
+
+                    <button class="btn" type="button" title="button">
+                        <span alt="Projetos">Projetos</span>
+                        <i class="fa-solid fa-window-restore"></i>
+                    </button>
+
+                </div>
             </div>
-        
-        </section>
-
-        <section class="section section__open"><!--PORTFOLIO-->
-            <button class="section__button" type="button" aria-label="Open Portfolio button">
-                Portfolio
-            </button>
-
-            <div class="section__content ">
-               <section class="section__content__portfolio">
-
-                    <ul id="profile.portfolio" aria-label="links Portfolio">
-                        <li>Carregando ...</li>
-                        <!-- PORTFOLIO -->
-                    </ul>
-                    
-               </section>
-            </div>
-        
-        </section>
-
-        <section class="section"><!--EXPERIENCE-->
-
-            <button class="section__button" type="button" aria-label="Open Portfolio button">
-                Experiencia
-            </button>
-
-           <div class="section__content">
-                <section class="section__experience">
-
-                    <ul id="profile.experience">
-                        <li>Carregando ...</li>
-                        <!--EXPERIENCE-->   
-                    </ul>
-
-                </section>
-            </div>
-
+            
         </section>
 
     </main>
 
-    <script src="assets/javascript/index.js"></script>
-    <script src="assets/javascript/api.js"></script>
-    <script src="assets/javascript/main.js"></script>
-    <script src="assets/javascript/profileInfo.js"></script>
-    <script src="assets/javascript/profileSkill.js"></script>
-    <script src="assets/javascript/skills.js"></script>
-    <script src="assets/javascript/language.js"></script>
-    <script src="assets/javascript/experienc.js"></script>
-    <script src="assets/javascript/portfolio.js"></script>
-    <script src="assets/javascript/course.js"></script>
+    <footer>
+        <span>© 2023. Todos os Direitos Reservados. Douglas Fernandes. Desenvolvido por <a href="https://github.com/DoughFernandes">DG</a>.</span>
+    </footer>
+
+    <nav class="nav--mobile"><!--NAVEGATION MOBILE-->
+        <ul class="menu__mobile">
+
+            <li class="menu__item">
+                <a class="menu__link active" title="menu phone" href="#home">
+                    <i class="menu__icon fa-solid fa-house"></i>
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" title="menu phone" href="#projetos">
+                    <i class="menu__icon fa-regular fa-window-restore"></i>
+                    <span class="menu__text">Projetos</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" title="menu phone" href="#sobre">
+                    <i class="menu__icon fa-solid fa-user"></i>
+                    <span class="menu__text">Sobre</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" title="menu phone" href="#contato">
+                    <i class="menu__icon fa-solid fa-envelope"></i>
+                    <span class="menu__text">Contato</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    
+    <script src="assets/javascript/theme.js"></script>
 
 </body>
 </html>

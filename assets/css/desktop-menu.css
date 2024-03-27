@@ -1,0 +1,23 @@
+.menu__desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+}
+.desktop__item{
+    width: 100%;
+}
+.desktop__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding: 1rem 1rem;
+}
+.desktop__icon, .desktop__text{
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--text-color);
+}

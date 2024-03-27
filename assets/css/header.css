@@ -1,61 +1,31 @@
-@import url(./global.css);
-
 .header {
-    background-image: url(../img/photo.profile.fundo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    padding: .5rem 1rem;
 }
-.header .photo{
-    width: 15rem;
+.header figure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.header img{
+    width: 40px;
     border-radius: 50%;
-    animation: float 3s ease-in-out infinite;
-    opacity: 0.99;
 }
-.header .title {
-    font-family: 'Neue Machine', sans-serif;
-    width: 80%;
-    margin-left: 2rem;
-}
-.header .title small{
-    font-size: .5rem;
-}
-.information{
-    margin-left: 2rem;
-    width: 100%;
-}
-.information li{
+.header__toggle{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: .5rem;
-    font-size: 1.125rem;
+    justify-content: flex-end;
 }
-.information a{
-    color: #fff !important;
+#toggleTheme{
+    font-size: 1.5rem;
+    color: var(--icons-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
 }
-.information ul{
-    padding: 0;
-}
-.information__profile{
-    height: .8rem;
-    width: .8rem;
-    margin: 0 .5rem 0 1rem;
-}
-@keyframes float {
-    0%{
-        transform: translate(0);
-    }
-    50%{
-        transform: translate(-10px);
-    }
-    100%{
-        transform: translate(0px);
-    }
+.header--nav{
+    display: none;
 }

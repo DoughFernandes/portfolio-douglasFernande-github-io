@@ -1,87 +1,98 @@
 @import url(./header.css);
+@import url(./moblie-menu.css);
 @import url(./hover.css);
-@import url(./languages.css);
-@import url(./media-query-tablet.css);
-@import url(./portfolio.css);
-@import url(./section.css);
-@import url(./skills.css);
-@import url(./experience.css);
-@import url(./Courses.css);
-@import url(./media-query-desktop.css);
+@import url(./media.css);
+@import url(./s-primary.css);
+@import url(./desktop-menu.css);
+@import url(./s-second.css);
+@import url(./footer.css);
+@import url(./s-thrid.css);
 
-*{
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
+:root, :root[data-theme='dark'] {
+    --primary-color: #010E16;
+    --primary-bg-color: #011826;
+    --secondary-bg-color: #051328;
+    --card-bg: #011D46;
+    --border-color: #E5F4FD;
+    --title-color: #E5F4FD;
+    --text-color: #F0F0F0;
+    --link-color: #E5F4FD;
+    --icons-color: #E5F4FD;
 }
-@font-face {
-    font-family: 'Neue Machine';
-    src: url('../fonts/Neue-machina-regular/NeueMachina-Regular.otf');
+:root, :root[data-theme='light'] {
+    --primary-color: #F2FAFF;
+    --primary-bg-color: #E5F4FD;
+    --secondary-bg-color: #C5E9FE;
+    --card-bg: #C5E9FE;
+    --border-color: #011D46;
+    --title-color: #011826;
+    --text-color: #011826;
+    --link-color: #011826;
+    --icons-color: #012840;
 }
-body{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: rgb(2,0,36);
-    background: -moz-linear-gradient(225deg, rgba(2,0,36,1) 10%,
-        rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
-    background: -webkit-linear-gradient(225deg, rgba(2,0,36,1) 10%,
-        rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
-    background: linear-gradient(225deg, rgba(2,0,36,1) 10%,
-        rgba(0,212,255,1) 45%, rgba(2,0,36,1) 83%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#020024",GradientType=1);
-    color: #fff;
-    background-repeat: no-repeat;
-}
-.main{
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    margin: 1rem;
-    border: 1px solid #d0ddfe;
-    border-radius: .5rem;
-    background-color: transparent;
-}
-.section{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-    width: 100%;
-    border: 1px solid #fff;
-    border-radius: 1rem;
-    transition: all .3s;
-}
-a{
-    color: #d0ddfe;
-    text-decoration: none;
-}
-ul{
+* {
+    margin: 0;
     padding: 0;
-}
-li{
+    box-sizing: border-box;
+    vertical-align: baseline;
     list-style: none;
 }
-h3{
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: #fff;
+body {
+    background-color: var(--primary-bg-color);
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
 }
-h4{
-    font-weight: 700;
-    font-size: 1rem;
-    color: #fff;
+main{
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--text-color);
 }
-small{
-    list-style: circle;
-    font-style: oblique;
+h1, h2, h3, h4, h5, h6{
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--title-color);
 }
-p{
-    font-size: 1rem;
+h1, h2 {
+    font-family: "Liga Espartana", sans-serif;
+}
+h3, h4{
+    font-family: "Langar", system-ui;
+}
+h5, h6{
+    font-family: "Reddit Mono", monospace;
+}
+i, a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+a{
+    cursor: pointer;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3.125rem;
+    padding: .875rem 1rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+.btn span, i {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+/*PROJECTS CENTER -------------------------------*/
+
+.projects__center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }

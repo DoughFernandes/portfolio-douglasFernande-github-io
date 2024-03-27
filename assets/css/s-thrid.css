@@ -1,0 +1,41 @@
+.section__projetos{
+    gap: 1.5rem;
+}
+.l__primary__img{
+    width: 100%;
+}
+.l__primary__img img{
+    width: 28rem;
+    border-radius: 1rem;
+}
+.p__list{
+    width: 100%;
+}
+.p__list__primary{
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    width: 30rem;
+    padding: 1rem;
+}
+.l__primary__details li{
+    font-weight: 200;
+    list-style: disc;
+    font-size: 1rem;
+}
+.l__primary__icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+.l__primary__icons img{
+    height: 3rem;
+    width: 3rem;
+}
+.l__primary__icons img:nth-child(3){
+    margin-top: .3rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: .4rem;
+}

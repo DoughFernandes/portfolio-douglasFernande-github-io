@@ -1,16 +1,8 @@
-.section__button:hover{
-    cursor: pointer;
-}
-.section:hover{
-    background-color: #55569E;
-    border-color: #8ca9fb ;
-}
-a:hover{
-    color: #8ca9fb;
-    transform: scale(1.02);
-}
-
-.section__content__portfolio li:hover{
-    transform: scale(1.1);
-    box-shadow: 5px 5px 10px #35364b;
+footer a:hover,
+.menu__link:hover .menu__icon,
+.menu__link:hover .menu__text,
+.menu__link.active .menu__icon,
+.menu__link.active .menu__text{
+    color: var(--icons-color);
+    font-weight: 600;
 }

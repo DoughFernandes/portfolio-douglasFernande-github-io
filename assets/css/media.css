@@ -1,0 +1,16 @@
+@media (width >= 768px) {
+    
+    .nav--mobile{
+        display: none;
+    }
+    .header--nav{
+        display: flex;
+    }
+    .header figure{
+        width: 50%;
+    }
+}
+
+@media (width >= 1200px){
+   
+}

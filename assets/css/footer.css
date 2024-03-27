@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    border-top: 1px solid var(--border-color);
+    margin-bottom: 8rem;
+}
+footer span {
+    color: var(--text-color);
+    margin: 1rem;
+}
+footer span, a {
+    color: var(--text-color);
+}

@@ -1,0 +1,26 @@
+.menu__mobile{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--primary-bg-color);
+    position: fixed;
+    bottom: 0;
+}
+.menu__item{
+    width: 100%;
+}
+.menu__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    padding: 1rem 1rem;
+}
+.menu__icon, .menu__text{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--text-color);
+}
