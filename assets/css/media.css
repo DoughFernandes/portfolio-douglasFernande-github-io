@@ -1,5 +1,16 @@
 @media (width >= 768px) {
-    
+    h1, h2, h3, h4, h5, h6, i, p, span, small, a{
+        transform: scale(1.05);
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: 900px;
+    }
     .nav--mobile{
         display: none;
     }
@@ -9,8 +20,18 @@
     .header figure{
         width: 50%;
     }
+    .its__me{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--secondary-bg-color);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    footer{
+        margin-bottom: 1rem!important;
+    }
 }
 
 @media (width >= 1200px){
-   
+    
 }

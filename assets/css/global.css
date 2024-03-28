@@ -2,13 +2,16 @@
 @import url(./moblie-menu.css);
 @import url(./hover.css);
 @import url(./media.css);
-@import url(./s-primary.css);
+@import url(./menu-header.css);
 @import url(./desktop-menu.css);
-@import url(./s-second.css);
+@import url(./skills.css);
 @import url(./footer.css);
-@import url(./s-thrid.css);
+@import url(./projects.css);
 @import url(./all-projects.css);
-@import url(./sobre-mim.css);
+@import url(./about-me.css);
+@import url(./experience.css);
+@import url(./course.css);
+@import url(./contat.css);
 
 :root, :root[data-theme='dark'] {
     --primary-color: #010E16;
@@ -92,9 +95,30 @@ a{
 /*PROJECTS CENTER -------------------------------*/
 
 .projects__center{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
+}
+/*FIGURE ABOUT ME -------------------------------*/
+.its__me{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+}
+.its__me .its__me__figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.its__me .its__me__figure__photo{
+    width: 20rem;
+    height: 22rem;
+    border-radius: 50%;
 }

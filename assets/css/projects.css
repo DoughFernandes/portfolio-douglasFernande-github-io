@@ -2,6 +2,9 @@
     gap: 1.5rem;
 }
 .l__primary__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 .l__primary__img img{

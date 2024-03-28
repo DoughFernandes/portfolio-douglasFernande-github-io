@@ -1,0 +1,41 @@
+.section__courses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 100%;
+    gap: 1rem;
+}
+.course__section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+.course__section button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color:  var( --card-bg);
+    color: var(--text-color);
+    padding: 1.5rem 0;
+}
+.section__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+    margin: 1rem;
+}
+.section__content small{
+    font-size: .8rem;
+}
+

@@ -1,0 +1,11 @@
+.section__about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+    gap: 2rem;
+}
+.section__about-me p{
+    margin: 0 3rem;
+}

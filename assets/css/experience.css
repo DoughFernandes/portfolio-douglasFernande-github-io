@@ -1,0 +1,27 @@
+.section__experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: .8rem;
+    border-radius: 1rem;
+    background-color: var(--secondary-bg-color);
+}
+.section__experience h2{
+    width: 100%;
+    text-align: center;
+}
+.section__experience small{
+    font-size: .8rem;
+}
+.section__experience p{
+    font-size: .9rem;
+}
+.section__experience ul {
+    margin: 0 2rem;
+}
+.section__experience ul li{
+    font-size: 1rem;
+    list-style: disc;
+}
