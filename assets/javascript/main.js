@@ -80,12 +80,11 @@ function updadePortfolio (p){
     `).join('');
 }
 
-
 (async function () {
     const profileData = await fetchProfileDate();
     updadeProfileInfo(profileData);
     updadeHardSkills(profileData);
     updadePortfolio(profileData);
-    updadeItsMe(profileData)
-    
+    updadeItsMe(profileData);
 })();
+ 
