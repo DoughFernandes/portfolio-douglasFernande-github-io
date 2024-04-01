@@ -14,7 +14,7 @@ function updadeItsMe(p){
                 <i class="fa-solid fa-language"></i>
                 ${p.languages.map((language) => `
                 <span>${language}</span>
-                `).join('')}
+                `).join(' | ')}
     
             </div>
         </section>
@@ -46,29 +46,36 @@ function updadeItsMe(p){
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
 
-                    <div class="section__content ">
-                    <h4>${education.name}</h4>
-                    <small>${education.period}</small>
-
-                    <ul>
-
-                        ${education.description.map((Description) => `
-                        <li>
-                            <h6>${Description.name}</h6>
-                            <p>${Description.details}</p>
-                        
-                        </li>
-                        `).join('')}
-
-                        <button class="btn" type="button" title="button">
-                            <span alt="Projetos">${education.plataform}</span>
-                        </button>
-                           
-                    </ul>
-                    </div>
                     
-                </div>
 
+                    <div class="section__content ">
+                        <h4>${education.name}</h4>
+                        <small>${education.period}</small>
+
+                        <ul>
+
+                             ${education.description.map((Description) => `
+                             <li>
+                                <h5>${Description.name}</h5>
+
+                                ${Description.details.map((Details) => `
+                                    <span>${Details}</span>
+                                `).join(' / ')}
+                                
+                            </li>
+                            `).join('')}           
+                                
+                        </ul>
+
+                        <button class="btn btn__href" type="button">
+                            <a href="${education.url}" target="_blank">
+                                    <span alt="Projetos">${education.plataform}</span>
+                                <i class="fa-solid fa-window-restore"></i>
+                            </a>
+                        </button>
+
+                    </div>  
+                </div>
             </section>
         
         `).join('')}
@@ -82,12 +89,12 @@ function updadeItsMe(p){
     
                 <ul alt="Media-social">
                     <li>
-                        <a href="${p.github}" title="github">
+                        <a href="${p.github}" title="github" target="_blank">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="${p.linkedin}" title="linkedin">
+                        <a href="${p.linkedin}" title="linkedin" target="_blank">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </li>

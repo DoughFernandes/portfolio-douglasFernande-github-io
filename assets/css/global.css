@@ -43,10 +43,17 @@
     list-style: none;
 }
 body {
-    background-color: var(--primary-bg-color);
     font-family: "Inter", sans-serif;
     font-weight: 200;
-}
+    background-color:var(--primary-color);
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    }
 main{
     padding: 0 1.5rem;
     display: flex;
@@ -74,6 +81,8 @@ i, a{
     text-decoration: none;
 }
 a{
+    height: 100%;
+    width: 100%;
     cursor: pointer;
 }
 .btn{
@@ -84,11 +93,11 @@ a{
     width: 100%;
     background: transparent;
     border-radius: 3.125rem;
-    padding: .875rem 1rem;
     border: 1px solid var(--border-color);
     color: var(--text-color);
 }
 .btn span, i {
+    padding: .875rem 1rem;
     text-transform: uppercase;
     font-size: 1.25rem;
 }
@@ -102,7 +111,9 @@ a{
     align-items: center;
     gap: 1rem;
 }
+
 /*FIGURE ABOUT ME -------------------------------*/
+
 .its__me{
     display: flex;
     flex-direction: column;

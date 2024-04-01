@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
+    gap: 1rem;
 }
 .l__primary__icons img{
     height: 3rem;

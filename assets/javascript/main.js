@@ -71,8 +71,10 @@ function updadePortfolio (p){
         </div>
 
         <button class="btn" type="button" title="button">
-            <span alt="Projetos">${portfolio.name}</span>
-            <i class="fa-solid fa-window-restore"></i>
+            <a href="${portfolio.url}" target="_blank">
+                <span alt="Projetos">${portfolio.name}</span>
+                <i class="fa-solid fa-window-restore"></i>
+            </a>
         </button>
 
     </div>

@@ -5,11 +5,12 @@ footer{
     justify-content: center;
     align-items: start;
     border-top: 1px solid var(--border-color);
-    margin-bottom: 8rem;
+    margin-bottom: 8.2rem;
 }
 footer span {
     color: var(--text-color);
     margin: 1rem;
+    font-size: .8rem;
 }
 footer span, a {
     color: var(--text-color);
