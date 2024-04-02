@@ -41,14 +41,14 @@ function updadeItsMe(p){
 
                 <div class="course__section">
 
-                    <button type="button" aria-label="Open courses button">
+                    <button id="buttonClick" type="button" aria-label="Open courses button">
                         <span>${education.plataform}</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
 
                     
 
-                    <div class="section__content ">
+                    <div id="open" class="section__content">
                         <h4>${education.name}</h4>
                         <small>${education.period}</small>
 

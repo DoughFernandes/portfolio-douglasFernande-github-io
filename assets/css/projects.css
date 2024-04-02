@@ -1,5 +1,10 @@
 .section__projetos{
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
 }
 .l__primary__img{
     display: flex;
@@ -13,33 +18,41 @@
 }
 .p__list{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }
 .p__list__primary{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around!important;
+    align-items: center;
     background-color: var(--card-bg);
     border-radius: 1rem;
-    width: 30rem;
+    height: 40rem;
     padding: 1rem;
+}
+.l__primary__details{
+    width: 80%;
 }
 .l__primary__details li{
     font-weight: 200;
     list-style: disc;
     font-size: 1rem;
+    margin: .5rem;
 }
 .l__primary__icons{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
     gap: 1rem;
 }
 .l__primary__icons img{
     height: 3rem;
     width: 3rem;
-}
-.l__primary__icons img:nth-child(3){
-    margin-top: .3rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: .4rem;
 }

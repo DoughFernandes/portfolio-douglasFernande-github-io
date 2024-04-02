@@ -32,11 +32,14 @@
     padding: 0;
 }
 .section__content{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     gap: .5rem;
     margin: 1rem;
+}
+.section__content__open{
+    display: flex!important;
 }
 .section__content small{
     font-size: .9rem;

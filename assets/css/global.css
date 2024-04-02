@@ -101,17 +101,6 @@ a{
     text-transform: uppercase;
     font-size: 1.25rem;
 }
-/*PROJECTS CENTER -------------------------------*/
-
-.projects__center{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-}
-
 /*FIGURE ABOUT ME -------------------------------*/
 
 .its__me{
@@ -119,7 +108,7 @@ a{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
 }
 .its__me .its__me__figure{

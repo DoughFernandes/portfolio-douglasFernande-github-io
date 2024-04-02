@@ -6,14 +6,15 @@
     gap: 1.5rem;
 }
 .section__primary figure{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../data/imgs/photo.profile.fundo.png);
+    background-image: url(../data/imgs/FundoET.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
+    overflow: visible;
 }
 .section__primary figure img{
     height: 20rem;

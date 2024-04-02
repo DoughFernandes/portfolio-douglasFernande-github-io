@@ -45,7 +45,7 @@ function updadePortfolio (p){
     const portfolio = document.getElementById('ProjectsList');
 
     portfolio.innerHTML = p.portfolio.map(portfolio =>`
-    <div title="${portfolio.name}" class="projects__center | p__list__primary">
+    <div title="${portfolio.name}" class="p__list__primary">
 
         <figure class="l__primary__img">
             <img src="${portfolio.imagem}" alt="${portfolio.name}">
@@ -89,4 +89,17 @@ function updadePortfolio (p){
     updadePortfolio(profileData);
     updadeItsMe(profileData);
 })();
- 
+
+
+const section = document.getElementById('buttonClick');
+
+section.addEventListener('click', () => {
+    const sectionOpen = document.getElementById('open');
+    const verficarSection = sectionOpen.classList.contains('section__content__open')
+
+    if(verficarSection){
+        sectionOpen.classList.remove('section__content__open');
+    }else{
+        sectionOpen.classList.add('section__content__open');
+    }
+});

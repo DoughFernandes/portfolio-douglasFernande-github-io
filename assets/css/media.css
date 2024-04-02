@@ -1,7 +1,5 @@
 @media (width >= 768px) {
-    h1, h2, h3, h4, h5, h6, i, p, span, small, a{
-        transform: scale(1.05);
-    }
+    /* GERAL ------------------------*/
     body {
         display: flex;
         flex-direction: column;
@@ -9,7 +7,18 @@
         align-items: center;
     }
     main{
-        width: 900px;
+        width: 780px;
+        margin: auto;
+        padding: auto;
+    }
+    /* HEADER ------------------------*/
+    .section__primary{
+        height: 95vh !important;
+    }
+    .section__primary figure img{
+        height: 30rem!important;
+        width: 32rem!important;
+        border-radius: 50%;
     }
     .nav--mobile{
         display: none;
@@ -20,18 +29,85 @@
     .header figure{
         width: 50%;
     }
-    .its__me{
-        display: grid;
+    /* SECTION PROJECTS ------------------------*/
+    .p__list{
+        display: grid!important;
         grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-content: space-between!important;
+    }
+
+    /* ABOUT ME ------------------------*/
+    .its__me{
+        display: grid!important;
+        grid-template-areas: 
+        "photo aboutMe"
+        "course course"
+        "experience experience"
+        "contats contats"!important;
         background-color: var(--secondary-bg-color);
         border-radius: 1rem;
         padding: 1rem;
     }
+    .section__experience{
+        height: 40rem !important;
+        width: 30rem!important;
+        grid-area: experience;
+    }
+    .its__me__figure{
+        height: 40rem !important;
+        width: 30rem!important;
+        grid-area: photo;
+    }
+    .section__about-m{
+        height: 40rem !important;
+        width: 30rem!important;
+        grid-area: aboutMe;
+    }
+    .course__section{
+        height: 40rem !important;
+        width: 30rem!important;
+        grid-area: course;
+    }
+    .section__contact{
+        height: 40rem !important;
+        grid-area: contact;
+        width: 100%!important;
+    }
+    /* GRID TEMPLETE ------------------------*/
     footer{
         margin-bottom: 1rem!important;
     }
 }
 
-@media (width >= 1200px){
-    
+/* DESKTOPS ------------------------------------------------ */
+
+@media (width >= 1000px){
+
+    .section__primary{
+        height: auto !important;
+    }
+    .section__primary h1{
+        width: 80%;
+        font-size:5.1rem!important;
+        font-weight: 200;
+    }
+    b{
+        font-size: 7.2rem!important;
+        font-weight: 600;
+    }
+    main{
+        width: 1000px;
+    }
+     /* HEADER ------------------------*/
+    .section__primary figure img{
+        height: 40rem!important;
+        width: 42rem!important;
+        border-radius: 50%;
+    }
+    .header figure{
+        margin: 2rem;
+        width: 50%;
+    }
+
 }
