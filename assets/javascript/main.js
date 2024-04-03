@@ -89,17 +89,3 @@ function updadePortfolio (p){
     updadePortfolio(profileData);
     updadeItsMe(profileData);
 })();
-
-
-const section = document.getElementById('buttonClick');
-
-section.addEventListener('click', () => {
-    const sectionOpen = document.getElementById('open');
-    const verficarSection = sectionOpen.classList.contains('section__content__open')
-
-    if(verficarSection){
-        sectionOpen.classList.remove('section__content__open');
-    }else{
-        sectionOpen.classList.add('section__content__open');
-    }
-});

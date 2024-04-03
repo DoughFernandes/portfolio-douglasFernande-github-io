@@ -8,6 +8,7 @@ function updadeItsMe(p){
         </figure>
 
         <section title="sobre mim" class="section__about-me">
+            <h3>Olá bem-vindo</h3>
             <p>${p.itsMe}</p>
     
             <div>
@@ -16,6 +17,17 @@ function updadeItsMe(p){
                 <span>${language}</span>
                 `).join(' | ')}
     
+            </div>
+        </section>
+
+        <section class="hobby">
+            <h2>hobby</h2>
+            <h3>Desgner e Editor de video</h3>
+            
+            <div class="iframeCards">
+                <iframe width="300" height="185" src="https://www.youtube-nocookie.com/embed/_R6F4TCt8d0?si=vAZ3GogDgDUp1PAq&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <iframe width="300" height="185" src="https://www.youtube-nocookie.com/embed/4FDvGR2TM4c?si=6DAU6cBXQrzUQYwM&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -41,14 +53,11 @@ function updadeItsMe(p){
 
                 <div class="course__section">
 
-                    <button id="buttonClick" type="button" aria-label="Open courses button">
+                    <button class="section__button" type="button" aria-label="Open courses button">
                         <span>${education.plataform}</span>
-                        <i class="fa-solid fa-chevron-down"></i>
                     </button>
 
-                    
-
-                    <div id="open" class="section__content">
+                    <div class="section__content">
                         <h4>${education.name}</h4>
                         <small>${education.period}</small>
 
@@ -80,7 +89,7 @@ function updadeItsMe(p){
         
         `).join('')}
 
-        <section title="Contatos" class="section__contat">
+        <section id="contats" title="Contatos" class="section__contat">
                 <h2>Contate-me</h2>
                 
                 <p>

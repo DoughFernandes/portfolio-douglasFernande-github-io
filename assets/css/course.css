@@ -15,7 +15,7 @@
     border: 1px solid var(--border-color);
     border-radius: 1rem;
 }
-.course__section button{
+.course__section .section__button{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -28,18 +28,15 @@
     color: var(--text-color);
     padding: 1.5rem 0;
 }
-.course__section button.btn__href{
+.course__section .section__button .btn__href{
     padding: 0;
 }
 .section__content{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: .5rem;
     margin: 1rem;
-}
-.section__content__open{
-    display: flex!important;
 }
 .section__content small{
     font-size: .9rem;

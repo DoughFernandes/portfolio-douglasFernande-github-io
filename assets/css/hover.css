@@ -6,3 +6,10 @@ footer a:hover,
     color: var(--icons-color);
     font-weight: 600;
 }
+.btn:hover{
+    transform: scale(1.02);
+    background-color: var(--card-bg);
+}
+i:hover, a:hover{
+    transform: scale(1.05);
+}

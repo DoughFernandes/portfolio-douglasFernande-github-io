@@ -10,10 +10,17 @@
         width: 780px;
         margin: auto;
         padding: auto;
+        margin-top: 5rem;
     }
     /* HEADER ------------------------*/
+    .header{
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--primary-color);
+    }
     .section__primary{
-        height: 95vh !important;
+        height: 90vh !important;
     }
     .section__primary figure img{
         height: 30rem!important;
@@ -39,40 +46,31 @@
 
     /* ABOUT ME ------------------------*/
     .its__me{
-        display: grid!important;
-        grid-template-areas: 
-        "photo aboutMe"
-        "course course"
-        "experience experience"
-        "contats contats"!important;
+        flex-direction: row !important;
         background-color: var(--secondary-bg-color);
         border-radius: 1rem;
         padding: 1rem;
+        flex-wrap: wrap;
     }
     .section__experience{
-        height: 40rem !important;
-        width: 30rem!important;
-        grid-area: experience;
+        height: 15rem;
+        border: 1px solid var(--card-bg);
+        width: 20rem!important;
+        flex: auto !important;
     }
     .its__me__figure{
-        height: 40rem !important;
-        width: 30rem!important;
-        grid-area: photo;
+        width: 20rem!important;
+        flex: auto !important;    
     }
-    .section__about-m{
-        height: 40rem !important;
-        width: 30rem!important;
-        grid-area: aboutMe;
+    .section__about-me{
+        width: 20rem!important;
+        flex: auto !important;
     }
     .course__section{
-        height: 40rem !important;
-        width: 30rem!important;
-        grid-area: course;
+        flex: auto !important;
     }
     .section__contact{
-        height: 40rem !important;
-        grid-area: contact;
-        width: 100%!important;
+        flex: auto !important;
     }
     /* GRID TEMPLETE ------------------------*/
     footer{
@@ -83,7 +81,34 @@
 /* DESKTOPS ------------------------------------------------ */
 
 @media (width >= 1000px){
-
+    b{
+        font-size: 7.2rem!important;
+        font-weight: 600;
+    }
+    main{
+        width: 1000px;
+        margin: auto;
+        padding: auto;
+        margin-top: 10rem;
+    }
+     /* HEADER ------------------------*/
+     .section__primary figure img{
+        height: 40rem!important;
+        width: 42rem!important;
+        border-radius: 50%;
+    }
+    .header figure{
+        width: 50%;
+    }
+    .its__me__figure{
+        width: 0rem!important;
+        flex: auto !important;    
+    }
+    .section__about-me{
+        width: 40rem!important;
+        flex: auto !important;
+    }
+    /* Primary ------------------------*/
     .section__primary{
         height: auto !important;
     }
@@ -92,22 +117,34 @@
         font-size:5.1rem!important;
         font-weight: 200;
     }
-    b{
-        font-size: 7.2rem!important;
-        font-weight: 600;
+    
+    /* ABOUT ME ------------------------*/
+    .its__me{
+        flex-direction: row !important;
+        background-color: var(--secondary-bg-color);
+        border-radius: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
     }
-    main{
-        width: 1000px;
+    .section__experience{
+        height: 15rem;
+        border: 1px solid var(--card-bg);
+        width: 20rem!important;
+        flex: auto !important;
     }
-     /* HEADER ------------------------*/
-    .section__primary figure img{
-        height: 40rem!important;
-        width: 42rem!important;
-        border-radius: 50%;
+    .its__me__figure{
+        width: 30rem!important;
+        flex: auto !important;    
     }
-    .header figure{
-        margin: 2rem;
-        width: 50%;
+    .section__about-me{
+        width: 40rem!important;
+        flex: auto !important;
+    }
+    .course__section{
+        flex: auto !important;
+    }
+    .section__contact{
+        flex: auto !important;
     }
 
 }
