@@ -1,8 +1,9 @@
+.active,
 footer a:hover,
-.menu__link:hover .menu__icon,
-.menu__link:hover .menu__text,
-.menu__link.active .menu__icon,
-.menu__link.active .menu__text{
+.desktop__link:hover .menu__icon,
+.desktop__link:hover .menu__text,
+.desktop__link.active .menu__icon,
+.desktop__link.active .menu__text{
     color: var(--icons-color);
     font-weight: 600;
 }
@@ -10,6 +11,6 @@ footer a:hover,
     transform: scale(1.02);
     background-color: var(--card-bg);
 }
-i:hover, a:hover{
+i:hover, a:hover, iframe:hover{
     transform: scale(1.05);
 }

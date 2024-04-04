@@ -5,9 +5,6 @@
     align-items: center;
     width: 40%;
 }
-.desktop__item{
-    width: 100%;
-}
 .desktop__link{
     display: flex;
     flex-direction: column;

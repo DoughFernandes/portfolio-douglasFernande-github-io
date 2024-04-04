@@ -133,3 +133,8 @@ function updadeItsMe(p){
 
     `
 }
+
+(async function () {
+    const profileData = await fetchProfileDate();
+    updadeItsMe(profileData);
+})();

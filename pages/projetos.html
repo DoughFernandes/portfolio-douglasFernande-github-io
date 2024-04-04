@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meu portfolio Front-End">
-    <title>Douglas Fernandes | Bem-vindo</title>
+    <title>Douglas Fernandes | Projetos</title>
+
+    <meta name="description" content="Meu portfolio Front-End">
 
     <!--FAIVEICONS-->
-    <link rel="shortcut icon" href="./assets/data/imgs/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/data/imgs/favicon-32x32.png" type="image/x-icon">
 
     <!--CSS-->
-    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
 
     <!-- NORMALIZE -->
     <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
@@ -26,32 +28,41 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        .animation__html {
+            visibility: hidden;
+        }
+
+    </style>
+
 </head>
 <body>
 
-    <!--HEADER-->
     <header class="header">
 
         <nav class="header--nav"><!--NAVEGATION DESKTOP-->
             <ul class="menu__desktop">
     
-                <li class="desktop__item">
-                    <a class="menu__link active" title="home" href="./index.html">
+                <li class="desktop__link">
+                    <a class="" title="home" href="../index.html">
                         <span class="menu__text">Home</span>
                     </a>
                 </li>
                 <li class="desktop__item">
-                    <a class="desktop__link" title="Projects" href="./pages/projetos.html">
+                    <a class="desktop__link active" title="Projects" href="./projetos.html">
                         <span class="desktop__text">Projetos</span>
                     </a>
                 </li>
                 <li class="desktop__item">
-                    <a class="desktop__link" title="Its Me" href="./pages/about-me.html">
+                    <a class="desktop__link" title="Its Me" href="./about-me.html">
                         <span class="desktop__text">Sobre</span>
                     </a>
                 </li>
                 <li class="desktop__item">
-                    <a class="desktop__link" title="phone" href="./pages/contat.html">
+                    <a class="desktop__link" title="phone" href="./contat.html">
                         <span class="desktop__text">Contato</span>
                     </a>
                 </li>
@@ -69,23 +80,7 @@
 
     </header>
 
-    <main>
-
-        <section id="section__primary" title="primary" class="section__primary" alt="Profile">
-
-            <figure>LOADING ...</figure>
-            <h1>LOADING ...</h1>
-            <ul alt="Media-social"><li>LOADING ...</li></ul>
-
-        </section>
-
-        <section title="Skills" class="section__skills" alt="Skills">
-            <h2>Conhecimento nas seguintes tecnologias</h2>
-
-            <ul id="hardSkills">
-                <li>LOADING...</li>
-            </ul> 
-        </section>
+    <main class="pages">
 
         <section title="Projetos" class="section__projetos">
             <h1>Projetos</h1>
@@ -128,40 +123,7 @@
                 </a>
             </button>
 
-        </section>
-
-        <section id="its__me" title="Tudo sobre mim" class="its__me">
-
-            <figure class="its__me__figure">
-                <img class="its__me__figure__photo" src="./assets/data/imgs/avatar doug.png" alt="profile photo">
-            </figure>
-
-            <section title="sobre mim" class="section__about-me">
-                <h2>Sobre mim</h2>
-                <p>LOADING...</p>
-            </section>
-
-            <section class="hobby">
-                <h2>hobby</h2>
-                <p>LOADING...</p>
-            </section>
-    
-            <section title="Experiências" class="section__experience">
-                <h2>Experiências</h2>
-                <p>LOADING...</p>
-            </section>
-    
-            <section title="Cursos" class="section__courses">
-                <h2>Courses</h2>
-                <p>LOADING...</p>
-            </section>
-    
-            <section id="contats" title="Contatos" class="section__contat">
-                <h2>Contate-me</h2>
-                <p>LOADING...</p>
-            </section>
-
-        </section>        
+        </section>    
 
     </main>
 
@@ -173,25 +135,25 @@
         <ul class="menu__mobile">
 
             <li class="menu__item">
-                <a class="menu__link active" title="home" href="./index.html">
+                <a class="menu__link" title="home" href="../index.html">
                     <i class="menu__icon fa-solid fa-house"></i>
                     <span class="menu__text">Home</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" title="Projects" href="./pages/projetos.html">
+                <a class="menu__link active" title="Projects" href="./projetos.html">
                     <i class="menu__icon fa-regular fa-window-restore"></i>
                     <span class="menu__text">Projetos</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" title="Its me" href="./pages/about-me.html">
+                <a class="menu__link" title="Its me" href="./about-me.html">
                     <i class="menu__icon fa-solid fa-user"></i>
                     <span class="menu__text">Sobre</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" title="Contat" href="./pages/contat.html">
+                <a class="menu__link" title="Contat" href="./contat.html">
                     <i class="menu__icon fa-solid fa-envelope"></i>
                     <span class="menu__text">Contato</span>
                 </a>
@@ -200,10 +162,11 @@
         </ul>
     </nav>
     
-    <script src="assets/javascript/theme.js"></script>
-    <script src="assets/javascript/api.js"></script>
-    <script src="assets/javascript/its-me.js"></script>
-    <script src="assets/javascript/main.js"></script>
-    
+    <script src="../assets/javascript/theme.js"></script>
+    <script src="../assets/javascript/api.js"></script>
+    <script src="../assets/javascript/its-me.js"></script>
+    <script src="../assets/javascript/projects.js"></script>
+    <script src="../assets/javascript/animation_page.js"></script>
+
 </body>
 </html>
