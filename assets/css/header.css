@@ -5,6 +5,9 @@
     align-items: center;
     width: 100%;
     padding: .5rem 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 .header figure{
     display: flex;
