@@ -9,6 +9,7 @@
     top: 0;
     border-bottom: 1px solid var(--border-color);
     background-color: var(--primary-color);
+    z-index: 1;
 }
 .header figure{
     display: flex;
