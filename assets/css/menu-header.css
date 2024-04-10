@@ -3,22 +3,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 .section__primary figure{
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../data/imgs/FundoET.png);
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    overflow: visible;
 }
 .section__primary figure img{
-    height: 20rem;
-    width: 22rem;
+    width: 15rem;
     border-radius: 50%;
 }
 .section__primary h1{

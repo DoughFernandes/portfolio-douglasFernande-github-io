@@ -87,8 +87,8 @@
     }
      /* HEADER ------------------------*/
      .section__primary figure img{
-        height: 40rem!important;
-        width: 42rem!important;
+        height: 20rem!important;;
+        width: 20rem!important;
         border-radius: 50%;
     }
     .header figure{

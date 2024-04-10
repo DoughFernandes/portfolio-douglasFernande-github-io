@@ -17,8 +17,11 @@
     align-items: center;
     width: 100%;
 }
+.header figure a{
+    width: auto;
+}
 .profile_img{
-    width: 40px;
+    width: 30px;
     border-radius: 50%;
 }
 .header__toggle{
