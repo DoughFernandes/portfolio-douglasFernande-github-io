@@ -1,0 +1,72 @@
+@use './base/index' as *;
+
+.hOne {
+  @include fonts-size(
+    $size: 5rem,
+    $weight: 800,
+    $family: $font-title
+  );
+}
+
+.hTwo {
+  @include fonts-size(
+    $size: 2rem,
+    $weight: 500,
+    $family: $font-title
+  );
+}
+
+.hThree {
+  @include fonts-size(
+    $size: 1.5rem,
+    $weight: 300,
+    $family: $font-title
+  );
+}
+
+.paragrafo {
+  @include fonts-size(
+    $size: 1rem,
+    $weight: 300,
+    $family: $font-body
+  );
+}
+
+.small {
+  @include fonts-size(
+    $size: .9rem,
+    $weight: 200,
+    $family: $font-body
+  );
+}
+
+.hTwoProject {
+  @include fonts-size(
+    $size: 2rem,
+    $weight: 800,
+    $family: $font-title-projetos
+  );
+}
+
+.hThreeProject {
+  @include fonts-size(
+    $size: 1.5rem,
+    $weight: 300,
+    $family: $font-subtitle-projetos
+  );
+}
+
+.paragrafoProject{
+  @include fonts-size(
+    $size: .9rem,
+    $weight: 100,
+    $family: $font-body-projetos
+  );
+}
+.smallProject {
+  @include fonts-size(
+    $size: .9rem,
+    $weight: 200,
+    $family: $font-body
+  );
+}

@@ -1,0 +1,63 @@
+@use './colors' as *;
+
+@mixin display-Container (
+  $height: null,
+  $width: null,
+  $display: null,
+  $grid: null,
+  $direction: null,
+  $justify: null,
+  $align: null,
+  $margin: null,
+  $padding: null,
+) {
+  @if $height != null {
+    height: $height;
+  }
+  @if $width != null {
+    width: $width;
+  }
+  @if $display != null {
+    display: $display;
+  }
+  @if $grid != null {
+    grid-template-columns: $grid;
+  }
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  @if $align != null {
+    align-items: $align;
+  }
+  @if $margin != null {
+    margin: $margin;
+  }
+  @if $padding != null {
+    padding: $padding;
+  }
+}
+
+@mixin fonts-size (
+  $size: null,
+  $weight: null,
+  $spacing: null,
+  $family: null
+) {
+  @if $size != null {
+    font-size: $size;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  @if $spacing != null {
+    letter-spacing: $spacing;
+  }
+  @if $family != null {
+    font-family: $family, 'Arial, sans-serif';
+  } @else {
+    font-family: 'Arial, sans-serif';
+  }
+}

@@ -1,0 +1,74 @@
+@use '@scss/base/index' as BASE;
+
+.header {
+  background-color: transparent;
+
+  @include BASE.display-Container(
+    $width: 100%,
+    $height: 4rem,
+    $display: grid,
+    $grid: 1fr 1fr,
+    $direction: row,
+    $justify: center,
+    $align: center
+  );
+}
+
+.nav {
+  @include BASE.display-Container(
+      $width: 100%,
+      $height: 100%,
+      $display: flex,
+      $direction: row,
+      $justify: flex-start,
+      $align: center
+    );
+
+  ul {
+    @include BASE.display-Container(
+      $display: flex,
+      $direction: row,
+      $justify: space-around,
+      $align: center
+    );
+
+    li {
+      height: 100%;
+      transition: .2s ease-in-out;
+
+      &:hover{
+        transform: scale(1.1);
+        opacity: .5;
+      }
+    }
+
+    a {
+      padding: .5rem 1rem;
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+}
+
+.figure {
+  position: relative;
+
+  @include BASE.display-Container(
+      $width: 100%,
+      $height: 100%,
+      $display: flex,
+      $direction: row,
+      $justify: space-between,
+      $align: center,
+      $padding: 0 2rem 0 0
+    );
+
+  img {
+    background-color: red;
+    border-radius: 5rem;
+
+  }
+}
