@@ -1,7 +1,9 @@
 @use '@scss/base/index' as BASE;
 
 .header {
-  background-color: transparent;
+  background: var(--secondary-bg-color);
+  filter: brightness(.9);
+  box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
 
   @include BASE.display-Container(
     $width: 100%,
@@ -12,74 +14,146 @@
     $justify: center,
     $align: center
   );
-}
 
-.nav {
-  @include BASE.display-Container(
-      $width: 100%,
-      $height: 100%,
-      $display: flex,
-      $direction: row,
-      $justify: flex-start,
-      $align: center
-    );
-
-  ul {
+  .nav {
     @include BASE.display-Container(
-      $display: flex,
-      $direction: row,
-      $justify: space-around,
-      $align: center
-    );
+        $width: 100%,
+        $height: 100%,
+        $display: flex,
+        $direction: row,
+        $justify: flex-start,
+        $align: center
+      );
 
-    li {
-      height: 100%;
-      transition: .2s ease-in-out;
+    ul {
+      @include BASE.display-Container(
+        $display: flex,
+        $direction: row,
+        $justify: space-around,
+        $align: center
+      );
 
-      &:hover{
-        transform: scale(1.1);
-        opacity: .5;
+      li {
+        height: 100%;
+        transition: .2s ease-in-out;
+
+        &:hover{
+          transform: scale(1.1);
+          opacity: .5;
+        }
+      }
+
+
+      a {
+        padding: .5rem 1rem;
+        cursor: grab;
+        color: var(--link-color);
+
+        &:active {
+          cursor: grabbing;
+        }
       }
     }
+  }
 
-    a {
-      padding: .5rem 1rem;
-      cursor: grab;
+  .figure {
+    position: relative;
 
-      &:active {
-        cursor: grabbing;
-      }
+    @include BASE.display-Container(
+        $width: 100%,
+        $height: 100%,
+        $display: flex,
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $padding: 0 2rem 0 0
+      );
+
+    img {
+      border-radius: 5rem;
+    }
+
+    a{
+      padding: .5rem;
     }
   }
 }
 
-.figure {
-  position: relative;
+// ------------------------------------
+
+.mobileHeader {
+  background: var(--secondary-bg-color);
+  filter: brightness(.9);
+  box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
 
   @include BASE.display-Container(
-      $width: 100%,
-      $height: 100%,
-      $display: flex,
-      $direction: row,
-      $justify: space-between,
-      $align: center,
-      $padding: 0 2rem 0 0
-    );
+    $width: 100%,
+    $height: 4rem,
+    $display: flex,
+    $direction: row,
+    $justify: center,
+    $align: center
+  );
+  .nav {
+    @include BASE.display-Container(
+        $width: 100%,
+        $height: 100%,
+        $display: flex,
+        $direction: row,
+        $justify: flex-start,
+        $align: center
+      );
 
-  img {
-    border-radius: 5rem;
+    ul {
+      @include BASE.display-Container(
+        $display: flex,
+        $direction: row,
+        $justify: space-around,
+        $align: center
+      );
+
+      li {
+        height: 100%;
+        transition: .2s ease-in-out;
+
+        &:hover{
+          transform: scale(1.1);
+          opacity: .5;
+        }
+      }
+
+
+      a {
+        padding: .5rem 1rem;
+        cursor: grab;
+        color: var(--link-color);
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
   }
 
-  a{
-    padding: .5rem;
-    color: black;
+  .figure {
+    position: relative;
+
+    @include BASE.display-Container(
+        $width: 100%,
+        $height: 100%,
+        $display: flex,
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $padding: 0 2rem
+      );
+
+    img {
+      border-radius: 5rem;
+    }
+
+    a{
+      padding: .5rem;
+    }
   }
-}
-
-.darkTheme {
-  @include BASE.dark-theme;
-}
-
-.lightTheme {
-  @include BASE.light-theme;
 }

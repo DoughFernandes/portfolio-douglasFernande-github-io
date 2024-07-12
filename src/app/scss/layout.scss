@@ -13,6 +13,8 @@ html, body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background: var(--primary-bg-color);
+  color: var(--text-color);
 
   @include BASE.fonts-size(
     $size: 1rem,

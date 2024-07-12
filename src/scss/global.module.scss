@@ -1,4 +1,13 @@
-@use './base/index' as *;
+@use './base/index' as * ;
+
+.darkTheme {
+  @include dark-theme;
+}
+
+.lightTheme {
+  @include light-theme;
+}
+
 
 .hOne {
   @include fonts-size(

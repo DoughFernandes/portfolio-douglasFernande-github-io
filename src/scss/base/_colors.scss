@@ -1,15 +1,15 @@
-// Tema Escuro
-$dark-primary-color: #010E16;
-$dark-primary-bg-color: #011826;
-$dark-secondary-bg-color: #051328;
+// PARA ALTERAR AS CORES DO PROJETO BASTA MUDAR AS CORES PRINCIPAIS, TODAS AS FONTES DE CORES USA ELAS COMO PADRÃO.
+
+// Tema Escuro PADRÃO
+$dark-primary-bg-color: #051328;
+$dark-secondary-bg-color: #041C3F;
 $dark-border-color: #E5F4FD;
 $dark-title-color: #E5F4FD;
 $dark-text-color: #F0F0F0;
 $dark-link-color: #E5F4FD;
 $dark-icon-color: #E5F4FD;
 
-// Tema Claro
-$light-primary-color: #F2FAFF;
+// Tema Claro PADRÃO
 $light-primary-bg-color: #E5F4FD;
 $light-secondary-bg-color: #C5E9FE;
 $light-border-color: #011D46;
@@ -20,25 +20,25 @@ $light-icon-color: #012840;
 
 // Mixin para aplicar tema escuro
 @mixin dark-theme {
-  --primary-color: #{$dark-primary-color};
-  --primary-bg-color: #{$dark-primary-bg-color};
-  --secondary-bg-color: #{$dark-secondary-bg-color};
+  --primary-bg-color: linear-gradient(0deg, #{$dark-primary-bg-color} 20%, #{$dark-secondary-bg-color} 50%);
+  --secondary-bg-color: linear-gradient(#{$dark-secondary-bg-color}, #{$dark-primary-bg-color});
   --border-color: #{$dark-border-color};
   --title-color: #{$dark-title-color};
   --text-color: #{$dark-text-color};
   --link-color: #{$dark-link-color};
   --icon-color: #{$dark-icon-color};
+  --shadow-color: #{$dark-primary-bg-color};
 }
 
 // Mixin para aplicar tema claro
 @mixin light-theme {
-  --primary-color: #{$light-primary-color};
-  --primary-bg-color: #{$light-primary-bg-color};
-  --secondary-bg-color: #{$light-secondary-bg-color};
+  --primary-bg-color: linear-gradient(0deg, #{$light-primary-bg-color} 20%, #{$light-secondary-bg-color} 50%);
+  --secondary-bg-color: linear-gradient(#{$light-secondary-bg-color}, #{$light-primary-bg-color});
   --border-color: #{$light-border-color};
   --title-color: #{$light-title-color};
   --text-color: #{$light-text-color};
   --link-color: #{$light-link-color};
   --icon-color: #{$light-icon-color};
+  --shadow-color: #{$dark-primary-bg-color};
 }
 

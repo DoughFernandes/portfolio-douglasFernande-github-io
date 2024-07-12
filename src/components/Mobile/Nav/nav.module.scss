@@ -1,0 +1,59 @@
+@use '@scss/base/' as BASE;
+
+.nav__mobile{
+  border-top: 1px solid var(--border-color);
+  background-color: var(--primary-bg-color);
+  position: fixed;
+  bottom: 0;
+
+  @include BASE.display-Container(
+    $width: 100%,
+    $height: auto
+  );
+}
+
+.menu__mobile{
+  @include BASE.display-Container(
+    $width: 100%,
+    $display: flex,
+    $align: center,
+    $justify: space-between,
+  );
+}
+
+.menu__item{
+  @include BASE.display-Container(
+    $width: 100%
+  )
+}
+.menu__link{
+  gap: .6rem;
+
+  @include BASE.display-Container(
+    $display: flex,
+    $direction: column,
+    $justify: space-between,
+    $align: center,
+    $padding: .5rem 0 1rem
+  );
+}
+.menu__text{
+  color: var(--icon-color);
+
+  @include BASE.fonts-size(
+    $size: 1rem,
+    $transform: uppercase
+  );
+}
+.menu__icon{
+  color: var(--icon-color);
+
+  @include BASE.fonts-size(
+    $size: 1rem,
+    $transform: uppercase
+  );
+
+  &:hover{
+    color: var(--primary-bg-color);
+  }
+}

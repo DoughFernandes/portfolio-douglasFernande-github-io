@@ -1,6 +1,6 @@
 @use './colors' as *;
 
-@mixin display-Container (
+@mixin display-Container(
   $height: null,
   $width: null,
   $display: null,
@@ -9,55 +9,47 @@
   $justify: null,
   $align: null,
   $margin: null,
-  $padding: null,
+  $padding: null
 ) {
-  @if $height != null {
-    height: $height;
-  }
-  @if $width != null {
-    width: $width;
-  }
-  @if $display != null {
-    display: $display;
-  }
-  @if $grid != null {
-    grid-template-columns: $grid;
-  }
-  @if $direction != null {
-    flex-direction: $direction;
-  }
-  @if $justify != null {
-    justify-content: $justify;
-  }
-  @if $align != null {
-    align-items: $align;
-  }
-  @if $margin != null {
-    margin: $margin;
-  }
-  @if $padding != null {
-    padding: $padding;
+  $properties: (
+    height: $height,
+    width: $width,
+    display: $display,
+    grid-template-columns: $grid,
+    flex-direction: $direction,
+    justify-content: $justify,
+    align-items: $align,
+    margin: $margin,
+    padding: $padding
+  );
+
+  @each $property, $value in $properties {
+    @if $value != null {
+      #{$property}: #{$value};
+    }
   }
 }
 
-@mixin fonts-size (
+@mixin fonts-size(
   $size: null,
   $weight: null,
   $spacing: null,
-  $family: null
+  $family: null,
+  $line-height: null,
+  $transform: null
 ) {
-  @if $size != null {
-    font-size: $size;
-  }
-  @if $weight != null {
-    font-weight: $weight;
-  }
-  @if $spacing != null {
-    letter-spacing: $spacing;
-  }
-  @if $family != null {
-    font-family: $family, 'Arial, sans-serif';
-  } @else {
-    font-family: 'Arial, sans-serif';
+  $font-properties: (
+    font-size: $size,
+    font-weight: $weight,
+    letter-spacing: $spacing,
+    font-family: $family,
+    line-height: $line-height,
+    text-transform: $transform
+  );
+
+  @each $property, $value in $font-properties {
+    @if $value != null {
+      #{$property}: #{$value};
+    }
   }
 }

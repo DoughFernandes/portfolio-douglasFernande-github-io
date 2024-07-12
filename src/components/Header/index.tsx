@@ -1,50 +1,66 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './header.module.scss';
 
-import sun from '@public/svg/sun.svg';
+import logo from '@public/photos/logo.png';
 import moon from '@public/svg/moon.svg';
+import sun from '@public/svg/sun.svg';
+
+import { DisplaySize } from '@/hooks/Display';
+import { useTheme } from '@/hooks/thema';
 
 export const Header = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const { isMobile } = DisplaySize();
+  const { isDarkTheme, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    const body = document.body;
-    if (isDarkTheme) {
-      body.classList.add(styles.darkTheme);
-      body.classList.remove(styles.lightTheme);
-    } else {
-      body.classList.add(styles.lightTheme);
-      body.classList.remove(styles.darkTheme);
-    }
-  }, [isDarkTheme]);
-
-  const toggleTheme = () => {
-    setIsDarkTheme(prevTheme => !prevTheme);
-  };
+  if (isMobile) {
+    return (
+      <header className={styles.mobileHeader}>
+        <figure className={styles.figure}>
+          <Image
+            src={logo}
+            alt='Logotipo do portifolio'
+            width={50}
+            height={50}
+          />
+          <a title='icon theme' href='#' onClick={toggleTheme}>
+            <Image
+              src={isDarkTheme ? sun : moon}
+              alt='Ícone de tema'
+              width={20}
+              height={20}
+            />
+          </a>
+        </figure>
+      </header>
+    );
+  }
 
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href='#'>Home</a>
+            <a href='.home'>Home</a>
           </li>
           <li>
-            <a href='#'>Sobre mim</a>
+            <a href='./about'>Sobre mim</a>
           </li>
           <li>
-            <a href='#'>Contato</a>
+            <a href='contatc'>Contato</a>
           </li>
         </ul>
       </nav>
-
       <figure className={styles.figure}>
-        <Image src={sun} alt='Logotipo do portifolio' width={20} height={20} />
-        <a title='icon moon' href='#' onClick={toggleTheme}>
-          <Image src={moon} alt='Ícone de lua' width={20} height={20} />
+        <Image src={logo} alt='Logotipo do portifolio' width={50} height={50} />
+        <a title='icon theme' href='#' onClick={toggleTheme}>
+          <Image
+            src={isDarkTheme ? sun : moon}
+            alt='Ícone de tema'
+            width={20}
+            height={20}
+          />
         </a>
       </figure>
     </header>
