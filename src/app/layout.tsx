@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        {/* <MobileNav /> */}
+        {<MobileNav />}
       </body>
     </html>
   );

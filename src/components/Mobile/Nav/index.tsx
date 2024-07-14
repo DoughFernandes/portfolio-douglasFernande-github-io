@@ -1,6 +1,5 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
 import styles from './nav.module.scss';
 import { useIconsTheme } from '@/hooks/icons';
 
@@ -17,13 +16,9 @@ export const MobileNav = () => {
               title={item.title}
               href={item.href}
             >
-              <Image
-                src={item.icon}
-                alt={`${item.title} icon`}
-                width={24}
-                height={24}
-                className={styles.menu__icon}
-              />
+              <span className={styles.menu__icon}>
+                {item.icon}
+              </span>
               <span className={styles.menu__text}>{item.title}</span>
             </a>
           </li>
@@ -32,4 +27,3 @@ export const MobileNav = () => {
     </nav>
   );
 };
-

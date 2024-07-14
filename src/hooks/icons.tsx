@@ -1,25 +1,27 @@
-import { useEffect, useState } from 'react';
-import { useTheme } from './thema';
+'use client';
 
+import { useEffect, useState } from 'react';
+import { FaEnvelope, FaHome, FaUser, FaWindowRestore } from 'react-icons/fa';
+import { useTheme } from './thema';
 const iconsPath = {
   light: {
-    home: '/icons/mobile/light/light-home.svg',
-    about: '/icons/mobile/light/light-about.svg',
-    contact: '/icons/mobile/light/light-contact.svg',
-    projects: '/icons/mobile/light/light-projects.svg',
+    home: <FaHome />,
+    about: <FaUser />,
+    contact: <FaEnvelope />,
+    projects: <FaWindowRestore />,
   },
   dark: {
-    home: '/icons/mobile/dark/dark-home.svg',
-    about: '/icons/mobile/dark/dark-about.svg',
-    contact: '/icons/mobile/dark/dark-contact.svg',
-    projects: '/icons/mobile/dark/dark-projects.svg',
+    home: <FaHome style={{ color: 'var(--icons-color)' }} />,
+    about: <FaUser style={{ color: 'var(--icons-color)' }} />,
+    contact: <FaEnvelope style={{ color: 'var(--icons-color)' }} />,
+    projects: <FaWindowRestore style={{ color: 'var(--icons-color)' }} />,
   },
 };
 
 interface IProps {
   title: string;
   href: string;
-  icon: string;
+  icon: JSX.Element;
 }
 
 export const useIconsTheme = () => {
