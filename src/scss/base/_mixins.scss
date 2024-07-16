@@ -1,15 +1,15 @@
 @use './colors' as *;
 
 @mixin display-Container(
-  $height: null,
-  $width: null,
-  $display: null,
-  $grid: null,
-  $direction: null,
-  $justify: null,
-  $align: null,
-  $margin: null,
-  $padding: null
+  $height: auto, // obrigatório
+  $width: auto,  // obrigatório
+  $display: flex, // opcional
+  $direction: column, // opcional
+  $justify: center, // opcional
+  $align: center, // opcional
+  $margin: null, // opcional
+  $padding: null, // opcional
+  $grid: null // opcional
 ) {
   $properties: (
     height: $height,
@@ -31,12 +31,12 @@
 }
 
 @mixin fonts-size(
-  $size: null,
-  $weight: null,
-  $spacing: null,
-  $family: null,
-  $line-height: null,
-  $transform: null
+  $size: null, // opcional
+  $weight: null, // opcional
+  $spacing: null, // opcional
+  $family: null, // opcional
+  $line-height: null, // opcional
+  $transform: null // opcional
 ) {
   $font-properties: (
     font-size: $size,

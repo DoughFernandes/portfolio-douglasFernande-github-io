@@ -1,7 +1,6 @@
 import './scss/layout.scss';
 import type { Metadata } from 'next';
 import { Header } from '../components/Header/index';
-import { MobileNav } from '@/components/Mobile/Nav';
 
 export const metadata: Metadata = {
   title: 'Portfólio ',
@@ -14,11 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='pt-BR'>
+    <html lang='pt-BR' suppressHydrationWarning={true}>
       <body>
         <Header />
         {children}
-        {<MobileNav />}
       </body>
     </html>
   );

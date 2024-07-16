@@ -12,13 +12,14 @@
 html, body {
   height: 100vh;
   width: 100vw;
+  min-width: BASE.$mobile-min-display;
   overflow: hidden;
   background: var(--primary-bg-color);
   color: var(--text-color);
 
   @include BASE.fonts-size(
     $size: 1rem,
-    $weight: 300,
+    $weight: 200,
     $family: BASE.$font-body
   );
 }

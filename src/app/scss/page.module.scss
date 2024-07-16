@@ -1,0 +1,54 @@
+@use '@scss/base/' as BASE;
+
+.container {
+  @include BASE.display-Container(calc(100vh - 4rem), 100%);
+
+  @media (max-width: BASE.$tablet-max-display) {
+    @include BASE.display-Container(calc(100vh - 8rem), 100%);
+  }
+}
+// --------- MOBILE --------------------------------
+.page__mobile {
+  background-color: red;
+  @include BASE.display-Container(calc(100vh - 8rem), 100%, flex, column);
+}
+
+// --------- DESKTOP --------------------------------
+.page__desktop {
+  @include BASE.display-Container(calc(100vh - 4rem), 100%, flex, column);
+
+  .desktop__title {
+    @include BASE.display-Container(70%, 90%, flex, row);
+    gap: 2rem;
+
+    img {
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    .desktop__description {
+      width: 100%;
+      font-family: BASE.$font-title;
+
+      h1 {
+        font-size: 3rem;
+        margin: 0;
+
+        b {
+          font-size: 2.5rem;
+          font-weight: 100;
+        }
+      }
+      small {
+        font-size: 1rem;
+        font-family: BASE.$font-body;
+      }
+
+    }
+  }
+
+  .desktop__Skills {
+    background-color: red;
+    @include BASE.display-Container(20%, 100%, flex, row);
+  }
+}

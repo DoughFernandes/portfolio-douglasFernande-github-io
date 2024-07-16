@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const DisplaySize = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 520);
+      setIsMobile(window.innerWidth < 700);
     };
 
     window.addEventListener('resize', handleResize);
@@ -18,5 +18,5 @@ export const DisplaySize = () => {
 
   return {
     isMobile,
-  }
+  };
 };

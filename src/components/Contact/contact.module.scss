@@ -1,0 +1,35 @@
+@use '@scss/base/' as BASE;
+
+.container__icons {
+  font-family: BASE.$font-body;
+
+  height: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+
+  li {
+    height: 100%;
+    width: auto;
+  }
+
+  .links {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: .5rem;
+    color: var(--text-color);
+    transition: .1s ease-in-out;
+
+    &:hover {
+      color: var(--border-color);
+      transform: scale(1.2);
+    }
+  }
+}
