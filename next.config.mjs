@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    URL_API: ""
+    API_URL: "https://raw.githubusercontent.com/DoughFernandes/Data-Profile/main/data/profile.json"
   }
 };
 
