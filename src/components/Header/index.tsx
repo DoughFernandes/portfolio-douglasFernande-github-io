@@ -5,9 +5,9 @@ import styles from './header.module.scss';
 
 import logo from '@public/photos/profile.png';
 
-import { DisplaySize } from '@/hooks/Display';
+import { DisplaySize } from '@hooks/Display';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { useTheme } from '../../hooks/thema';
+import { useTheme } from '@hooks/thema';
 
 export const Header = () => {
   const { isMobile } = DisplaySize();
@@ -37,13 +37,16 @@ export const Header = () => {
       <nav className={styles.desktop__nav}>
         <ul>
           <li>
-            <a href='.home'>Home</a>
+            <a href='/'>Home</a>
           </li>
           <li>
-            <a href='./about'>Sobre mim</a>
+            <a href='/pages/about'>Sobre mim</a>
           </li>
           <li>
-            <a href='contatc'>Contato</a>
+            <a href='/pages/contact'>Contato</a>
+          </li>
+          <li>
+            <a href='/pages/project'>Projetos</a>
           </li>
         </ul>
       </nav>

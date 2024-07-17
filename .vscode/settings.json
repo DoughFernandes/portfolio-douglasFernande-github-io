@@ -1,4 +1,5 @@
 {
+  "editor.fontLigatures": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.autoIndent": "full",
   "editor.trimAutoWhitespace": true,

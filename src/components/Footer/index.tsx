@@ -1,14 +1,18 @@
-'use client'
+'use client';
 
-import { motion } from "framer-motion";
 import { item } from '@animation/animation';
+import { motion } from 'framer-motion';
 import styles from './footer.module.scss';
 
 const Footer = () => {
   return (
-    <motion.footer variants={item} className={styles.footer}>
-      <span>© 2024. Todos os Direitos Reservados. Douglas Fernandes. Desenvolvido por <a href="https://github.com/DoughFernandes">Douglas Fernandes</a>.</span>
-    </motion.footer>
+    <footer className={styles.footer}>
+      <motion.span variants={item}>
+        © 2024. Todos os Direitos Reservados. Douglas Fernandes. Desenvolvido
+        por
+        <a href='https://github.com/DoughFernandes'>Douglas Fernandes</a>.
+      </motion.span>
+    </footer>
   );
 };
 

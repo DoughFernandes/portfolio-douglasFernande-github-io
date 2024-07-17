@@ -33,13 +33,15 @@ export const subItem = {
   },
 };
 
-// <motion.ul
-//   className="container"
-//   variants={container}
-//   initial="hidden"
-//   animate="visible"
-// >
-//   {[0, 1, 2, 3].map((index) => (
-//     <motion.li key={index} className="item" variants={item} />
-//   ))}
-// </motion.ul>
+export const scaleRotate = {
+  visible: {
+    scale: [1, 1.5, 1.3, 1.5, 1, 0.5, 1],
+    rotate: [0, 0, 270, 360, 0],
+    borderRadius: [10, 200, 20, 20, 1000],
+    transition: {
+      duration: 3,
+      ease: "easeInOut",
+      delay: 2,
+    },
+  },
+};

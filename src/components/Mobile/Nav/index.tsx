@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './nav.module.scss';
-import { useIconsTheme } from '@/hooks/icons';
+import { useIconsTheme } from '@hooks/icons';
 
 export const MobileNav = () => {
   const useIcons = useIconsTheme();

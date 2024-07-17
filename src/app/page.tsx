@@ -68,9 +68,6 @@ export default function Home() {
         <motion.section variants={item} className={styles.desktop__Skills}>
           MEUS CONHECIMENTOS
         </motion.section>
-        <motion.footer variants={item} className={styles.footer}>
-          Footer
-        </motion.footer>
       </motion.section>
     </motion.main>
   );

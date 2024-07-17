@@ -1,6 +1,7 @@
 import './scss/layout.scss';
 import type { Metadata } from 'next';
-import { Header } from '../components/Header/index';
+import { Header } from '@components/Header/index';
+import Footer from '@src/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Portfólio ',
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
