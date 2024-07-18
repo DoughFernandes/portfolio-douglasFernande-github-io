@@ -1,14 +1,9 @@
-import { useState, useEffect } from 'react';
-import API from '@/app/api/Profile/routes';
-
-interface Profile {
-  id: string;
-  name: string;
-  email: string;
-}
+import API from '@src/app/api/Profile/routes';
+import { Profile } from '@src/interface/types';
+import { useEffect, useState } from 'react';
 
 interface UseProfileReturn {
-  dataProfile: Profile | null;
+  dataProfile?: Profile | null;
   error: string | null;
   loading: boolean;
 }

@@ -10,8 +10,8 @@ const Footer = () => {
       <motion.span variants={item}>
         © 2024. Todos os Direitos Reservados. Douglas Fernandes. Desenvolvido
         por
-        <a href='https://github.com/DoughFernandes'>Douglas Fernandes</a>.
       </motion.span>
+      <a href='https://github.com/DoughFernandes'> Douglas Fernandes</a>.
     </footer>
   );
 };

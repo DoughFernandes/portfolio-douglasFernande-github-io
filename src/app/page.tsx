@@ -8,6 +8,7 @@ import profile from '@public/photos/profile.png';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './scss/page.module.scss';
+import { Skills } from '@src/components/Skills';
 
 export default function Home() {
   const { isMobile } = DisplaySize();
@@ -44,14 +45,14 @@ export default function Home() {
     >
       <motion.section className={styles.page__desktop}>
         <motion.section variants={item} className={styles.desktop__title}>
-          <motion.figure variants={item}>
+          <figure className={styles.desktop__logo}>
             <Image
               src={profile}
               alt='Imagem de perfil'
               width={250}
               height={250}
             />
-          </motion.figure>
+          </figure>
           <motion.section
             variants={subItem}
             className={styles.desktop__description}
@@ -65,8 +66,12 @@ export default function Home() {
             <ContatoIcons />
           </motion.section>
         </motion.section>
-        <motion.section variants={item} className={styles.desktop__Skills}>
-          MEUS CONHECIMENTOS
+        <motion.section
+          variants={item}
+          className={styles.desktop__Skills}
+        >
+          <p>Conhecimento nas principais tecnologias do mercado</p>
+          <Skills />
         </motion.section>
       </motion.section>
     </motion.main>

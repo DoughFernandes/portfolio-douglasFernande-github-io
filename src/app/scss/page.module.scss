@@ -22,13 +22,7 @@
     @include BASE.display-Container(70%, 90%, flex, row);
 
     .desktop__logo {
-      height: 200px;
-      width: 250px;
-      overflow: hidden;
-
       img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
       }
     }
@@ -55,7 +49,6 @@
   }
 
   .desktop__Skills {
-    background-color: red;
     @include BASE.display-Container(20%, 100%, flex, row);
   }
 }
