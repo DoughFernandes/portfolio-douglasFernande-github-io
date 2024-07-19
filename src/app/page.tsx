@@ -5,10 +5,10 @@ import ContatoIcons from '@components/Contact';
 import { MobileNav } from '@components/Mobile/Nav/index';
 import { DisplaySize } from '@hooks/Display';
 import profile from '@public/photos/profile.png';
+import { Skills } from '@src/components/Skills';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './scss/page.module.scss';
-import { Skills } from '@src/components/Skills';
 
 export default function Home() {
   const { isMobile } = DisplaySize();
@@ -66,10 +66,7 @@ export default function Home() {
             <ContatoIcons />
           </motion.section>
         </motion.section>
-        <motion.section
-          variants={item}
-          className={styles.desktop__Skills}
-        >
+        <motion.section variants={item} className={styles.desktop__Skills}>
           <p>Conhecimento nas principais tecnologias do mercado</p>
           <Skills />
         </motion.section>
