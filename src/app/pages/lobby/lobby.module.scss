@@ -1,18 +1,5 @@
 @use '@scss/base/' as BASE;
-
-.container {
-  max-width: BASE.$desktop-max-display;
-  @include BASE.display-Container(calc(100vh - 7rem), 100%);
-
-  @media (max-width: BASE.$tablet-max-display) {
-    @include BASE.display-Container(calc(100vh - 8rem), 100%);
-  }
-}
-// --------- MOBILE --------------------------------
-.page__mobile {
-  background-color: red;
-  @include BASE.display-Container(calc(100vh - 11rem), 100%, flex, column);
-}
+@use '@src/scss/global.module.scss';
 
 // --------- DESKTOP --------------------------------
 .page__desktop {

@@ -1,0 +1,6 @@
+@use '@scss/base/' as BASE;
+@use '@src/scss/global.module.scss';
+
+.page__mobile {
+  @include BASE.display-Container(calc(100vh - 11rem), 100%, flex, column);
+}

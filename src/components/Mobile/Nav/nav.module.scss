@@ -6,30 +6,25 @@
   position: fixed;
   bottom: 0;
 
-  @include BASE.display-Container($width: 100%, $height: 4rem);
+  @include BASE.display-Container(4rem, 100%, flex, row, center, center);
 }
 
 .menu__mobile {
-  @include BASE.display-Container(
-    $width: 100%,
-    $display: flex,
-    $align: center,
-    $justify: space-between
-  );
+  @include BASE.display-Container(100%, 100%, flex, row, space-between, center);
 }
 
 .menu__item {
-  @include BASE.display-Container($width: 100%);
+  @include BASE.display-Container(100%, 100%, flex, column, center, center);
 }
 .menu__link {
-  gap: 0.6rem;
-
   @include BASE.display-Container(
-    $display: flex,
-    $direction: column,
-    $justify: space-between,
-    $align: center,
-    $padding: 0.5rem 0 1rem
+    100%,
+    100%,
+    flex,
+    column,
+    center,
+    center,
+    $padding: 0 1rem
   );
 }
 .menu__text {

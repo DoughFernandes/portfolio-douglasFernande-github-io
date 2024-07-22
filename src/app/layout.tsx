@@ -1,11 +1,10 @@
-import './scss/layout.scss';
 import type { Metadata } from 'next';
-import { Header } from '@components/Header/index';
-import Footer from '@src/components/Footer';
+import './scss/layout.scss';
 
 export const metadata: Metadata = {
   title: 'Portfólio ',
-  description: 'Esse é uma apresentação sobre Douglas Fernandes, tudo sobre sua carreira',
+  description:
+    'Esse é uma apresentação sobre Douglas Fernandes, tudo sobre sua carreira',
 };
 
 export default function RootLayout({
@@ -15,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR' suppressHydrationWarning={true}>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      {children}
     </html>
   );
 }

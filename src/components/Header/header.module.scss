@@ -5,33 +5,13 @@
   filter: brightness(.9);
   box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
 
-  @include BASE.display-Container(
-    $width: 100%,
-    $height: 4rem,
-    $display: grid,
-    $grid: 1fr 1fr,
-    $direction: row,
-    $justify: center,
-    $align: center
-  );
+  @include BASE.display-Container(4rem, 100%, grid, row, $grid: 1fr 1fr);
 
   .desktop__nav {
-    @include BASE.display-Container(
-        $width: 100%,
-        $height: 100%,
-        $display: flex,
-        $direction: row,
-        $justify: flex-start,
-        $align: center
-      );
+    @include BASE.display-Container(100%, 100%, flex, row, flex-start, center);
 
     ul {
-      @include BASE.display-Container(
-        $display: flex,
-        $direction: row,
-        $justify: space-around,
-        $align: center
-      );
+      @include BASE.display-Container(auto, auto, flex, row, space-around, center);
 
       li {
         height: 100%;
@@ -59,15 +39,9 @@
   .desktop__figure {
     position: relative;
 
-    @include BASE.display-Container(
-        $width: 100%,
-        $height: 100%,
-        $display: flex,
-        $direction: row,
-        $justify: space-between,
-        $align: center,
-        $padding: 0 2rem 0 0
-      );
+    @include BASE.display-Container(100%, 100%, flex, row, space-around, center, $padding: 0 2rem 0 0 );
+
+
 
     img {
       border-radius: 5rem;
@@ -96,31 +70,13 @@
   filter: brightness(.9);
   box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
 
-  @include BASE.display-Container(
-    $width: 100%,
-    $height: 4rem,
-    $display: flex,
-    $direction: row,
-    $justify: center,
-    $align: center
-  );
+  @include BASE.display-Container( 4rem, 100%, flex, row);
+
   .mobile__nav {
-    @include BASE.display-Container(
-        $width: 100%,
-        $height: 100%,
-        $display: flex,
-        $direction: row,
-        $justify: flex-start,
-        $align: center
-      );
+    @include BASE.display-Container( 100%, 100%, flex, row, flex-start, center);
 
     ul {
-      @include BASE.display-Container(
-        $display: flex,
-        $direction: row,
-        $justify: space-around,
-        $align: center
-      );
+      @include BASE.display-Container( auto, auto, flex, row, space-around, center);
 
       li {
         height: 100%;
@@ -152,15 +108,7 @@
   .mobile__figure {
     position: relative;
 
-    @include BASE.display-Container(
-        $width: 100%,
-        $height: 100%,
-        $display: flex,
-        $direction: row,
-        $justify: space-between,
-        $align: center,
-        $padding: 0 2rem
-      );
+    @include BASE.display-Container( 100%, 100%, flex, row, space-between, center,  $padding: 0 2rem);
 
     img {
       border-radius: 5rem;
