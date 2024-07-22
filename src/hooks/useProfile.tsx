@@ -3,13 +3,13 @@ import { Profile } from '@src/interface/types';
 import { useEffect, useState } from 'react';
 
 interface UseProfileReturn {
-  dataProfile?: Profile | null;
+  data?: Profile | null;
   error: string | null;
   loading: boolean;
 }
 
 const useProfile = (): UseProfileReturn => {
-  const [dataProfile, setDataProfile] = useState<Profile | null>(null);
+  const [data, setdata] = useState<Profile | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -17,7 +17,7 @@ const useProfile = (): UseProfileReturn => {
     const fetchProfile = async () => {
       try {
         const data = await API();
-        setDataProfile(data);
+        setdata(data);
       } catch (err) {
         if (err instanceof Error) {
           setError(err.message);
@@ -32,7 +32,7 @@ const useProfile = (): UseProfileReturn => {
     fetchProfile();
   }, []);
 
-  return { dataProfile, error, loading };
+  return { data, error, loading };
 };
 
 export default useProfile;

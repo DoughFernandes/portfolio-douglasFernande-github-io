@@ -17,6 +17,8 @@ html, body {
   background: var(--primary-bg-color);
   color: var(--text-color);
 
+  @include BASE.display-Container(auto, 100vw);
+
   @include BASE.fonts-size(
     $size: 1rem,
     $weight: 200,

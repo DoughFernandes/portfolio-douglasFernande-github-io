@@ -1,12 +1,12 @@
 @use './colors' as *;
 
 @mixin display-Container(
-  $height: auto, // obrigatório
-  $width: auto,  // obrigatório
-  $display: flex, // opcional
-  $direction: column, // opcional
-  $justify: center, // opcional
-  $align: center, // opcional
+  $height: auto,
+  $width: auto,
+  $display: flex,
+  $direction: column,
+  $justify: center,
+  $align: center,
   $margin: null, // opcional
   $padding: null, // opcional
   $grid: null // opcional

@@ -5,7 +5,7 @@ import ContatoIcons from '@components/Contact';
 import { MobileNav } from '@components/Mobile/Nav/index';
 import { DisplaySize } from '@hooks/Display';
 import profile from '@public/photos/profile.png';
-import { Skills } from '@src/components/Skills';
+import Skills from '@src/components/Skills';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './scss/page.module.scss';
@@ -58,7 +58,7 @@ export default function Home() {
             className={styles.desktop__description}
           >
             <h1>
-              Soluções Criativas &<b>Desenvolvimento Front-end</b>
+              Soluções Criativas &<small> Desenvolvimento Front-end</small>
             </h1>
             <small>
               Douglas Fernandes, São Paulo-SP, Desenvolvedora Front-end.

@@ -1,6 +1,7 @@
 @use '@scss/base/' as BASE;
 
 .container {
+  max-width: BASE.$desktop-max-display;
   @include BASE.display-Container(calc(100vh - 7rem), 100%);
 
   @media (max-width: BASE.$tablet-max-display) {
@@ -17,6 +18,10 @@
 .page__desktop {
   @include BASE.display-Container(calc(100vh - 7rem), 100%, flex, column);
 
+  @media (min-width: BASE.$desktop-max-display) {
+    transform: scale(1.2);
+  }
+
   .desktop__title {
     gap: 2rem;
     @include BASE.display-Container(70%, 90%, flex, row);
@@ -32,23 +37,42 @@
       font-family: BASE.$font-title;
 
       h1 {
-        font-size: 3rem;
+        font-size: 4rem;
+        line-height: 0.5;
         margin: 0;
 
-        b {
+        @media (max-width: 905px) {
           font-size: 2.5rem;
+          line-height: 1;
+        }
+
+        small {
+          font-size: 2rem;
           font-weight: 100;
+          font-family: BASE.$font-body;
         }
       }
       small {
         font-size: 1rem;
         font-family: BASE.$font-body;
       }
-
     }
   }
 
   .desktop__Skills {
-    @include BASE.display-Container(20%, 100%, flex, row);
+    gap: 1rem;
+
+    @include BASE.display-Container(
+      20%,
+      80%,
+      flex,
+      row,
+      flex-start,
+      flex-start
+    );
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
