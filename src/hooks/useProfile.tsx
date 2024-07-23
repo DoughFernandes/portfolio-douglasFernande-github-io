@@ -9,15 +9,15 @@ interface UseProfileReturn {
 }
 
 const useProfile = (): UseProfileReturn => {
-  const [data, setdata] = useState<Profile | null>(null);
+  const [data, setData] = useState<Profile | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const data = await API();
-        setdata(data);
+        const data: Profile = await API();
+        setData(data);
       } catch (err) {
         if (err instanceof Error) {
           setError(err.message);

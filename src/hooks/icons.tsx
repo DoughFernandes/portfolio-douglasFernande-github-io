@@ -30,17 +30,41 @@ export const useIconsTheme = () => {
 
   useEffect(() => {
     const iconsLight = [
-      { title: 'Home', href: '/pages/home', icon: iconsPath.light.home },
-      { title: 'About', href: '/pages/about', icon: iconsPath.light.about },
-      { title: 'Contact', href: '/pages/contact', icon: iconsPath.light.contact },
-      { title: 'Projects', href: '/pages/projects', icon: iconsPath.light.projects },
+      { title: 'Home', href: '/', icon: iconsPath.light.home },
+      {
+        title: 'About',
+        href: '/pages/about',
+        icon: iconsPath.light.about,
+      },
+      {
+        title: 'Contact',
+        href: '/pages/contact',
+        icon: iconsPath.light.contact,
+      },
+      {
+        title: 'Projects',
+        href: '/pages/project',
+        icon: iconsPath.light.projects,
+      },
     ];
 
     const iconsDark = [
-      { title: 'Home', href: '/home', icon: iconsPath.dark.home },
-      { title: 'About', href: '/about', icon: iconsPath.dark.about },
-      { title: 'Contact', href: '/contact', icon: iconsPath.dark.contact },
-      { title: 'Projects', href: '/projects', icon: iconsPath.dark.projects },
+      { title: 'Home', href: '/', icon: iconsPath.dark.home },
+      {
+        title: 'About',
+        href: '/pages/about',
+        icon: iconsPath.dark.about,
+      },
+      {
+        title: 'Contact',
+        href: '/pages/contact',
+        icon: iconsPath.dark.contact,
+      },
+      {
+        title: 'Projects',
+        href: '/pages/projects',
+        icon: iconsPath.dark.projects,
+      },
     ];
 
     setIcons(toggleTheme === 'light' ? iconsLight : iconsDark);

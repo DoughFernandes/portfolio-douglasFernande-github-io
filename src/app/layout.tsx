@@ -1,3 +1,4 @@
+import { Header } from '@src/components/Header';
 import type { Metadata } from 'next';
 import './scss/layout.scss';
 
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR' suppressHydrationWarning={true}>
-      {children}
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

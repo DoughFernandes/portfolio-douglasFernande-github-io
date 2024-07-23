@@ -5,7 +5,7 @@ export const DisplaySize = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 700);
+      setIsMobile(window.innerWidth < 550.9);
     };
 
     window.addEventListener('resize', handleResize);

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './header.module.scss';
 
 import logo from '@public/photos/profile.png';
@@ -37,25 +38,33 @@ export const Header = () => {
       <nav className={styles.desktop__nav}>
         <ul>
           <li>
-            <a href='/'>Home</a>
+            <Link href='/'>
+              Home
+            </Link>
           </li>
           <li>
-            <a href='/pages/about'>Sobre mim</a>
+            <Link href='/pages/about'>
+              Sobre mim
+            </Link>
           </li>
           <li>
-            <a href='/pages/contact'>Contato</a>
+            <Link href='/pages/contact'>
+              Contato
+            </Link>
           </li>
           <li>
-            <a href='/pages/project'>Projetos</a>
+            <Link href='/pages/project'>
+              Projetos
+            </Link>
           </li>
         </ul>
       </nav>
       <figure className={styles.desktop__figure}>
         <Image
           src={logo}
-          alt='Imagen de perfil do portfolio'
-          width={50}
-          height={50}
+          alt='Imagem de perfil do portfolio'
+          width={30}
+          height={30}
           priority
         />
         <a title='icon theme' onClick={toggleTheme}>
