@@ -2,7 +2,7 @@
 
 .desktop__header {
   background: var(--secondary-bg-color);
-  filter: brightness(.9);
+  filter: brightness(0.9);
   box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
 
   @include BASE.display-Container(4rem, 100%, flex, row, space-between, center);
@@ -11,21 +11,27 @@
     @include BASE.display-Container(100%, 100%, flex, row, flex-start, center);
 
     ul {
-      @include BASE.display-Container(auto, auto, flex, row, space-around, center);
+      @include BASE.display-Container(
+        auto,
+        auto,
+        flex,
+        row,
+        space-around,
+        center
+      );
 
       li {
         height: 100%;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
 
-        &:hover{
+        &:hover {
           transform: scale(1.1);
-          opacity: .5;
+          opacity: 0.5;
         }
       }
 
-
       a {
-        padding: .5rem .5rem;
+        padding: 0.5rem 0.5rem;
         cursor: grab;
         color: var(--link-color);
 
@@ -39,14 +45,22 @@
   .desktop__figure {
     position: relative;
 
-    @include BASE.display-Container(100%, 100%, flex, row, space-between, center );
+    @include BASE.display-Container(
+      100%,
+      100%,
+      flex,
+      row,
+      space-between,
+      center
+    );
 
     img {
+      width: 25px;
       border-radius: 5rem;
     }
 
-    a{
-      padding: .5rem;
+    a {
+      padding: 0.5rem;
       color: var(--icon-color);
 
       &:hover {
@@ -54,7 +68,7 @@
         opacity: 0.5;
       }
 
-      &:active{
+      &:active {
         color: aliceblue;
       }
     }
@@ -64,57 +78,56 @@
 // ------------------------------------
 
 .mobile__header {
-  background: var(--secondary-bg-color);
-  filter: brightness(.9);
-  box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
+  background: none;
 
-  @include BASE.display-Container( 4rem, 100%, flex, row);
+  @include BASE.display-Container(4rem, 100%, flex, row, flex-end, center);
 
-  .mobile__nav {
-    @include BASE.display-Container( 100%, 100%, flex, row, flex-start, center);
+  .mobile__figure {
+    padding: 1rem;
+    background: var(--cards-bg-color);
+    z-index: 1;
 
-    ul {
-      @include BASE.display-Container( auto, auto, flex, row, space-around, center);
+    @include BASE.display-Container(100%, 50%, flex, row, center, center);
 
-      li {
-        height: 100%;
-        transition: .2s ease-in-out;
+    .mobile__nav {
+      @include BASE.display-Container(100%, 100%, flex, column, center, center);
+      ul {
+        @include BASE.display-Container(100%, 100%, flex, column);
+        li {
+          padding: 2% 20%;
+          font-size: 1rem;
+          @include BASE.display-Container(auto, 100%, flex, row, flex-start);
 
-        &:hover{
-          transform: scale(1.1);
-          opacity: .5;
-        }
-      }
-
-
-      a{
-        padding: .5rem;
-        color: var(--icon-color);
-
-        &:hover {
-          transform: scale(1.1);
-          opacity: 0.5;
-        }
-
-        &:active{
-          color: aliceblue;
+          a {
+            width: auto;
+            font-size: 8vw;
+          }
         }
       }
     }
   }
 
-  .mobile__figure {
-    position: relative;
-
-    @include BASE.display-Container( 100%, 100%, flex, row, space-between, center,  $padding: 0 2rem);
+  button {
+    position: absolute;
+    left: 5%;
+    top: 1%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    z-index: 10;
+    background: var(--cards-bg-color);
 
     img {
+      width: 90%;
       border-radius: 5rem;
     }
+  }
 
-    a{
-      padding: .5rem;
-      color: var(--icon-color);
-    }
+  a {
+    @include BASE.display-Container(100%, 50%, flex, row, flex-end);
+    width: 50%;
+    padding: 1rem;
+    color: var(--icon-color);
   }
 }

@@ -3,14 +3,7 @@
 
 // --------- Mobile --------------------------------
 .page__mobile {
-  @include BASE.display-Container(
-    calc(100vh - 8rem),
-    100%,
-    flex,
-    column,
-    flex-start,
-    center
-  );
+  @include BASE.display-Container(calc(100% - 8rem), 100%, flex, column, space-around, center);
 }
 
 .title {

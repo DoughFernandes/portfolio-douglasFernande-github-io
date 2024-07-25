@@ -2,17 +2,19 @@
 
 // Tema Escuro PADRÃO
 $dark-primary-bg-color: #051328;
-$dark-secondary-bg-color: #041C3F;
-$dark-border-color: #E5F4FD;
-$dark-title-color: #E5F4FD;
-$dark-text-color: #F0F0F0;
-$dark-link-color: #E5F4FD;
-$dark-icon-color: #E5F4FD;
+$dark-secondary-bg-color: #041c3f;
+$dark-card-bg-color: #0761e9;
+$dark-border-color: #e5f4fd;
+$dark-title-color: #e5f4fd;
+$dark-text-color: #f0f0f0;
+$dark-link-color: #e5f4fd;
+$dark-icon-color: #e5f4fd;
 
 // Tema Claro PADRÃO
-$light-primary-bg-color: #E5F4FD;
-$light-secondary-bg-color: #C5E9FE;
-$light-border-color: #011D46;
+$light-primary-bg-color: #e5f4fd;
+$light-secondary-bg-color: #c5e9fe;
+$light-card-bg-color: #e0f3ff;
+$light-border-color: #011d46;
 $light-title-color: #011826;
 $light-text-color: #011826;
 $light-link-color: #012840;
@@ -20,8 +22,17 @@ $light-icon-color: #012840;
 
 // Mixin para aplicar tema escuro
 @mixin dark-theme {
-  --primary-bg-color: linear-gradient(0deg, #{$dark-primary-bg-color} 20%, #{$dark-secondary-bg-color} 50%);
-  --secondary-bg-color: linear-gradient(#{$dark-secondary-bg-color}, #{$dark-primary-bg-color});
+  --primary-bg-color: linear-gradient(
+    0deg,
+    #{$dark-primary-bg-color} 20%,
+    #{$dark-secondary-bg-color} 50%
+  );
+  --secondary-bg-color: linear-gradient(
+    120deg,
+    #{$dark-secondary-bg-color} 20%,
+    #{$dark-primary-bg-color} 50%
+  );
+  --cards-bg-color: #{$dark-card-bg-color};
   --border-color: #{$dark-border-color};
   --title-color: #{$dark-title-color};
   --text-color: #{$dark-text-color};
@@ -32,8 +43,16 @@ $light-icon-color: #012840;
 
 // Mixin para aplicar tema claro
 @mixin light-theme {
-  --primary-bg-color: linear-gradient(0deg, #{$light-primary-bg-color} 20%, #{$light-secondary-bg-color} 50%);
-  --secondary-bg-color: linear-gradient(#{$light-secondary-bg-color}, #{$light-primary-bg-color});
+  --primary-bg-color: linear-gradient(
+    0deg,
+    #{$light-primary-bg-color} 20%,
+    #{$light-secondary-bg-color} 50%
+  );
+  --secondary-bg-color: linear-gradient(
+    #{$light-secondary-bg-color},
+    #{$light-primary-bg-color}
+  );
+  --cards-bg-color: #{$light-card-bg-color};
   --border-color: #{$light-border-color};
   --title-color: #{$light-title-color};
   --text-color: #{$light-text-color};
@@ -41,4 +60,3 @@ $light-icon-color: #012840;
   --icon-color: #{$light-icon-color};
   --shadow-color: #{$dark-primary-bg-color};
 }
-

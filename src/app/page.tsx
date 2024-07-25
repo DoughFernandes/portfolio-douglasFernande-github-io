@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@src/components/Footer';
 import Loading from '@src/components/Loading';
 import { DisplaySize } from '@src/hooks/Display';
 import { useLoadingState } from '@src/hooks/loading';
@@ -9,7 +10,7 @@ import Lobby from './pages/lobby/mobile/page';
 import './scss/layout.scss';
 
 export default function Home() {
-  const { data, error, loading } = useProfile();
+  const { profile, error, loading } = useProfile();
   const showLoading = useLoadingState(loading);
   const { isMobile } = DisplaySize();
 
@@ -17,7 +18,8 @@ export default function Home() {
     <>
       {(loading || showLoading) && <Loading />}
       {error && <p>{error}</p>}
-      {!showLoading && data && (isMobile ? <Lobby /> : <LobbyDesktop />)}
+      {!showLoading && profile && (isMobile ? <Lobby /> : <LobbyDesktop />)}
+      <Footer />
     </>
   );
 }

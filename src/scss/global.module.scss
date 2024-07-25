@@ -1,11 +1,9 @@
 @use './base/index' as *;
 
 .container {
-  max-width: $desktop-max-display;
-  @include display-Container(calc(100vh - 8rem), 100%);
-
-  @media (max-width: $mobile-max-display) {
-    @include display-Container(calc(100vh - 11.5rem), 100%);
+  @include display-Container(100vh, 100%);
+  @media (max-width: $mobile-max-display ) {
+    @include display-Container(100%, 100%);
   }
 }
 

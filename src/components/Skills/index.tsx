@@ -1,21 +1,20 @@
 'use client';
 
 import useProfile from '@src/hooks/useProfile';
-import styles from "./skills.module.scss";
+import styles from './skills.module.scss';
 
 const Skills = () => {
-  const { data } = useProfile();
+  const { profile } = useProfile();
 
   return (
     <section className={styles.skills__container}>
-      {data && (
+      {profile && (
         <ul>
-          {Array.isArray(data.skills?.hardSkills) &&
-            data.skills.hardSkills.map((skill, index) => (
-              <li key={index}>
-                <img width={50} src={skill.logo} alt={skill.name} />
-              </li>
-            ))}
+          {Object.entries(profile?.habilidades_tecnicas || {}).map(([name, url]) => (
+            <li key={name}>
+              <img src={url} alt={name} />
+            </li>
+          ))}
         </ul>
       )}
     </section>
@@ -23,3 +22,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

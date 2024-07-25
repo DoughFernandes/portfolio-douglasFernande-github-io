@@ -22,9 +22,9 @@ export default function LobbyDesktop() {
       >
         <motion.section className={styles.page__desktop}>
           <section className={styles.title}>
-            {data?.photo && (
+            {data?.foto && (
               <figure>
-                <img src={data.photo} alt='Logo do site' />
+                <img src={data.foto} alt='Logo do site' />
               </figure>
             )}
 

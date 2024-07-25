@@ -5,11 +5,11 @@ import './scss/layout.scss';
 export const metadata: Metadata = {
   title: 'Portfólio ',
   description:
-    'Esse é uma apresentação sobre Douglas Fernandes, tudo sobre sua carreira',
+    'Esse é uma apresentação sobre Douglas Fernandes, tudo sobre sua carreira'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

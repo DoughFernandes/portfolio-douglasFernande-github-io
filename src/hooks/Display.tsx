@@ -17,6 +17,6 @@ export const DisplaySize = () => {
   }, []);
 
   return {
-    isMobile,
+    isMobile
   };
 };

@@ -30,39 +30,39 @@ export const useIconsTheme = () => {
 
   useEffect(() => {
     const iconsLight = [
-      { title: 'Home', href: '/', icon: iconsPath.light.home },
+      { title: 'Home', href: '/pages/home/mobile', icon: iconsPath.light.home },
       {
         title: 'About',
-        href: '/pages/about',
+        href: '/pages/about/mobile',
         icon: iconsPath.light.about,
       },
       {
         title: 'Contact',
-        href: '/pages/contact',
+        href: '/pages/contact/mobile',
         icon: iconsPath.light.contact,
       },
       {
         title: 'Projects',
-        href: '/pages/project',
+        href: '/pages/project/mobile',
         icon: iconsPath.light.projects,
       },
     ];
 
     const iconsDark = [
-      { title: 'Home', href: '/', icon: iconsPath.dark.home },
+      { title: 'Home', href: '/pages/home/mobile', icon: iconsPath.dark.home },
       {
         title: 'About',
-        href: '/pages/about',
+        href: '/pages/about/mobile',
         icon: iconsPath.dark.about,
       },
       {
         title: 'Contact',
-        href: '/pages/contact',
+        href: '/pages/contact/mobile',
         icon: iconsPath.dark.contact,
       },
       {
         title: 'Projects',
-        href: '/pages/projects',
+        href: '/pages/projects/mobile',
         icon: iconsPath.dark.projects,
       },
     ];

@@ -1,22 +1,19 @@
 @use '@scss/base/' as *;
 
 .footer {
-  height: 3rem;
   width: 100%;
-  text-align: center;
-  background: transparent;
+  background-color: var(--secondary-bg-color);
   position: fixed;
   bottom: 0;
-  margin-bottom: 0;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  border: 1px solid #000;
 
-  @media (max-width: $mobile-max-display ) {
-    height: 3vw;
-    margin-bottom: 4rem;
+  @media (max-width: $mobile-max-display) {
     font-size: 2vw;
   }
 
-  a{
+  a {
     color: var(--title-color);
     font-weight: 600;
   }

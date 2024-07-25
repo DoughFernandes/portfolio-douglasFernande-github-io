@@ -1,78 +1,78 @@
+import useProfile from '@src/hooks/useProfile';
+import { memo } from 'react';
 import {
   FaEnvelope,
   FaGithubAlt,
   FaInstagram,
   FaLinkedinIn,
-  FaWhatsapp,
+  FaWhatsapp
 } from 'react-icons/fa';
 import styles from './contact.module.scss';
 
-const ContatoIcons = () => {
+interface IconProps {
+  href: string | undefined;
+  title: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+const Icon = memo(({ href, title, Icon }: IconProps) => (
+  <a target='_blank' className={styles.links} href={href} title={title}>
+    <Icon />
+  </a>
+));
+
+const ContatoIcons = memo(() => {
+  const { profile } = useProfile();
+  const {
+    email,
+    github,
+    linkedin,
+    telefone: whatsapp
+  } = profile?.contato || {};
+
   const openEmailClient = (event: any) => {
     event.preventDefault();
-    const email = 'dfdsf1996@gmail.com';
     const subject = 'Assunto do Email';
     const body = 'Corpo do Email';
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
     window.open(gmailUrl, '_blank');
-  }
+  };
 
   return (
     <ul className={styles.container__icons}>
       <li>
-        <a
-          target='_blanck'
-          className={styles.links}
-          href='https://github.com/DoughFernandes'
-          title='icon github'
-        >
-          <FaGithubAlt />
-        </a>
+        <Icon href={github} title='GitHub' Icon={FaGithubAlt} />
       </li>
       <li>
-        <a
-          target='_blanck'
-          className={styles.links}
-          href='https://www.linkedin.com/in/dough-fernandes/'
-          title='icon linkedin'
-        >
-          <FaLinkedinIn />
-        </a>
+        <Icon href={linkedin} title='LinkedIn' Icon={FaLinkedinIn} />
       </li>
       <li>
-        <a
-          target='_blanck'
-          className={styles.links}
+        <Icon
           href='https://www.instagram.com/dooughsouza/?next=%2F'
-          title='icon Instagram'
-        >
-          <FaInstagram />
-        </a>
+          title='Instagram'
+          Icon={FaInstagram}
+        />
+      </li>
+      <li>
+        <Icon
+          href={`https://wa.me/${whatsapp}`}
+          title='WhatsApp'
+          Icon={FaWhatsapp}
+        />
       </li>
       <li>
         <a
-          target='_blanck'
           className={styles.links}
-          href='whatsapp: (11) 955824702'
-          title='icon Whatsapp'
-        >
-          <FaWhatsapp />
-        </a>
-      </li>
-      <li>
-        <a
-          target='_blank'
-          className={styles.links}
-          href='#'
-          title='icon E-mail'
           onClick={openEmailClient}
+          title='Email'
+          style={{ cursor: 'pointer' }}
         >
           <FaEnvelope />
         </a>
       </li>
     </ul>
   );
-};
+});
 
 export default ContatoIcons;
