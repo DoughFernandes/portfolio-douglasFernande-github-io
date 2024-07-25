@@ -91,16 +91,23 @@
 
     .mobile__nav {
       @include BASE.display-Container(100%, 100%, flex, column, center, center);
+
       ul {
-        @include BASE.display-Container(100%, 100%, flex, column);
+        border: 1px solid var(--border-color);
+        border-radius: 1rem;
+        @include BASE.display-Container(85%, 90%, flex, column, center, center);
+
         li {
-          padding: 2% 20%;
-          font-size: 1rem;
-          @include BASE.display-Container(auto, 100%, flex, row, flex-start);
+          padding: 0 1rem;
+          font-size: 5vw;
+          box-shadow: 5px 5px 10px var(--cards-bg-color);
+          filter: brightness(0.95);
+          border-radius: 1rem;
+          @include BASE.display-Container(auto, 80%, flex, row, center);
 
           a {
             width: auto;
-            font-size: 8vw;
+            font-size: 6vw;
           }
         }
       }

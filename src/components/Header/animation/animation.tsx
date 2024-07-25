@@ -15,8 +15,8 @@ export const collapseVariants: Variants = {
     }
   },
   open: {
-    top: '0px',
-    left: '0px',
+    top: '1%',
+    left: '5%',
     height: '50vh',
     width: '90%',
     position: 'absolute',
@@ -61,6 +61,31 @@ export const listItem: Variants = {
     x: 0,
     transition: {
       duration: 0.1
+    }
+  }
+};
+
+export const positionLogo: Variants = {
+  close: {
+    top: '1%',
+    left: '5%',
+    height: '30',
+    width: '30',
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut'
+    }
+  },
+  open: {
+    top: '5%',
+    left: '12%',
+    height: '40px',
+    width: '40px',
+    scale: 1.2,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut'
     }
   }
 };

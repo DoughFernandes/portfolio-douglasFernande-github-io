@@ -6,9 +6,17 @@ import { DisplaySize } from '@hooks/Display';
 import { useTheme } from '@hooks/thema';
 import useProfile from '@src/hooks/useProfile';
 import Link from 'next/link';
-import { FaMoon, FaSun } from 'react-icons/fa';
-import { collapseVariants, collapselist, listItem } from './animation/animation';
+import { FaMoon, FaSun, FaHome, FaUser, FaEnvelope, FaProjectDiagram } from 'react-icons/fa';
+import { collapseVariants, collapselist, listItem, positionLogo } from './animation/animation';
 import styles from './header.module.scss';
+
+// Mapeamento de menu com títulos e ícones
+const navMenu = [
+  { title: 'Home', icon: FaHome, link: '/' },
+  { title: 'Sobre mim', icon: FaUser, link: '/pages/about' },
+  { title: 'Contato', icon: FaEnvelope, link: '/pages/contact' },
+  { title: 'Projetos', icon: FaProjectDiagram, link: '/pages/project' },
+];
 
 export const Header = () => {
   const { isMobile } = DisplaySize();
@@ -22,9 +30,16 @@ export const Header = () => {
 
   const renderMobileHeader = () => (
     <header className={styles.mobile__header}>
-      <button type='button' title='button' onClick={toggleCollapse}>
+      <motion.button
+        type='button'
+        title='button'
+        onClick={toggleCollapse}
+        initial='close'
+        animate={isExpanded ? 'open' : 'close'}
+        variants={positionLogo}
+      >
         <img src={profile?.foto} alt={`logo de perfil ${profile?.nome}`} />
-      </button>
+      </motion.button>
 
       <AnimatePresence>
         {isExpanded && (
@@ -43,10 +58,10 @@ export const Header = () => {
               variants={collapselist}
             >
               <ul>
-                {['Home', 'Sobre mim', 'Contato', 'Projetos'].map((text, index) => (
+                {navMenu.map(({ title, icon: Icon, link }, index) => (
                   <motion.li key={index} variants={listItem}>
-                    <FaMoon />
-                    <Link href={`/pages/${text.replace(' ', '/').toLowerCase()}/mobile`}>{text}</Link>
+                    <Icon />
+                    <Link href={`${link}/mobile`}>{title}</Link>
                   </motion.li>
                 ))}
               </ul>
@@ -65,9 +80,9 @@ export const Header = () => {
     <header className={styles.desktop__header}>
       <nav className={styles.desktop__nav}>
         <ul>
-          {['Home', 'Sobre mim', 'Contato', 'Projetos'].map((text, index) => (
+          {navMenu.map(({ title, link }, index) => (
             <li key={index}>
-              <Link href={`/pages/${text.replace(' ', '/').toLowerCase()}/desktop`}>{text}</Link>
+              <Link href={`${link}/desktop`}>{title}</Link>
             </li>
           ))}
         </ul>
