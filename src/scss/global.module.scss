@@ -2,8 +2,9 @@
 
 .container {
   @include display-Container(100vh, 100%);
-  @media (max-width: $mobile-max-display ) {
-    @include display-Container(100%, 100%);
+
+  @media (max-width: $mobile-max-display) {
+    @include display-Container(100%, 100%, column, center, flex-start);
   }
 }
 

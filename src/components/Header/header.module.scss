@@ -80,7 +80,7 @@
 .mobile__header {
   background: none;
 
-  @include BASE.display-Container(4rem, 100%, flex, row, flex-end, center);
+  @include BASE.display-Container(3rem, 100%, flex, row, flex-end, center);
 
   .mobile__figure {
     padding: 1rem;

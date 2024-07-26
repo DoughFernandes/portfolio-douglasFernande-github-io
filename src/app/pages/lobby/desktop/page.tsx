@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import styles from './desktop.module.scss';
 
 export default function LobbyDesktop() {
-  const { data } = useProfile();
+  const { profile } = useProfile();
 
   return (
     <>
@@ -22,9 +22,9 @@ export default function LobbyDesktop() {
       >
         <motion.section className={styles.page__desktop}>
           <section className={styles.title}>
-            {data?.foto && (
+            {profile?.foto && (
               <figure>
-                <img src={data.foto} alt='Logo do site' />
+                <img src={profile.foto} alt='Logo do site' />
               </figure>
             )}
 
