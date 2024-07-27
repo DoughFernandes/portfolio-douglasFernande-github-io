@@ -14,37 +14,35 @@ export default function LobbyDesktop() {
 
   return (
     <>
-      <motion.main
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={stylesGlobal.container}
-      >
-        <motion.section className={styles.page__desktop}>
-          <section className={styles.title}>
-            {profile?.foto && (
-              <figure>
-                <img src={profile.foto} alt='Logo do site' />
-              </figure>
-            )}
+      <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
+        <section className={styles.home}>
 
-            <motion.section variants={item} className={styles.description}>
-              <motion.h1 variants={item}>
+          <section className={styles.title}>
+            <motion.figure variants={item}>
+              <img src={profile?.foto} alt='foto de perfil' />
+            </motion.figure>
+
+            <motion.section className={styles.description}>
+              <h1>
                 Soluções & <b>Criatividade</b>
-              </motion.h1>
-              <small> Desenvolvimento Front-end</small>
-              <p>Douglas Fernandes, São Paulo-SP, Desenvolvedora Front-end.</p>
-              <ContatoIcons />
+                <small> Desenvolvedor Front-end</small>
+              </h1>
+
+              <motion.section variants={item} className={styles.about}>
+                <p>Douglas Fernandes, 28 anos / São Paulo-SP</p>
+                <ContatoIcons />
+              </motion.section>
             </motion.section>
           </section>
 
-          <motion.section variants={itemX} className={styles.skills}>
-            <p>Conhecimento nas principais tecnologias do mercado</p>
-            <Skills />
-          </motion.section>
+        </section>
+
+        <motion.section variants={itemX} className={styles.skills}>
+          <p>Conhecimento nas principais tecnologias do mercado</p>
+          <Skills />
         </motion.section>
+
       </motion.main>
-      <Footer />
     </>
   );
 }

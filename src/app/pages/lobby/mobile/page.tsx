@@ -11,15 +11,8 @@ import styles from './lobby.module.scss';
 export default function Lobby() {
   const { profile } = useProfile();
 
-  const photo = profile?.foto;
-
   return (
-    <motion.main
-      variants={container}
-      initial='hidden'
-      animate='visible'
-      className={stylesGlobal.container}
-    >
+    <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
       <section className={styles.home}>
         <motion.figure
           initial={{ opacity: 0, scale: 0.8 }}
@@ -28,7 +21,7 @@ export default function Lobby() {
           className={styles.logo__container}
         >
           {profile?.foto ? (
-            <img src={photo} alt='Logo do site' width={320} height={250} />
+            <img src={profile.foto} alt='Logo do site' width={320} height={250} />
           ) : (
             <div className={styles.logo}>DG</div>
           )}
@@ -38,7 +31,7 @@ export default function Lobby() {
           <h1>
             Soluções & <b>Criatividade</b>
           </h1>
-          <small> Desenvolvedora Front-end</small>
+          <small> Desenvolvedor Front-end</small>
         </motion.section>
 
         <motion.section variants={item} className={styles.description}>

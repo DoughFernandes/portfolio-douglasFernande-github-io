@@ -1,43 +1,34 @@
 import useProfile from '@src/hooks/useProfile';
 import { memo } from 'react';
-import {
-  FaEnvelope,
-  FaGithubAlt,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp
-} from 'react-icons/fa';
+import { FaEnvelope, FaGithubAlt, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import styles from './contact.module.scss';
 
 interface IconProps {
-  href: string | undefined;
+  href?: string;
   title: string;
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  onclick?: () => void;
 }
 
-const Icon = memo(({ href, title, Icon }: IconProps) => (
-  <a target='_blank' className={styles.links} href={href} title={title}>
+const Icon = memo(({ href, title, Icon, onclick }: IconProps) => (
+  <a target='_blank' className={styles.links} href={href} title={title} onClick={onclick || undefined}>
     <Icon />
+    <span>{title}</span>
   </a>
 ));
 
 const ContatoIcons = memo(() => {
   const { profile } = useProfile();
-  const {
-    email,
-    github,
-    linkedin,
-    telefone: whatsapp
-  } = profile?.contato || {};
+  const { email, github, linkedin, telefone: whatsapp } = profile?.contato || {};
 
-  const openEmailClient = (event: any) => {
-    event.preventDefault();
+  function openEmailClient(event?: any) {
+    event?.preventDefault();
     const subject = 'Assunto do Email';
     const body = 'Corpo do Email';
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
-    window.open(gmailUrl, '_blank');
-  };
+    event ? window.open(gmailUrl, '_blank') : null;
+  }
 
   return (
     <ul className={styles.container__icons}>
@@ -48,28 +39,13 @@ const ContatoIcons = memo(() => {
         <Icon href={linkedin} title='LinkedIn' Icon={FaLinkedinIn} />
       </li>
       <li>
-        <Icon
-          href='https://www.instagram.com/dooughsouza/?next=%2F'
-          title='Instagram'
-          Icon={FaInstagram}
-        />
+        <Icon href='https://www.instagram.com/dooughsouza/?next=%2F' title='Instagram' Icon={FaInstagram} />
       </li>
       <li>
-        <Icon
-          href={`https://wa.me/${whatsapp}`}
-          title='WhatsApp'
-          Icon={FaWhatsapp}
-        />
+        <Icon href={`whatsapp:${whatsapp}`} title='WhatsApp' Icon={FaWhatsapp} />
       </li>
       <li>
-        <a
-          className={styles.links}
-          onClick={openEmailClient}
-          title='Email'
-          style={{ cursor: 'pointer' }}
-        >
-          <FaEnvelope />
-        </a>
+        <Icon onclick={openEmailClient} title='Email' Icon={FaEnvelope} />
       </li>
     </ul>
   );
