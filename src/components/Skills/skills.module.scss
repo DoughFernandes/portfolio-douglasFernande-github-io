@@ -9,8 +9,9 @@
     @include BASE.display-Container(auto, auto, flex, row);
 
     li {
-      height: 2.5rem;
-      width: 3rem;
+      padding: 0 1rem;
+      height: 5vw;
+      width: 5vw;
 
       img {
         width: 100%;
