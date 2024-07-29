@@ -1,17 +1,17 @@
 @use '@src/scss//base/' as BASE;
 
 .skills__container{
-  height: 3rem;
-  width: auto;
   flex-wrap: wrap;
+
+  @include BASE.display-Container(auto, auto, flex, row);
 
   ul {
     @include BASE.display-Container(auto, auto, flex, row);
 
     li {
       padding: 0 1rem;
-      height: 5vw;
-      width: 5vw;
+      height: 10vw;
+      max-height: 4rem;
 
       img {
         width: 100%;

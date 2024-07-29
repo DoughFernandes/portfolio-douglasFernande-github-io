@@ -7,8 +7,6 @@
   $direction: column,
   $justify: center,
   $align: center,
-  $margin: null, // opcional
-  $padding: null, // opcional
   $grid: null // opcional
 ) {
   $properties: (
@@ -18,9 +16,7 @@
     grid-template-columns: $grid,
     flex-direction: $direction,
     justify-content: $justify,
-    align-items: $align,
-    margin: $margin,
-    padding: $padding
+    align-items: $align
   );
 
   @each $property, $value in $properties {
@@ -30,26 +26,4 @@
   }
 }
 
-@mixin fonts-size(
-  $size: null, // opcional
-  $weight: null, // opcional
-  $spacing: null, // opcional
-  $family: null, // opcional
-  $line-height: null, // opcional
-  $transform: null // opcional
-) {
-  $font-properties: (
-    font-size: $size,
-    font-weight: $weight,
-    letter-spacing: $spacing,
-    font-family: $family,
-    line-height: $line-height,
-    text-transform: $transform
-  );
 
-  @each $property, $value in $font-properties {
-    @if $value != null {
-      #{$property}: #{$value};
-    }
-  }
-}

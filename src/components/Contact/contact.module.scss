@@ -7,7 +7,8 @@
 
   li {
     min-height: 2rem;
-    padding: 0 0.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 
     @include BASE.display-Container(100%, auto, flex, row, center, center);
 
@@ -15,16 +16,10 @@
       gap: 0.5rem;
       flex-wrap: wrap;
       cursor: pointer;
-      color: var(--icons-color);
       transition: all 0.1s ease-in-out;
       text-align: center;
 
       @include BASE.display-Container(100%, auto, flex, row, center, center);
-
-      .Icon {
-        height: 100%;
-        width: 100%;
-      }
 
       span {
         height: auto;

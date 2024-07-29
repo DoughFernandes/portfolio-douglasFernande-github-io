@@ -1,7 +1,9 @@
 @use './base/index' as *;
 
 .container {
+  padding: 2rem;
   max-width: $desktop-max-display;
+
   @include display-Container(calc(100vh - 7rem), 100%);
 
   @media (max-width: $mobile-max-display) {

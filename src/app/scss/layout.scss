@@ -12,11 +12,30 @@
 html,
 body {
   min-width: BASE.$mobile-min-display;
-  overflow: hidden;
   background: var(--primary-bg-color);
+  font-size: 1rem;
+  font-family: BASE.$font-body;
   color: var(--text-color);
 
   @include BASE.display-Container(100vh, 100vw, flex, column, flex-start, center);
+}
 
-  @include BASE.fonts-size($size: 1rem, $weight: 200, $family: BASE.$font-body);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  font-family: BASE.$font-title;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+a {
+  color: var(--link-color);
 }
