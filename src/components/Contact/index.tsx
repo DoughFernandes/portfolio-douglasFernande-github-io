@@ -12,7 +12,7 @@ interface IconProps {
 
 const Icon = memo(({ href, title, Icon, onclick }: IconProps) => (
   <a target='_blank' className={styles.links} href={href} title={title} onClick={onclick || undefined}>
-    <Icon />
+    <Icon className={styles.ImgIcon}/>
     <span>{title}</span>
   </a>
 ));

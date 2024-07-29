@@ -3,26 +3,33 @@
 .container__icons {
   min-height: 1rem;
 
-  @include BASE.display-Container(5vh, auto, flex, row, flex-start, center);
+  @include BASE.display-Container(2.5rem, 100%, flex, row, flex-start, center);
+
+  @media (max-width: BASE.$mobile-max-display) {
+    @include BASE.display-Container(2rem, 100%, flex, row, center, center);
+  }
 
   li {
-    min-height: 2rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-
     @include BASE.display-Container(100%, auto, flex, row, center, center);
 
     .links {
-      gap: 0.5rem;
+      margin-right: 0.5rem;
       flex-wrap: wrap;
       cursor: pointer;
       transition: all 0.1s ease-in-out;
       text-align: center;
+      gap: 0.5rem;
 
-      @include BASE.display-Container(100%, auto, flex, row, center, center);
+      @include BASE.display-Container(100%, 100%, flex, row);
 
       span {
         height: auto;
+        font-size: 0.8rem;
+      }
+
+      .ImgIcon {
+        height: 15px;
+        width: 20px;
       }
 
       &:hover {

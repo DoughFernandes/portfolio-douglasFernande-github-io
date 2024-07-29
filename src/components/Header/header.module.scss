@@ -55,8 +55,9 @@
     );
 
     img {
-      width: 25px;
-      border-radius: 5rem;
+      width: 25px !important;
+      height: 25px!important;
+      border-radius: 50%;
     }
 
     a {
@@ -127,7 +128,7 @@
 
     img {
       width: 90%;
-      border-radius: 5rem;
+      border-radius: 50%;
     }
   }
 
