@@ -1,12 +1,12 @@
 'use client';
 
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { DisplaySize } from '@hooks/Display';
 import { useTheme } from '@hooks/thema';
 import useProfile from '@src/hooks/useProfile';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaMoon, FaSun, FaHome, FaUser, FaEnvelope, FaProjectDiagram } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaEnvelope, FaHome, FaMoon, FaProjectDiagram, FaSun, FaUser } from 'react-icons/fa';
 import { collapseVariants, collapselist, listItem, positionLogo } from './animation/animation';
 import styles from './header.module.scss';
 
@@ -15,7 +15,7 @@ const navMenu = [
   { title: 'Home', icon: FaHome, link: '/' },
   { title: 'Sobre mim', icon: FaUser, link: '/pages/about' },
   { title: 'Contato', icon: FaEnvelope, link: '/pages/contact' },
-  { title: 'Projetos', icon: FaProjectDiagram, link: '/pages/project' },
+  { title: 'Projetos', icon: FaProjectDiagram, link: '/pages/projects' }
 ];
 
 export const Header = () => {
@@ -30,38 +30,19 @@ export const Header = () => {
 
   const renderMobileHeader = () => (
     <header className={styles.mobile__header}>
-      <motion.button
-        type='button'
-        title='button'
-        onClick={toggleCollapse}
-        initial='close'
-        animate={isExpanded ? 'open' : 'close'}
-        variants={positionLogo}
-      >
+      <motion.button type='button' title='button' onClick={toggleCollapse} initial='close' animate={isExpanded ? 'open' : 'close'} variants={positionLogo}>
         <img src={profile?.foto} alt={`logo de perfil ${profile?.nome}`} />
       </motion.button>
 
       <AnimatePresence>
         {isExpanded && (
-          <motion.figure
-            className={styles.mobile__figure}
-            initial='close'
-            animate='open'
-            exit='close'
-            variants={collapseVariants}
-          >
-            <motion.nav
-              className={styles.mobile__nav}
-              initial='close'
-              animate='open'
-              exit='close'
-              variants={collapselist}
-            >
+          <motion.figure className={styles.mobile__figure} initial='close' animate='open' exit='close' variants={collapseVariants}>
+            <motion.nav className={styles.mobile__nav} initial='close' animate='open' exit='close' variants={collapselist}>
               <ul>
                 {navMenu.map(({ title, icon: Icon, link }, index) => (
                   <motion.li key={index} variants={listItem}>
                     <Icon />
-                    <Link href={`${link}/mobile`}>{title}</Link>
+                    <Link href={`${link}`}>{title}</Link>
                   </motion.li>
                 ))}
               </ul>
@@ -82,7 +63,7 @@ export const Header = () => {
         <ul>
           {navMenu.map(({ title, link }, index) => (
             <li key={index}>
-              <Link href={`${link}/desktop`}>{title}</Link>
+              <Link href={`${link}`}>{title}</Link>
             </li>
           ))}
         </ul>
