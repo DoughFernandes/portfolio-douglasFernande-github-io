@@ -1,7 +1,35 @@
 @use '@scss//base/' as BASE;
 
 .loading__container {
-  @include BASE.display-Container(calc(100vh - 7rem), 100vw);
+  @include BASE.display-Container(calc(100vh - 11rem), 100vw);
+
+  .alert{
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--text-color);
+    border-radius: 1rem;
+
+    h2 {
+      padding: 1rem;
+    }
+
+    span {
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+
+    a {
+      transition: .5s all ease-in-out;
+
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
 
   .loader {
     @include BASE.display-Container(5rem, 5rem);
