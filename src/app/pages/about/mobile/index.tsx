@@ -5,7 +5,7 @@ import stylesGlobal from '@scss/global.module.scss';
 import useProfile from '@src/hooks/useProfile';
 import { motion } from 'framer-motion';
 import { FaLanguage } from 'react-icons/fa';
-import styles from './desktop.module.scss';
+import styles from './mobile.module.scss';
 
 export default function About() {
   const { profile } = useProfile();
@@ -14,7 +14,6 @@ export default function About() {
     <>
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.about}>
-
           <motion.figure variants={itemX} className={styles.figure}>
             <img src={profile?.foto} alt='foto de perfil' />
           </motion.figure>
@@ -34,7 +33,6 @@ export default function About() {
               </div>
             ))}
           </motion.section>
-
         </section>
       </motion.main>
     </>
