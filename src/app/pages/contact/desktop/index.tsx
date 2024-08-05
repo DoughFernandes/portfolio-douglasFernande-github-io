@@ -1,24 +1,21 @@
 'use client';
 
-import { container } from '@animation/animation';
+import { container, item, itemX } from '@animation/animation';
 import stylesGlobal from '@scss/global.module.scss';
 import ContatoIcons from '@src/components/Contact';
-import useProfile from '@src/hooks/useProfile';
 import { motion } from 'framer-motion';
 import styles from './desktop.module.scss';
 
 export default function Contact() {
-  const { profile } = useProfile();
-
   return (
     <>
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.contact}>
-          <h1>Contate-me</h1>
-          <p>Estou disponível para novos desafios e colaborações. Entre em contato comigo pelas minhas redes sociais ou via WhatsApp 😁😉</p>
-          <section className={styles.icons}>
+          <motion.h1 variants={item}>Contate-me</motion.h1>
+          <motion.p variants={itemX}>Estou disponível para novos desafios e colaborações. Entre em contato comigo pelas minhas redes sociais ou via WhatsApp 😁😉</motion.p>
+          <motion.section variants={item} className={styles.icons}>
             <ContatoIcons />
-          </section>
+          </motion.section>
         </section>
       </motion.main>
     </>
