@@ -11,14 +11,7 @@
     @include BASE.display-Container(100%, 100%, flex, row, flex-start, center);
 
     ul {
-      @include BASE.display-Container(
-        auto,
-        auto,
-        flex,
-        row,
-        space-around,
-        center
-      );
+      @include BASE.display-Container(auto, auto, flex, row, space-around, center);
 
       li {
         height: 100%;
@@ -45,18 +38,11 @@
   .desktop__figure {
     position: relative;
 
-    @include BASE.display-Container(
-      100%,
-      100%,
-      flex,
-      row,
-      space-between,
-      center
-    );
+    @include BASE.display-Container(100%, 100%, flex, row, space-between, center);
 
     img {
       width: 25px !important;
-      height: 25px!important;
+      height: 25px !important;
       border-radius: 50%;
     }
 
@@ -79,7 +65,7 @@
 // ------------------------------------
 
 .mobile__header {
-  background: none;
+  background: var(--secondary-bg-color);
 
   @include BASE.display-Container(3rem, 100%, flex, row, flex-end, center);
 
