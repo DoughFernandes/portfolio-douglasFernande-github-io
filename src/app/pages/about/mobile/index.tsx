@@ -24,8 +24,8 @@ export default function About() {
           </motion.section>
 
           <motion.section variants={itemX} className={styles.idiomas}>
-            {Object.entries(profile?.idiomas || {}).map(([idioma, nivel]) => (
-              <div className={styles.idioma}>
+            {Object.entries(profile?.idiomas || {}).map(([idioma, nivel], key) => (
+              <div key={key} className={styles.idioma}>
                 <FaLanguage />
                 <span>
                   {idioma}: {nivel}

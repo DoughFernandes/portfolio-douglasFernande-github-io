@@ -1,7 +1,7 @@
 @use '@scss/base/' as BASE;
 
 .about {
-  @include BASE.display-Container(calc(100vh - 11rem), 100%, flex, column, flex-start);
+  @include BASE.display-Container(calc(100vh - 11rem), 100%);
 
   .figure {
     height: auto;
