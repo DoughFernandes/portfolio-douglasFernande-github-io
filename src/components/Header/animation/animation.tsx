@@ -4,8 +4,8 @@ export const collapseVariants: Variants = {
   close: {
     top: '1%',
     left: '5%',
-    height: '0px',
     width: '0px',
+    height: '0',
     borderRadius: '1rem',
     transition: {
       duration: 0.5,
@@ -17,8 +17,8 @@ export const collapseVariants: Variants = {
   open: {
     top: '1%',
     left: '5%',
-    height: '50vh',
-    width: '90%',
+    height: '90vh',
+    width: '90vw',
     position: 'absolute',
     borderRadius: '1rem',
     transition: {
@@ -53,14 +53,14 @@ export const listItem: Variants = {
     opacity: 0,
     x: -50,
     transition: {
-      duration: 0.2
+      duration: 0.5
     }
   },
   open: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.1
+      duration: 0.5
     }
   }
 };
@@ -69,8 +69,6 @@ export const positionLogo: Variants = {
   close: {
     top: '1%',
     left: '5%',
-    height: '30',
-    width: '30',
     scale: 1,
     transition: {
       duration: 0.5,
@@ -79,10 +77,8 @@ export const positionLogo: Variants = {
   },
   open: {
     top: '5%',
-    left: '12%',
-    height: '40px',
-    width: '40px',
-    scale: 1.2,
+    left: '10%',
+    scale: 1.5,
     transition: {
       duration: 0.5,
       ease: 'easeInOut'
