@@ -13,8 +13,8 @@ html,
 body {
   min-width: BASE.$mobile-min-display;
   background: var(--primary-bg-color);
+  background-repeat: no-repeat;
   font-size: 1rem;
-  overflow: hidden;
   font-family: BASE.$font-body;
   color: var(--text-color);
 

@@ -3,7 +3,10 @@
 import { DisplaySize } from '@hooks/Display';
 import { useTheme } from '@hooks/thema';
 import useProfile from '@src/hooks/useProfile';
-import { AnimatePresence, motion } from 'framer-motion';
+import {
+  AnimatePresence,
+  motion
+} from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 import {
@@ -15,22 +18,44 @@ import {
   FaSun,
   FaUser
 } from 'react-icons/fa';
-import { collapseVariants, collapselist, listItem, positionLogo } from './animation/animation';
+import {
+  collapseVariants,
+  collapselist,
+  listItem,
+  positionLogo
+} from './animation/animation';
 import styles from './header.module.scss';
 
 const navMenu = [
   { title: 'Home', icon: FaHome, link: '/' },
-  { title: 'Sobre mim', icon: FaUser, link: '/pages/about' },
-  { title: 'Contato', icon: FaEnvelope, link: '/pages/contact' },
-  { title: 'Projetos', icon: FaProjectDiagram, link: '/pages/projects' },
-  { title: 'Experiência', icon: FaCreativeCommonsNd, link: '/pages/experiences' }
+  {
+    title: 'Sobre mim',
+    icon: FaUser,
+    link: '/pages/about'
+  },
+  {
+    title: 'Contato',
+    icon: FaEnvelope,
+    link: '/pages/contact'
+  },
+  {
+    title: 'Projetos',
+    icon: FaProjectDiagram,
+    link: '/pages/projects'
+  },
+  {
+    title: 'Experiência',
+    icon: FaCreativeCommonsNd,
+    link: '/pages/experiences'
+  }
 ];
 
 export const Header = () => {
   const { isMobile } = DisplaySize();
   const { isDarkTheme, toggleTheme } = useTheme();
   const { profile } = useProfile();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] =
+    useState(false);
 
   const toggleCollapse = () => {
     setIsExpanded(!isExpanded);
@@ -46,7 +71,10 @@ export const Header = () => {
         animate={isExpanded ? 'open' : 'close'}
         variants={positionLogo}
       >
-        <img src={profile?.foto} alt={`logo de perfil ${profile?.nome}`} />
+        <img
+          src={profile?.foto}
+          alt={`logo de perfil ${profile?.nome}`}
+        />
       </motion.button>
 
       <AnimatePresence>
@@ -66,12 +94,22 @@ export const Header = () => {
               variants={collapselist}
             >
               <ul>
-                {navMenu.map(({ title, icon: Icon, link }, index) => (
-                  <motion.li key={index} variants={listItem}>
-                    <Icon />
-                    <Link href={`${link}`}>{title}</Link>
-                  </motion.li>
-                ))}
+                {navMenu.map(
+                  (
+                    { title, icon: Icon, link },
+                    index
+                  ) => (
+                    <motion.li
+                      key={index}
+                      variants={listItem}
+                    >
+                      <Icon />
+                      <Link href={`${link}`}>
+                        {title}
+                      </Link>
+                    </motion.li>
+                  )
+                )}
               </ul>
             </motion.nav>
           </motion.figure>
@@ -88,21 +126,33 @@ export const Header = () => {
     <header className={styles.desktop__header}>
       <nav className={styles.desktop__nav}>
         <ul>
-          {navMenu.map(({ title, link }, index) => (
-            <li key={index}>
-              <Link href={`${link}`}>{title}</Link>
-            </li>
-          ))}
+          {navMenu.map(
+            ({ title, link }, index) => (
+              <li key={index}>
+                <Link href={`${link}`}>
+                  {title}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
       </nav>
       <figure className={styles.desktop__figure}>
-        <img src={profile?.foto} alt={`logo de perfil ${profile?.nome}`} />
-        <a title='icon theme' onClick={toggleTheme}>
+        <img
+          src={profile?.foto}
+          alt={`logo de perfil ${profile?.nome}`}
+        />
+        <a
+          title='icon theme'
+          onClick={toggleTheme}
+        >
           {isDarkTheme ? <FaSun /> : <FaMoon />}
         </a>
       </figure>
     </header>
   );
 
-  return isMobile ? renderMobileHeader() : renderDesktopHeader();
+  return isMobile
+    ? renderMobileHeader()
+    : renderDesktopHeader();
 };

@@ -1,0 +1,63 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .mainImageContainer {
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .arrowLeft,
+    .arrowRight {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrowLeft {
+      left: -50px;
+    }
+
+    .arrowRight {
+      right: -50px;
+    }
+
+    .mainImage {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+  }
+
+  .thumbnailContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .thumbnail {
+      width: 150px;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+
+      &.active {
+        opacity: 1;
+        border: 2px solid #fff;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
