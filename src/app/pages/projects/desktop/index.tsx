@@ -3,26 +3,22 @@
 import { container } from '@animation/animation';
 import stylesGlobal from '@scss/global.module.scss';
 import useProfile from '@src/hooks/useProfile';
-import {
-  AnimatePresence,
-  motion
-} from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import styles from './desktop.module.scss';
 
 export default function ProjectsDesktop() {
   const { profile } = useProfile();
   const [current, setCurrent] = useState(0);
-  const [images, setImages] = useState<string[]>([]);
+  const [projects, setProjects] = useState<{ ferramentas: { [key: string]: string; }; link: string; imagem: string; titulo: string; descricao: string }[]>([]);
 
   useEffect(() => {
     if (profile?.portfolio) {
-      const projectImages = profile.portfolio.map(project => project.imagem);
-      setImages(projectImages);
+      setProjects(profile.portfolio);
     }
   }, [profile]);
 
-  const length = images.length;
+  const length = projects.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -36,56 +32,68 @@ export default function ProjectsDesktop() {
     setCurrent(index);
   };
 
-  if (!images.length) {
+  if (!projects.length) {
     return <div>Carregando...</div>;
   }
 
-  return (
-    <motion.main
-      variants={container}
-      initial='hidden'
-      animate='visible'
-      className={stylesGlobal.container}
-    >
-      <div className={styles.carousel}>
-        <div className={styles.mainImageContainer}>
-          <div
-            className={styles.arrowLeft}
-            onClick={prevSlide}
-          >
-            &#9664;
-          </div>
-          <AnimatePresence initial={false}>
-            <motion.img
-              key={current}
-              src={images[current]}
-              alt='Project Image'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className={styles.mainImage}
-            />
-          </AnimatePresence>
-          <div
-            className={styles.arrowRight}
-            onClick={nextSlide}
-          >
-            &#9654;
-          </div>
-        </div>
+  const { imagem, titulo, descricao, ferramentas } = projects[current];
 
-        <div className={styles.thumbnailContainer}>
-          {images.map((img, index) => (
-            <motion.img
-              key={index}
-              src={img}
-              alt={`Thumbnail ${index + 1}`}
-              onClick={() => selectSlide(index)}
-              className={`${styles.thumbnail} ${index === current ? styles.active : ''}`}
-            />
-          ))}
+  return (
+    <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
+      <section className={styles.carousel} aria-label='Carrossel de projetos'>
+        <div className={styles.mainContent}>
+          <div className={styles.mainImageContainer}>
+            <button className={styles.arrowLeft} onClick={prevSlide} aria-label='Imagem anterior' aria-controls='project-carousel'>
+              &#9664;
+            </button>
+            <a href={projects[current].link} target='_blank' rel='noopener noreferrer'>
+              <AnimatePresence initial={false}>
+                <motion.img
+                  id='project-carousel'
+                  key={current}
+                  src={imagem}
+                  alt={`Imagem do projeto: ${titulo}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className={styles.mainImage}
+                />
+              </AnimatePresence>
+            </a>
+            <header className={styles.header}>
+              <h1>{titulo}</h1>
+              <p>{descricao}</p>
+              <ul className={styles.toolList}>
+                {Object.entries(ferramentas).map(([tool, iconUrl]) => (
+                  <li key={tool} className={styles.toolItem}>
+                    <img src={iconUrl} alt={`Ícone de ${tool}`} className={styles.toolIcon} />
+                    <span>{tool}</span>
+                  </li>
+                ))}
+              </ul>
+            </header>
+            <button className={styles.arrowRight} onClick={nextSlide} aria-label='Próxima imagem' aria-controls='project-carousel'>
+              &#9654;
+            </button>
+          </div>
+
+          <div className={styles.thumbnailContainer} role='group' aria-label='Miniaturas de projetos'>
+            {projects.map((project, index) => (
+              <motion.img
+                key={index}
+                src={project.imagem}
+                alt={`Miniatura do projeto: ${project.titulo}`}
+                onClick={() => selectSlide(index)}
+                className={`${styles.thumbnail} ${index === current ? styles.active : ''}`}
+                role='button'
+                aria-pressed={index === current}
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && selectSlide(index)}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </motion.main>
   );
 }

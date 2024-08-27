@@ -1,63 +1,169 @@
 .carousel {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
+  padding: 20px;
 
-  .mainImageContainer {
-    position: relative;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .header {
+    text-align: center;
     margin-bottom: 20px;
 
-    .arrowLeft,
-    .arrowRight {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
+    h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 10px;
+      font-family: 'Bebas Neue', sans-serif;
     }
 
-    .arrowLeft {
-      left: -50px;
-    }
-
-    .arrowRight {
-      right: -50px;
-    }
-
-    .mainImage {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
+    p {
+      font-size: 1.5rem;
+      color: #ccc;
     }
   }
 
-  .thumbnailContainer {
+  .mainContent {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
 
-    .thumbnail {
-      width: 150px;
-      cursor: pointer;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
+    .mainImageContainer {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
 
-      &.active {
-        opacity: 1;
+      .arrowLeft,
+      .arrowRight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10;
+        border: none;
+        font-size: 2.5rem;
+        transition: background 0.3s ease;
+        border-radius: 50%; // Forma arredondada para as setas
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      .arrowLeft {
+        left: -50px;
+      }
+
+      .arrowRight {
+        right: -50px;
+      }
+
+      .mainImage {
+        width: 60%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         border: 2px solid #fff;
       }
+    }
 
-      &:hover {
-        opacity: 1;
+    .infoSection {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+      }
+
+      .techIcons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .thumbnailContainer {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+
+      .thumbnail {
+        width: 150px;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border: 2px solid transparent;
+
+        &.active {
+          opacity: 1;
+          transform: scale(1.05);
+          border-color: #fff;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
+
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #ccc;
+    font-size: 1rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.toolList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.toolItem {
+  display: flex;
+  align-items: center;
+}
+
+.toolIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
 }
