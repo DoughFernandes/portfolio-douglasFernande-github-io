@@ -24,6 +24,7 @@ export interface Profile {
   };
   portfolio: {
     titulo: string;
+    subtitulo:string;
     descricao: string;
     link: string;
     imagem: string;

@@ -2,46 +2,7 @@
 
 .carousel {
   position: relative;
-  padding: 20px;
   @include BASE.display-Container(100%, 100%, flex, column, center, center);
-
-  .header {
-    width: 500px;
-    text-align: center;
-    margin-bottom: 20px;
-
-    h1 {
-      font-size: 2rem;
-      color: var(--title-color);
-      margin-bottom: 10px;
-      font-family: BASE.$font-title;
-    }
-
-    p {
-      font-size: 1.5rem;
-      color: var(--text-color);
-    }
-
-    .toolList {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-      gap: 1rem;
-    }
-
-    .toolItem {
-      display: flex;
-      align-items: center;
-    }
-
-    .toolIcon {
-      width: 30px;
-      height: 30px;
-    }
-  }
 
   .mainContent {
     @include BASE.display-Container(auto, 100%, flex, column);
@@ -51,13 +12,63 @@
     .mainProjectContainer {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       max-width: 1200px;
       position: relative;
+      gap: 1rem;
 
-      .mainImageContainer {
-        height: 200px;
-        width: 600px;
+      .mainProjectDescriptions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .header {
+          width: 100%;
+          max-width: 500px;
+          text-align: center;
+          margin-bottom: 20px;
+
+          h1 {
+            font-size: 2rem;
+            color: var(--title-color);
+            margin-bottom: 10px;
+            font-family: BASE.$font-title;
+          }
+
+          p {
+            font-size: 1.5rem;
+            color: var(--text-color);
+          }
+
+          .toolList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            gap: 1rem;
+          }
+
+          .toolItem {
+            display: flex;
+            align-items: center;
+          }
+
+          .toolIcon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .mainImageContainer {
+          height: auto;
+          max-width: 600px;
+          min-width: 400px;
+        }
       }
 
       .arrowLeft,
@@ -78,14 +89,6 @@
         }
       }
 
-      .arrowLeft {
-        left: -50px;
-      }
-
-      .arrowRight {
-        right: -50px;
-      }
-
       .mainImage {
         width: 100%;
         max-width: 500px;
@@ -101,8 +104,22 @@
       gap: 10px;
       margin-top: 20px;
 
+      .thumbnailFigure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      figcaption {
+        font-size: 0.8rem;
+        font-family: BASE.$font-title;
+      }
+
       .thumbnail {
-        width: 150px;
+        min-width: 50px;
+        max-width: 150px;
         cursor: pointer;
         opacity: 0.6;
         transition: opacity 0.3s ease, transform 0.3s ease;

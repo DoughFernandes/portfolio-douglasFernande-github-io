@@ -13,7 +13,12 @@ export default function LobbyDesktop() {
 
   return (
     <>
-      <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
+      <motion.main
+        variants={container}
+        initial='hidden'
+        animate='visible'
+        className={stylesGlobal.container}
+      >
         <section className={styles.home}>
           <section className={styles.title}>
             <motion.figure variants={item}>
