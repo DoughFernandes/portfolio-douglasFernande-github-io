@@ -1,62 +1,80 @@
+@use '@scss/base/' as BASE;
+
 .carousel {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
   padding: 20px;
+  @include BASE.display-Container(100%, 100%, flex, column, center, center);
 
   .header {
+    width: 500px;
     text-align: center;
     margin-bottom: 20px;
 
     h1 {
       font-size: 2rem;
-      color: #fff;
+      color: var(--title-color);
       margin-bottom: 10px;
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: BASE.$font-title;
     }
 
     p {
       font-size: 1.5rem;
-      color: #ccc;
+      color: var(--text-color);
+    }
+
+    .toolList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      gap: 1rem;
+    }
+
+    .toolItem {
+      display: flex;
+      align-items: center;
+    }
+
+    .toolIcon {
+      width: 30px;
+      height: 30px;
     }
   }
 
   .mainContent {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include BASE.display-Container(auto, 100%, flex, column);
+    gap: 2rem;
+    transition: all 0.3s ease;
 
-    .mainImageContainer {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
+    .mainProjectContainer {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 1200px;
+      position: relative;
+
+      .mainImageContainer {
+        height: 200px;
+        width: 600px;
+      }
 
       .arrowLeft,
       .arrowRight {
-        position: absolute;
+        position: relative;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        padding: 15px;
+        background: none;
+        color: var(--icon-color);
+        padding: 0;
         cursor: pointer;
         z-index: 10;
         border: none;
-        font-size: 2.5rem;
-        transition: background 0.3s ease;
-        border-radius: 50%; // Forma arredondada para as setas
+        font-size: 2rem;
 
         &:hover {
-          background: rgba(0, 0, 0, 0.8);
+          color: var(--hover-icon-color);
         }
       }
 
@@ -69,44 +87,11 @@
       }
 
       .mainImage {
-        width: 60%;
+        width: 100%;
         max-width: 500px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         border: 2px solid #fff;
-      }
-    }
-
-    .infoSection {
-      text-align: center;
-      color: #fff;
-      margin-bottom: 20px;
-
-      h2 {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          font-size: 1.5rem;
-          margin-bottom: 10px;
-        }
-      }
-
-      .techIcons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
-
-        img {
-          width: 50px;
-          height: 50px;
-        }
       }
     }
 
@@ -148,22 +133,4 @@
       margin: 0;
     }
   }
-}
-
-.toolList {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-}
-
-.toolItem {
-  display: flex;
-  align-items: center;
-}
-
-.toolIcon {
-  width: 24px;
-  height: 24px;
-  margin-right: 5px;
 }
