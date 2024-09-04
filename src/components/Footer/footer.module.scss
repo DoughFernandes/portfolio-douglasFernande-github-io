@@ -1,15 +1,16 @@
-@use '@scss/base/' as *;
+@use '@scss/base/index' as BASE;
 
 .footer {
   width: 100%;
-  background-color: var(--secondary-bg-color);
   position: fixed;
   bottom: 0;
   padding: 1rem 1rem;
   text-align: center;
   border: 1px solid #000;
+  z-index: 10;
+  background: var(--secondary-bg-color);
 
-  @media (max-width: $mobile-max-display) {
+  @media (max-width: BASE.$mobile-max-display) {
     font-size: 2vw;
   }
 

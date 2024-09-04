@@ -4,6 +4,7 @@
   background: var(--secondary-bg-color);
   filter: brightness(0.9);
   box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
+  z-index: 10;
 
   @include BASE.display-Container(4rem, 100%, flex, row, space-between, center);
 
@@ -67,6 +68,7 @@
 
 .mobile__header {
   background: var(--secondary-bg-color);
+  z-index: 10;
 
   @include BASE.display-Container(3rem, 100%, flex, row, flex-end, center);
 
