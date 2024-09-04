@@ -3,37 +3,15 @@
 .desktop__header {
   background: var(--secondary-bg-color);
   filter: brightness(0.9);
-  box-shadow: 0 0 100px var(--shadow-color),
-    inset 0 0 5px var(--shadow-color);
+  box-shadow: 0 0 100px var(--shadow-color), inset 0 0 5px var(--shadow-color);
 
-  @include BASE.display-Container(
-    4rem,
-    100%,
-    flex,
-    row,
-    space-between,
-    center
-  );
+  @include BASE.display-Container(4rem, 100%, flex, row, space-between, center);
 
   .desktop__nav {
-    @include BASE.display-Container(
-      100%,
-      100%,
-      flex,
-      row,
-      flex-start,
-      center
-    );
+    @include BASE.display-Container(100%, 100%, flex, row, flex-start, center);
 
     ul {
-      @include BASE.display-Container(
-        auto,
-        auto,
-        flex,
-        row,
-        space-around,
-        center
-      );
+      @include BASE.display-Container(auto, auto, flex, row, space-around, center);
 
       li {
         height: 100%;
@@ -47,7 +25,7 @@
 
       a {
         padding: 0 0.5rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
         cursor: grab;
         color: var(--link-color);
 
@@ -61,14 +39,7 @@
   .desktop__figure {
     position: relative;
 
-    @include BASE.display-Container(
-      100%,
-      100%,
-      flex,
-      row,
-      space-between,
-      center
-    );
+    @include BASE.display-Container(100%, 100%, flex, row, space-between, center);
 
     img {
       width: 25px !important;
@@ -97,67 +68,33 @@
 .mobile__header {
   background: var(--secondary-bg-color);
 
-  @include BASE.display-Container(
-    3rem,
-    100%,
-    flex,
-    row,
-    flex-end,
-    center
-  );
+  @include BASE.display-Container(3rem, 100%, flex, row, flex-end, center);
 
   .mobile__figure {
     padding: 1rem;
     background: var(--cards-bg-color);
     z-index: 1;
 
-    @include BASE.display-Container(
-      100%,
-      50%,
-      flex,
-      row,
-      center,
-      center
-    );
+    @include BASE.display-Container(100%, 50%, flex, row, center, center);
 
     .mobile__nav {
-      @include BASE.display-Container(
-        100%,
-        100%,
-        flex,
-        column,
-        center,
-        center
-      );
+      @include BASE.display-Container(100%, 100%, flex, column, center, center);
 
       ul {
         border: 1px solid var(--border-color);
         border-radius: 1rem;
-        @include BASE.display-Container(
-          85%,
-          90%,
-          flex,
-          column,
-          center,
-          center
-        );
+        @include BASE.display-Container(85%, 90%, flex, column, center, center);
 
         li {
           padding: 0 1rem;
-          font-size: 1rem;
+          font-size: 2rem;
+          margin-left: 50%;
 
-          @include BASE.display-Container(
-            auto,
-            auto,
-            flex,
-            row,
-            flex-start,
-            center
-          );
+          @include BASE.display-Container(auto, 100%, flex, row, flex-start, center);
 
           a {
             width: auto;
-            font-size: 1rem;
+            font-size: 1.5rem;
           }
         }
       }
@@ -174,6 +111,7 @@
     border-radius: 50%;
     z-index: 10;
     background: var(--cards-bg-color);
+    color: var(--icon-color);
 
     img {
       width: 100%;
@@ -182,13 +120,7 @@
   }
 
   a {
-    @include BASE.display-Container(
-      100%,
-      50%,
-      flex,
-      row,
-      flex-end
-    );
+    @include BASE.display-Container(100%, 50%, flex, row, flex-end);
     width: 50%;
     padding: 1rem;
     color: var(--icon-color);

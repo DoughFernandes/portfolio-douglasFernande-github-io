@@ -17,8 +17,8 @@ export const collapseVariants: Variants = {
   open: {
     top: '1%',
     left: '5%',
-    height: '90vh',
-    width: '90vw',
+    height: '60%',
+    width: '90%',
     position: 'absolute',
     borderRadius: '1rem',
     transition: {
