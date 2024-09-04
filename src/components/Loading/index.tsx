@@ -6,7 +6,10 @@ const Loading = () => {
     <motion.section initial={{ opacity: 0 }} transition={{ duration: 2 }} animate={{ opacity: 1 }} className={styles.loading__container}>
       <div className={styles.alert}>
         <h2>Atenção:</h2>
-        <span>Estamos constantemente atualizando nosso portfólio para oferecer a melhor experiência possível. Se você encontrar algum erro ou problema, pedimos desculpas pelo inconveniente. Agradecemos seu feedback para que possamos continuar melhorando. Muito obrigado!</span>
+        <span>
+          Estou constantemente atualizando meu portfólio para oferecer a melhor experiência possível. Se você encontrar algum erro ou problema, peço desculpas pelo inconveniente. Agradeço seu feedback
+          para podermos continuar melhorando. Muito obrigado!
+        </span>
         <a rel='noopener' target='_blank' href='https://github.com/DoughFernandes/PortfolioDouglasFernande.github.io'>
           FeedBack
         </a>

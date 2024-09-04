@@ -1,6 +1,7 @@
 @use '@scss//base/' as BASE;
 
 .loading__container {
+  z-index: 9999;
   @include BASE.display-Container(calc(100vh - 11rem), 100vw);
 
   .alert{

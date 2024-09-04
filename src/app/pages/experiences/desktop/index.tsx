@@ -15,8 +15,7 @@ export default function ExperiencesDesktop() {
       <CursorDot />
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.experiences}>
-          <section>1</section>
-          <section>2</section>
+          <p>A página está em desenvolvimento, Obrigado pela compreensão.</p>
         </section>
       </motion.main>
     </>
