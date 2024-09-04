@@ -2,28 +2,26 @@
 
 .carousel {
   position: relative;
+
   @include BASE.display-Container(100%, 100%, flex, column, center, center);
 
   .mainContent {
-    @include BASE.display-Container(auto, 100%, flex, column);
-    gap: 2rem;
+    @include BASE.display-Container(100%, 100%, flex, column);
     transition: all 0.3s ease;
 
     .mainProjectContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
       max-width: 1200px;
       position: relative;
       gap: 1rem;
 
+      @include BASE.display-Container(auto, auto, flex, row, center, center);
+
       .mainProjectDescriptions {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
         position: relative;
         flex-wrap: wrap;
         gap: 1rem;
+
+        @include BASE.display-Container(auto, auto, flex, row, center, center);
 
         .header {
           width: 100%;
@@ -59,8 +57,9 @@
           }
 
           .toolIcon {
-            width: 30px;
-            height: 30px;
+            margin-top: 1rem;
+            width: 40px;
+            height: 40px;
           }
         }
 
@@ -109,7 +108,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: .5rem;
+        gap: 0.5rem;
       }
 
       figcaption {
@@ -137,17 +136,6 @@
           opacity: 1;
         }
       }
-    }
-  }
-
-  .footer {
-    margin-top: 30px;
-    text-align: center;
-    color: #ccc;
-    font-size: 1rem;
-
-    p {
-      margin: 0;
     }
   }
 }
