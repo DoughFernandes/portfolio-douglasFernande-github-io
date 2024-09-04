@@ -5,10 +5,12 @@ import stylesGlobal from '@scss/global.module.scss';
 import ContatoIcons from '@src/components/Contact';
 import { motion } from 'framer-motion';
 import styles from './desktop.module.scss';
+import CursorDot from '@src/components/BolinhaBody';
 
 export default function Contact() {
   return (
     <>
+    <CursorDot />
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.contact}>
           <motion.h1 variants={item}>Contate-me</motion.h1>

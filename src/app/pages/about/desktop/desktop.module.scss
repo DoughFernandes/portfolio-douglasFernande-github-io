@@ -1,6 +1,7 @@
 @use '@scss/base/' as BASE;
 
 .about {
+  z-index: 5;
   @include BASE.display-Container(calc(100vh - 11rem), 100%, flex, row);
 
   .figure {

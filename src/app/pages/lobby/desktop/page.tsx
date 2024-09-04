@@ -2,6 +2,7 @@
 
 import { container, item, itemX } from '@animation/animation';
 import stylesGlobal from '@scss/global.module.scss';
+import CursorDot from '@src/components/BolinhaBody';
 import ContatoIcons from '@src/components/Contact';
 import Skills from '@src/components/Skills';
 import useProfile from '@src/hooks/useProfile';
@@ -13,12 +14,8 @@ export default function LobbyDesktop() {
 
   return (
     <>
-      <motion.main
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={stylesGlobal.container}
-      >
+      <CursorDot />
+      <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.home}>
           <section className={styles.title}>
             <motion.figure variants={item}>

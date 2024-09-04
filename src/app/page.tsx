@@ -7,6 +7,7 @@ import { useLoadingState } from '@src/hooks/loading';
 import useProfile from '@src/hooks/useProfile';
 import LobbyDesktop from './pages/lobby/desktop/page';
 import Lobby from './pages/lobby/mobile/page';
+import CursorDot from '@src/components/BolinhaBody'; // Verifique se o caminho está correto
 import './scss/layout.scss';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <>
+      <CursorDot /> {/* A bolinha será adicionada aqui */}
       {(loading || showLoading) && <Loading />}
       {error && <p>{error}</p>}
       {!showLoading && profile && (isMobile ? <Lobby /> : <LobbyDesktop />)}

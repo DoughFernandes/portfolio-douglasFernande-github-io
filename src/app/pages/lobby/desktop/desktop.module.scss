@@ -1,6 +1,7 @@
 @use '@scss/base/' as BASE;
 
 .home {
+  z-index: 5;
   @include BASE.display-Container(70%, 100%, flex, column, flex-start);
   padding: 1rem;
 

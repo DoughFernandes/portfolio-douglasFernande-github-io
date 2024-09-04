@@ -2,6 +2,7 @@
 
 import { container, item, itemX } from '@animation/animation';
 import stylesGlobal from '@scss/global.module.scss';
+import CursorDot from '@src/components/BolinhaBody';
 import useProfile from '@src/hooks/useProfile';
 import { motion } from 'framer-motion';
 import { FaLanguage } from 'react-icons/fa';
@@ -16,6 +17,7 @@ export default function About() {
 
   return (
     <>
+      <CursorDot />
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.about}>
           <motion.figure variants={itemX} className={styles.figure}>
