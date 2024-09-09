@@ -1,6 +1,6 @@
 @use '@scss/base/' as BASE;
 
-.containerCards {
+.container__Cards {
   @include BASE.display-Container(auto, 100%, flex, column, center, center);
   padding: 1rem;
 
@@ -17,7 +17,7 @@
     color: var(--text-color);
   }
 
-  .containerProjects {
+  .container__Projects {
     gap: 1rem;
     flex-wrap: wrap;
 
@@ -36,7 +36,7 @@
         box-shadow: 0 4px 12px var(--shadow-color);
       }
 
-      &.projectExpanded {
+      &.project__Expanded {
         height: auto;
         width: 90%;
         border-radius: 12px;
@@ -48,13 +48,13 @@
         z-index: 10;
       }
 
-      .projectHeaderExpanded {
+      .project__Header_Expanded {
         text-align: center;
         font-size: 1rem;
         padding: 1rem 0;
       }
 
-      .projectHeader {
+      .project__Header {
         height: 30px;
         cursor: pointer;
         text-align: center;
@@ -83,7 +83,7 @@
         }
       }
 
-      .projectDetails {
+      .project__Details {
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -92,11 +92,6 @@
         transform: scale(0.95);
         transition: opacity 0.3s ease, transform 0.3s ease;
         gap: 1rem;
-
-        &.showDetails {
-          opacity: 1;
-          transform: scale(1);
-        }
 
         h2 {
           font-size: 2rem;
@@ -136,7 +131,7 @@
         }
       }
 
-      .closeButton {
+      .close__Button {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -152,7 +147,7 @@
         }
       }
 
-      .verProjetos {
+      .ver__Projetos {
         height: 2rem;
         width: 20rem;
         background: none;
@@ -195,7 +190,7 @@
   }
 
   @media (max-width: 768px) {
-    .verProjetos {
+    .ver__Projetos {
       width: 100%;
       font-size: 0.9rem;
 
@@ -209,7 +204,7 @@
       margin-bottom: 1rem;
     }
 
-    .projectDetails {
+    .projec__tDetails {
       gap: 0.5rem;
 
       h2 {

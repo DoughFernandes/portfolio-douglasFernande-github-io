@@ -6,18 +6,18 @@
 
   @include BASE.display-Container(100%, 100%, flex, column, center, center);
 
-  .mainContent {
+  .main__Content {
     @include BASE.display-Container(100%, 100%, flex, column);
     transition: all 0.3s ease;
 
-    .mainProjectContainer {
+    .main__Project_Container {
       max-width: 1200px;
       position: relative;
       gap: 1rem;
 
       @include BASE.display-Container(auto, auto, flex, row, center, center);
 
-      .mainProjectDescriptions {
+      .main__Project_Descriptions {
         position: relative;
         flex-wrap: wrap;
         gap: 1rem;
@@ -42,7 +42,7 @@
             color: var(--text-color);
           }
 
-          .toolList {
+          .tool__List {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -52,27 +52,27 @@
             gap: 1rem;
           }
 
-          .toolItem {
+          .tool__Item {
             display: flex;
             align-items: center;
           }
 
-          .toolIcon {
+          .tool__Icon {
             margin-top: 1rem;
             width: 40px;
             height: 40px;
           }
         }
 
-        .mainImageContainer {
+        .main__Image_Container {
           height: auto;
           max-width: 600px;
           min-width: 400px;
         }
       }
 
-      .arrowLeft,
-      .arrowRight {
+      .arrow__Left,
+      .arrow__Right {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -89,7 +89,7 @@
         }
       }
 
-      .mainImage {
+      .main__Image {
         width: 100%;
         max-width: 500px;
         border-radius: 10px;
@@ -98,13 +98,13 @@
       }
     }
 
-    .thumbnailContainer {
+    .thumbnail__Container {
       display: flex;
       justify-content: center;
       gap: 10px;
       margin-top: 20px;
 
-      .thumbnailFigure {
+      .thumbnail__Figure {
         display: flex;
         flex-direction: column;
         justify-content: center;
