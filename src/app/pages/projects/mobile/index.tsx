@@ -4,21 +4,14 @@ import Loading from '@src/components/Loading';
 import useProfile from '@src/hooks/useProfile';
 import { Profile } from '@src/interface/types';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './mobile.module.scss';
 
 export default function Projects() {
   const { profile } = useProfile() as { profile: Profile };
-  const [projects, setProjects] = useState<Profile['portfolio']>([]);
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
-  useEffect(() => {
-    if (profile?.portfolio) {
-      setProjects(profile.portfolio);
-    }
-  }, [profile]);
-
-  if (!projects.length) return <Loading />;
+  if (!profile?.portfolio?.length) return <Loading />;
 
   const handleCardClick = (index: number) => {
     setExpandedProject(expandedProject === index ? null : index);
@@ -38,7 +31,7 @@ export default function Projects() {
         <small>Obrigado por visitar meu portfólio! Fico muito feliz em compartilhar meus projetos com você.</small>
 
         <motion.section layout className={styles.container__Projects}>
-          {projects.map((project, index) => (
+          {profile.portfolio.map((project, index) => (
             <motion.section
               key={project.titulo}
               layout
@@ -72,11 +65,9 @@ export default function Projects() {
                   </button>
                   <motion.ul {...animationProps}>
                     {Object.entries(project.ferramentas).map(([tool, iconUrl]) => (
-                      <>
-                        <li key={tool}>
-                          <img className={styles.icon} src={iconUrl} alt={`Ícone de ${tool}`} />
-                        </li>
-                      </>
+                      <li key={tool}>
+                        <img className={styles.icon} src={iconUrl} alt={`Ícone de ${tool}`} />
+                      </li>
                     ))}
                   </motion.ul>
                 </motion.section>

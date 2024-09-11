@@ -7,31 +7,24 @@ import Loading from '@src/components/Loading';
 import useProfile from '@src/hooks/useProfile';
 import { Profile } from '@src/interface/types';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './desktop.module.scss';
 
 export default function ProjectsDesktop() {
   const { profile } = useProfile() as { profile: Profile };
   const [current, setCurrent] = useState<number>(0);
-  const [projects, setProjects] = useState<Profile['portfolio']>([]);
 
-  useEffect(() => {
-    if (profile?.portfolio) {
-      setProjects(profile.portfolio);
-    }
-  }, [profile]);
+  if (!profile?.portfolio || profile.portfolio.length === 0) {
+    return <Loading />;
+  }
 
-  const length = projects.length;
+  const length = profile.portfolio.length;
 
   const nextSlide = () => setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
   const selectSlide = (index: number) => setCurrent(index);
 
-  if (!projects.length) {
-    return <Loading />;
-  }
-
-  const { imagem, titulo, descricao, ferramentas, link } = projects[current];
+  const { imagem, titulo, descricao, ferramentas, link } = profile.portfolio[current];
 
   return (
     <>
@@ -79,7 +72,7 @@ export default function ProjectsDesktop() {
             </motion.section>
 
             <motion.section className={styles.thumbnail__Container} variants={itemX} role='group' aria-label='Miniaturas de projetos'>
-              {projects.map((project, index) => (
+              {profile.portfolio.map((project, index) => (
                 <figure key={index} className={styles.thumbnail__Figure}>
                   <motion.img
                     src={project.imagem}
