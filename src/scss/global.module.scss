@@ -4,7 +4,7 @@
   padding: 2rem;
   max-width: $desktop-max-display;
 
-  @include display-Container(calc(100% - 7rem), 100%);
+  @include display-Container(100%, 100%);
 
   @media (max-width: $mobile-max-display) {
     @include display-Container(100%, 100%, column, center, flex-start);

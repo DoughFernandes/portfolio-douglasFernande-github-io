@@ -28,7 +28,7 @@
         padding: 0 0.5rem;
         font-size: 0.9rem;
         cursor: grab;
-        color: var(--link-color);
+        color: var(--text-color);
 
         &:active {
           cursor: grabbing;
@@ -125,6 +125,6 @@
     @include BASE.display-Container(100%, 50%, flex, row, flex-end);
     width: 50%;
     padding: 1rem;
-    color: var(--icon-color);
+    color: var(--text-color);
   }
 }
