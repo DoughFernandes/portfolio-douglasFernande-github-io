@@ -13,7 +13,6 @@
 
   .education,
   .courses {
-    min-width: 500px;
     background-color: var(--cards-bg-color);
     padding: 2rem;
     border-radius: 8px;
@@ -21,7 +20,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     gap: 1rem;
 
-    @include BASE.display-Container(auto, 48%, flex, column, flex-start, center);
+    @include BASE.display-Container(auto, 80%, flex, column, flex-start, center);
 
     &:hover {
       transform: translateY(-4px);
