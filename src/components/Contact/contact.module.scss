@@ -19,6 +19,7 @@
       transition: all 0.1s ease-in-out;
       text-align: center;
       gap: 0.5rem;
+      color: var(--text-color);
 
       @include BASE.display-Container(100%, 100%, flex, row);
 

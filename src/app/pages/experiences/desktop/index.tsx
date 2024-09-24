@@ -1,6 +1,6 @@
 'use client';
 
-import { container } from '@animation/animation';
+import { container, item, itemX } from '@animation/animation';
 import stylesGlobal from '@scss/global.module.scss';
 import CursorDot from '@src/components/BolinhaBody';
 import useProfile from '@src/hooks/useProfile';
@@ -22,7 +22,7 @@ export default function ExperiencesDesktop() {
       <CursorDot />
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.experiences}>
-          <section className={styles.education}>
+          <motion.section className={styles.education} variants={item}>
             <section className={styles.formacao}>
               <h2>Formação</h2>
               <FaBuildingColumns />
@@ -39,21 +39,40 @@ export default function ExperiencesDesktop() {
                 </motion.div>
               ))}
             </section>
-          </section>
+          </motion.section>
 
-          <section className={styles.courses}>
+          <motion.section className={styles.courses} variants={itemX}>
             <h2>Cursos</h2>
             {profile?.educacao.map((curso, index) => (
-              <motion.button key={index} className={styles.show__Details_Button} onClick={() => toggleCourseDetails(index)} whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+              <motion.button
+                key={index}
+                className={styles.show__Details_Button}
+                onClick={() => toggleCourseDetails(index)}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
                 <h3>{curso.instituicao}</h3>
                 <AnimatePresence>
                   {openCourses === index && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.4 }}
-                      style={{ overflow: 'hidden' }}
+                      initial={{
+                        opacity: 0,
+                        height: 0
+                      }}
+                      animate={{
+                        opacity: 1,
+                        height: 'auto'
+                      }}
+                      exit={{
+                        opacity: 0,
+                        height: 0
+                      }}
+                      transition={{
+                        duration: 0.4
+                      }}
+                      style={{
+                        overflow: 'hidden'
+                      }}
                     >
                       <p>{curso.curso}</p>
                       <small>{curso.periodo}</small>
@@ -68,7 +87,7 @@ export default function ExperiencesDesktop() {
                 </AnimatePresence>
               </motion.button>
             ))}
-          </section>
+          </motion.section>
         </section>
       </motion.main>
     </>
