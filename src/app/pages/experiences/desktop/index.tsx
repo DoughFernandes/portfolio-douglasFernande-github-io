@@ -1,6 +1,6 @@
 'use client';
 
-import { container, item, itemX } from '@animation/animation';
+import { container } from '@animation/animation';
 import stylesGlobal from '@scss/global.module.scss';
 import CursorDot from '@src/components/BolinhaBody';
 import useProfile from '@src/hooks/useProfile';
@@ -11,42 +11,55 @@ import { CoursesSectionProps, ExperienceSectionProps, ProfileInterface } from '.
 import styles from './desktop.module.scss';
 
 const EducationSection = () => (
-  <section className={styles.formacao}>
+  <section className={styles.formation_education}>
     <h2>Formação</h2>
-    <FaBuildingColumns />
-    <small>Ensino médio - Completo</small>
+    <div>
+      <FaBuildingColumns />
+      <small>Ensino médio - Completo</small>
+    </div>
   </section>
 );
 
 const ExperienceSection = ({ experiencia_profissional }: ExperienceSectionProps) => (
-  <section>
+  <motion.section
+    className={styles.formation_experiencia}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
     <h2>Experiências</h2>
     {experiencia_profissional?.map((experiencia, index) => (
-      <motion.div key={index} className={styles.formation} whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+      <motion.div key={index} className={styles.formation} whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
         <h3>{experiencia.cargo}</h3>
         <p>{experiencia.empresa}</p>
         <small>{experiencia.periodo}</small>
         <p>{experiencia.descricao}</p>
       </motion.div>
     ))}
-  </section>
+  </motion.section>
 );
 
 const CoursesSection = ({ educacao, openCourses, toggleCourseDetails }: CoursesSectionProps) => (
-  <motion.section className={styles.courses} variants={itemX}>
+  <section>
     <h2>Cursos</h2>
     {educacao?.map((curso, index) => (
       <motion.button
         key={index}
         className={styles.show__Details_Button}
         onClick={() => toggleCourseDetails(index)}
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
+        aria-expanded={openCourses === index}
       >
         <h3>{curso.instituicao}</h3>
         <AnimatePresence>
           {openCourses === index && (
-            <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <p>{curso.curso}</p>
               <small>{curso.periodo}</small>
               <p>{curso.descricao}</p>
@@ -55,12 +68,12 @@ const CoursesSection = ({ educacao, openCourses, toggleCourseDetails }: CoursesS
                   Ver mais
                 </a>
               </span>
-            </div>
+            </motion.div>
           )}
         </AnimatePresence>
       </motion.button>
     ))}
-  </motion.section>
+  </section>
 );
 
 export default function ExperiencesDesktop() {
@@ -76,19 +89,15 @@ export default function ExperiencesDesktop() {
       <CursorDot />
       <motion.main variants={container} initial='hidden' animate='visible' className={stylesGlobal.container}>
         <section className={styles.experiences}>
-          <motion.section className={styles.education} variants={item}>
-            {/* Seção de Formação */}
-            <EducationSection />
-            {/* Seção de Experiências */}
+          <EducationSection />
+          <div className={styles.contanier_formation}>
             <ExperienceSection experiencia_profissional={profile?.experiencia_profissional} />
-          </motion.section>
-
-          {/* Seção de Cursos */}
-          <CoursesSection
-            educacao={profile?.educacao}
-            openCourses={openCourses}
-            toggleCourseDetails={toggleCourseDetails}
-          />
+            <CoursesSection
+              educacao={profile?.educacao}
+              openCourses={openCourses}
+              toggleCourseDetails={toggleCourseDetails}
+            />
+          </div>
         </section>
       </motion.main>
     </>

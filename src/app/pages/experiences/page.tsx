@@ -9,8 +9,7 @@ import ExperiencesDesktop from './desktop';
 import ExperiencesMobile from './mobile';
 
 export default function Home() {
-  const { profile, error, loading } =
-    useProfile();
+  const { profile, error, loading } = useProfile();
   const showLoading = useLoadingState(loading);
   const { isMobile } = DisplaySize();
 
@@ -18,13 +17,7 @@ export default function Home() {
     <>
       {(loading || showLoading) && <Loading />}
       {error && <p>{error}</p>}
-      {!showLoading &&
-        profile &&
-        (isMobile ? (
-          <ExperiencesMobile />
-        ) : (
-          <ExperiencesDesktop />
-        ))}
+      {!showLoading && profile && (isMobile ? <ExperiencesMobile /> : <ExperiencesDesktop />)}
       <Footer />
     </>
   );
