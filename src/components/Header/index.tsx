@@ -6,7 +6,17 @@ import useProfile from '@src/hooks/useProfile';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaBars, FaCreativeCommonsNd, FaEnvelope, FaHome, FaMoon, FaProjectDiagram, FaSun, FaTimes, FaUser } from 'react-icons/fa';
+import {
+  FaBars,
+  FaCreativeCommonsNd,
+  FaEnvelope,
+  FaHome,
+  FaMoon,
+  FaProjectDiagram,
+  FaSun,
+  FaTimes,
+  FaUser
+} from 'react-icons/fa';
 import { collapseVariants, collapselist, listItem, positionLogo } from './animation/animation';
 import styles from './header.module.scss';
 
@@ -50,14 +60,34 @@ export const Header = () => {
 
   const renderMobileHeader = () => (
     <header className={styles.mobile__header}>
-      <motion.button type='button' title='Menu' onClick={toggleCollapse} initial='close' animate={isExpanded ? 'open' : 'close'} variants={positionLogo} aria-expanded={isExpanded}>
+      <motion.button
+        type='button'
+        title='Menu'
+        onClick={toggleCollapse}
+        initial='close'
+        animate={isExpanded ? 'open' : 'close'}
+        variants={positionLogo}
+        aria-expanded={isExpanded}
+      >
         {isExpanded ? <FaTimes /> : <FaBars />}
       </motion.button>
 
       <AnimatePresence>
         {isExpanded && (
-          <motion.figure className={styles.mobile__figure} initial='close' animate='open' exit='close' variants={collapseVariants}>
-            <motion.nav className={styles.mobile__nav} initial='close' animate='open' exit='close' variants={collapselist}>
+          <motion.figure
+            className={styles.mobile__figure}
+            initial='close'
+            animate='open'
+            exit='close'
+            variants={collapseVariants}
+          >
+            <motion.nav
+              className={styles.mobile__nav}
+              initial='close'
+              animate='open'
+              exit='close'
+              variants={collapselist}
+            >
               <ul>
                 {navMenu.map(({ title, icon: Icon, link }, index) => (
                   <motion.li key={index} variants={listItem} whileHover={{ scale: 1.1 }}>

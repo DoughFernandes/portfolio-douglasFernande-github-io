@@ -1,6 +1,6 @@
 @use '@src/scss//base/' as BASE;
 
-.skills__container{
+.skills__container {
   flex-wrap: wrap;
 
   @include BASE.display-Container(auto, auto, flex, row);
@@ -10,12 +10,17 @@
 
     li {
       padding: 0 1rem;
-      height: 10vw;
+      height: 80px;
+      width: 100px;
       max-height: 4rem;
 
       img {
-        width: 100%;
-        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 0 10px var(--cards-bg-color));
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
